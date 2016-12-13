@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+  <constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+    
+    <package name="loan" namespace="/loan" extends="json-default">        
+        <!-- 投标返回处理 -->
+        <action name="loantenderreturn" class="com.jqg.struts.LoanAction" method="loantenderreturn">
+        	<result name="success">/jump.jsp</result>
+		<result name="mobile">/wap/jump.jsp</result>
+        </action>        
+        <!-- 投标异步通知接口处理 -->
+        <action name="loantendernotify" class="com.jqg.struts.LoanAction" method="loantendernotify">
+        	<result name="success">/jump.jsp</result>
+        </action>
+         <!-- 债权转让异步通知接口处理 -->
+        <action name="transferBuyNotify" class="com.jqg.struts.LoanAction" method="transferBuyNotify">
+        	<result name="success">/jump.jsp</result>
+        </action>
+         <!-- 平台和用户之间转账返回处理 -->
+        <action name="platTransferreturn" class="com.jqg.struts.LoanAction" method="platTransferreturn">
+        	<result name="success">/back/jump.jsp</result>
+        </action>
+       <!-- 平台和用户之间转账异步通知处理 -->
+        <action name="platTransfernotify" class="com.jqg.struts.LoanAction" method="platTransfernotify">
+        	<result name="success">/jump.jsp</result>
+        </action> 
+        <action name="nameAuditnotify" class="com.jqg.struts.LoanAction" method="nameAuditnotify">
+        	<result name="success">/jump.jsp</result>
+        </action>
+        <!-- 投标复审返回处理 -->
+        <action name="loantenderauditreturn" class="com.jqg.struts.LoanAction" method="loantenderauditreturn">
+        	<result name="success">/jump.jsp</result>
+        </action>
+		 <action name="systemChecke" class="com.jqg.struts.LoanAction" method="systemChecke">
+        	<result name="success">/jump.jsp</result>
+        </action>
+        <!-- 投标复审异步通知接口处理 -->
+        <action name="loantenderauditnotify" class="com.jqg.struts.LoanAction" method="loantenderauditnotify">
+        	<result name="success">/jump.jsp</result>
+        </action>
+        <!-- 理财还款返回处理 -->
+        <action name="lcrepayreturn" class="com.jqg.struts.LoanAction" method="lcrepayreturn">
+        	<result name="success">/back/jump.jsp</result>
+        </action>
+        <!-- 理财还款异步通知接口处理 -->
+        <action name="lcrepaynotify" class="com.jqg.struts.LoanAction" method="lcrepaynotify">
+        	<result name="success">/jump.jsp</result>
+        </action>
+        <!-- 还款返回处理 -->
+        <action name="borrowrepayreturn" class="com.jqg.struts.LoanAction" method="borrowrepayreturn">
+        	<result name="success">/jump.jsp</result>
+        </action>
+        <!-- 还款异步通知接口处理 -->
+        <action name="borrowrepaynotify" class="com.jqg.struts.LoanAction" method="borrowrepaynotify">
+        	
+        </action>
+        
+        <!--借款平台垫付返回处理 -->
+        <action name="borrowwebrepayreturn" class="com.jqg.struts.LoanAction" method="borrowwebrepayreturn">
+        	<result name="success">/jump.jsp</result>
+        </action>
+        <!-- 借款平台垫付异步通知处理 -->
+        <action name="borrowwebrepaynotify" class="com.jqg.struts.LoanAction" method="borrowwebrepaynotify">
+        	<result name="success">/jump.jsp</result>
+        </action>
+        
+        <!-- 付款异步通知处理 -->
+        <action name="loantraansfernotify" class="com.jqg.struts.LoanAction" method="loantraansfernotify">
+        	<result name="success">/jump.jsp</result>
+        </action>
+        
+        <!-- 充值返回处理 -->
+        <action name="loanrechargereturn" class="com.jqg.struts.LoanAction" method="loanrechargereturn">
+        	<result name="success">/jump.jsp</result>
+		<result name="mobile">/wap/jump.jsp</result>
+        </action>
+        <!-- 充值异步通知处理 -->
+        <action name="loanrechargenotify" class="com.jqg.struts.LoanAction" method="loanrechargenotify">
+        	<result name="success">/jump.jsp</result>
+        </action>
+        
+        <!-- 提现申请返回处理 -->
+        <action name="loanwithdrawsreturn" class="com.jqg.struts.LoanAction" method="loanwithdrawsreturn">
+        	<result name="success">/jump.jsp</result>
+		<result name="mobile">/wap/jump.jsp</result>
+        </action>
+        <!-- 提现申请异步通知处理 -->
+        <action name="loanwithdrawsnotify" class="com.jqg.struts.LoanAction" method="loanwithdrawsnotify">
+        	<result name="success">/jump.jsp</result>
+        </action>
+        
+        <!-- 提现审核返回处理 -->
+        <action name="withdrawsAuditreturn" class="com.jqg.struts.LoanAction" method="withdrawsAuditreturn">
+        	<result name="success">/jump.jsp</result>
+        </action>
+        <!-- 提现审核异步通知处理 -->
+        <action name="withdrawsAuditnotify" class="com.jqg.struts.LoanAction" method="withdrawsAuditnotify">
+        	<result name="success">/jump.jsp</result>
+        </action>
+        <!-- 理财投资返回处理 -->
+        <action name="loantenderlcreturn" class="com.jqg.struts.LoanAction" method="loantenderlcreturn">
+        	<result name="success">/jump.jsp</result>
+        	<result name="mobile">/wap/jump.jsp</result>
+        </action>
+         <!-- 流标返回处理 -->
+        <action name="loanFailedreturn" class="com.jqg.struts.LoanAction" method="loanFailedreturn">
+        	<result name="success">/jump.jsp</result>
+        </action>
+        <!-- 流标异步通知处理 -->
+        <action name="loanFailednotify" class="com.jqg.struts.LoanAction" method="loanFailednotify">
+        	<result name="success">/jump.jsp</result>
+        </action>
+        <!-- 处理标数据 -->
+         <action name="toBorrowReauditSuccess" class="com.jqg.struts.LoanAction" method="toBorrowReauditSuccess">
+        	<result name="success">/back/jump.jsp</result>
+        </action>
+     </package>
+
+</struts>

@@ -1,0 +1,36 @@
+﻿@charset "utf-8";
+
+/*公告发布区 */
+.bigBox{border:solid 1px #d9d9d9;padding-bottom:200px;margin-top:10px;}
+.bigBox .menuBox{background-color:#f2f2f2;overflow:hidden;}
+.bigBox .menuBox .menu{float:left;padding-left:20px;height:40px;overflow:hidden;}
+.bigBox .menuBox .menu a{font-size:14px;line-height:40px;margin-right:20px;padding-left:20px;}
+.bigBox .menuBox .menu div:hover{background-color:#CCC;}
+.bigBox .menuBox .menu div{float:left;}
+.bigBox .menuBox .menuText{float:right;margin-right:20px;font-size:12px;line-height:40px;margin-left:60px;color:#999;}
+.bigBox .neiRong .text{overflow:hidden;border-bottom:solid 1px #d9d9d9;margin-right:20px;}
+.bigBox .neiRong .text:hover{background-color:#F2F2F2;}
+.bigBox .neiRong{padding-top:10px;padding-left:20px;}
+.bigBox .neiRong .text .textLeft{float:left;padding:10px 5px;}
+.bigBox .neiRong .text .textRight{float:right;overflow:hidden;}
+.bigBox .neiRong .text .textRight .textRightL #t{padding-top:20px;}
+.bigBox .neiRong .text .textRight .textRightL{float:right;margin-right:10px;font-size:12px;color:#999;}
+.bigBox .neiRong .text .textRight .textRightL div{font-size:12px;color:#999;margin-right:50px;}
+.bigBox .neiRong .text .textRight .textRightL a{color:#666;}
+.PBox{background-color:#f2f2f2;overflow:hidden;margin-bottom:10px;padding:5px;}
+.PBox .P{overflow:hidden;width:500px;float:right;}
+.PBox .P div{float:right;width:25px;height:25px;border:solid 1px #d9d9d9;margin-left:10px;}
+.PBox .P div a{line-height:25px;padding-left:8px;}
+.PBox .P .pText{width:60px;height:25px;}
+.fabu{ margin-bottom:20px;}
+.fatie{border:solid 1px #d9d9d9;}
+.fatie .top{height:40px;background-color:#f2f2f2;}
+.fatie .top div{line-height:40px;padding-left:20px;font-size:14px;}
+.fatie .topT .biaoT{padding-left:20px;width:200px;margin:10px 0;margin-right:10px;heigth:20px;border:solid 1px #d9d9d9;}
+.fatie .topT{margin-left:20px;}
+.fatie .textBox{border:solid 1px #d9d9d9;width:1000px;margin-left:20px;position:relative;}
+.fatie .textTop{height:30px;background-color:#f2f2f2;}
+.fatie .textBox .tishi a{color:#F93;margin:10px;}
+.fatie .textBox .tishi{position:absolute;left:40%;top:50%;}
+.fatie .textB .text{width:1000px;height:200px;}
+.fatie .fabiao{margin:10px 20px;}

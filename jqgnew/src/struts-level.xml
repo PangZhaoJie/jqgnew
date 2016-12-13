@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.multipart.saveDir" value="/tmp"></constant>
+    <package name="level" namespace="/level" extends="default">
+        <!-- 信用级别管理-->
+        <action name="searchClevel" class="com.jqg.struts.CreditlevelAction" method="searchClevel">
+        <result>/back/9_cs2.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="createClevel" class="com.jqg.struts.CreditlevelAction" method="createClevel">
+        <result>/back/9_cs2.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="delClevel" class="com.jqg.struts.CreditlevelAction" method="delClevel">
+        <result>/back/9_cs2.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="editClevel" class="com.jqg.struts.CreditlevelAction" method="editClevel">
+        <result>/back/9_cs2.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <!-- 投资级别管理 -->
+         <action name="searchIlevel" class="com.jqg.struts.CreditlevelAction" method="searchIlevel">
+        <result>/back/9_cs3.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="createIlevel" class="com.jqg.struts.CreditlevelAction" method="createIlevel">
+        <result>/back/9_cs3.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="delIlevel" class="com.jqg.struts.CreditlevelAction" method="delIlevel">
+        <result>/back/9_cs3.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="editIlevel" class="com.jqg.struts.CreditlevelAction" method="editIlevel">
+        <result>/back/9_cs3.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+     
+    </package>
+</struts>

@@ -1,0 +1,47 @@
+﻿@charset "utf-8";
+
+/*正文 */
+.ctrlBtnBox .huifu{float:left;}
+.ctrlBtnBox .fanhui{float:right;}
+.ctrlBtnBox{overflow:hidden;margin-top:10px;}
+.banzhu{border:solid 1px #d9d9d9;overflow:hidden;margin-top:10px;}
+.banzhu .leftBox{width:172px;background-color:#e8f4fb;border-right:solid 1px #d9d9d9;float:left;}
+.banzhu .leftBox .T{color:#999;height:40px;margin:0 20px;}
+.banzhu .leftBox span{color:#69F;line-height:40px;}
+.banzhu .leftBox .zuozhe{margin:0 40px;padding-bottom:50px;}
+.banzhu .leftBox div{margin:0 20px;padding-bottom:20px;}
+.banzhu .rightBox{width:1005px;float:right;}
+.banzhu .rightBox .biaoti{font-size:16px;padding:10px 20px;border-bottom:solid 2px #d9d9d9;}
+.banzhu .rightBox .xinxi{font-size:12px;padding:0 20px;color:#CCC;border-bottom:solid 1px #d9d9d9;line-height:40px;}
+.banzhu .rightBox .text{font-size:14px;padding:10px 20px; text-indent:28px;}
+.banzhu .rightBox .zan .zanS{background-image:url(../../images/zan_03.png);background-repeat:no-repeat; background-position:center center;width:60px;height:25px; cursor:pointer;}
+.banzhu .rightBox .zan .zanX{background-image:url(../../images/zan_05.png);background-repeat:no-repeat; background-position:center center;width:60px;height:25px;cursor:pointer;}
+.banzhu .rightBox .zan{margin-left:20px;}
+.bigBox{border:solid 1px #d9d9d9;margin-top:10px;}
+.pinglun{border-bottom:solid 1px #d9d9d9;overflow:hidden;}
+.pinglun .leftBox{width:172px;background-color:#e8f4fb;border-right:solid 1px #d9d9d9;float:left;}
+.pinglun .leftBox .touxiang{margin:20px 20px;}
+.pinglun .leftBox .T{color:#999;height:40px;margin:0 20px;}
+.pinglun .leftBox .zuozhe{margin:0 40px;padding-bottom:20px;padding-top:10px;}
+.pinglun .rightBox{width:1005px;float:right;}
+.pinglun .rightBox .biaoti{font-size:14px;padding:10px 20px;border-bottom:solid 1px #d9d9d9;}
+.pinglun .rightBox .xinxi{font-size:12px;padding:0 20px;color:#CCC;}
+.pinglun .rightBox .text{font-size:14px;padding:10px 20px;}
+.pinglun .rightBox .qianM{border-top:solid 1px #d9d9d9;line-height:30px; height:40px;width:1000px;position:absolute;bottom:-160px;left:0px;padding-left:20px;}
+.pinglun .rightBox{position:relative;}
+.PBox{background-color:#f2f2f2;overflow:hidden;margin-bottom:10px;padding:5px;margin-top:10px;}
+.PBox .P{overflow:hidden;width:500px;float:right;}
+.PBox .P div{float:right;width:25px;height:25px;border:solid 1px #d9d9d9;margin-left:10px;}
+.PBox .P div a{line-height:25px;padding-left:8px;}
+.PBox .P .pText{width:60px;height:25px;}
+.fatie{border:solid 1px #d9d9d9;}
+.fatie .top{height:40px;background-color:#f2f2f2;}
+.fatie .top div{line-height:40px;padding-left:20px;font-size:14px;}
+.fatie .topT .biaoT{padding-left:20px;width:200px;margin:10px 0;margin-right:10px;heigth:20px;border:solid 1px #d9d9d9;}
+.fatie .topT{margin-left:20px;}
+.fatie .textBox{border:solid 1px #d9d9d9;width:1000px;margin-left:20px;position:relative;}
+.fatie .textTop{height:30px;background-color:#f2f2f2;}
+.fatie .textBox .tishi a{color:#F93;margin:10px;}
+.fatie .textBox .tishi{position:absolute;left:40%;top:50%;}
+.fatie .textB .text{width:1000px;height:200px;}
+.fatie .fabiao{margin:10px 20px;}

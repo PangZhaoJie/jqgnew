@@ -1,0 +1,37 @@
+﻿@charset "utf-8";
+
+/*借款新手指引 */
+.content_ct{ width:1180px; height:auto; background: url(../images/ct_bg.jpg) repeat-y;}
+.invest_step{ width:910px;padding-top:10px;}
+.step_title{ width:910px; height:42px; float:left; background:url(../images/zy_title01.jpg) repeat-x;}
+.step_title span{ width:160px; height:42px; float:left; background:#38bc66 repeat-x; line-height:42px; text-align:center; color:#fff; font-size:18px;}
+.step_nr{ float:left; padding:20px 10px 5px 10px;}
+.step_nr ul{ padding:0; margin:0;}
+.step_nr ul li{ width:120px; float:left; margin:25px 29px ; display:inline; text-align:center;}
+.step_nr ul li span{ width:120px; line-height:32px; float:left;}
+
+/*弹出框*/
+.light_title{ width:100%; height:25px; }
+.black_overlay{  display: none; position:fixed; top: 0; left: 0;width: 100%; height:100%; background:#000 repeat; z-index:1001;  -moz-opacity: 0.5; opacity:0.5; filter: alpha(opacity=50); } 
+.white_content { display: none; position: absolute; top: 45%; left:35%; border:8px solid #ddd; width: 30%;  height:15%; padding:10px ; background-color:#fff; z-index:1002; overflow: auto; } 
+.close{ width:30px; height:30px; float:right;}
+.letter_info{width:100%; float:left; padding-top:3%; }
+.letter_info span{float:left; padding-left:3%; font-size:24px;color:#006ac7; }
+
+.yuanli_title{ width:910px; height:42px; float:left; background:url(../images/zy_title02.jpg) repeat-x; margin-top:15px;}
+.yuanli_title span{ width:160px; height:42px; float:left; background:#0ba7db repeat-x; line-height:42px; text-align:center; color:#fff; font-size:18px;}
+.yuanli_nr{ float:left; padding:20px 10px 5px 10px;}
+.yl_img{ width:600px; height:430px;float:left; text-align:center; padding:0 150px; background:url(../images/yuanli_img.jpg) center top no-repeat;}
+.yl_top{ width:600px; float:left; }
+.yl_right{width:100px; float:right; padding-top:75px;}
+.yl_left{width:100px; float:left;padding-top:75px; padding-left:0px;}
+.yl_bottom{width:600px; float:left;padding-top:20px; }
+
+.yuanli_nr p{ line-height:30px; float:left; padding:10px 0;}
+
+
+/*投资新手指引*/
+.step_title1{ width:910px; height:42px; float:left; background:url(../images/zy_title03.jpg) repeat-x;}
+.step_title1 span{ width:160px; height:42px; float:left; background:#bec302 repeat-x; line-height:42px; text-align:center; color:#fff; font-size:18px;}
+.yuanli_title1{ width:910px; height:42px; float:left; background:url(../images/zy_title04.jpg) repeat-x; margin-top:15px;}
+.yuanli_title1 span{ width:160px; height:42px; float:left; background:#fb5a00 repeat-x; line-height:42px; text-align:center; color:#fff; font-size:18px;}

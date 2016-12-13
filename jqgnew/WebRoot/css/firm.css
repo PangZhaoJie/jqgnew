@@ -1,0 +1,70 @@
+*{margin: 0 auto; padding: 0; font-family: "微软雅黑"; text-decoration: none; list-style:none; border:0;}
+.clear{both}
+
+
+.content{ width:1200px;margin:0 auto;}
+
+.v_con_box{ width:1200px; overflow: hidden; margin-bottom:20px;}
+.v_con_left{ width:765px; height:400px; float:left; border:#cccccc 1px solid;}
+.v_left_title{ width:765px; height:50px; background:#f5f5f5; font-size:16px; color:#545454; line-height:50px; position:relative; border-bottom:#cccccc 1px solid;}
+.v_left_title a{ width:24px; height:24px; font-size:12px; color:#fff; background:#ea7937; display:block; position:absolute; top:14px; left:10px; line-height:24px; text-align:center;}
+.v_left_title span{ position:absolute; left:12px;}
+.v_left_title em{ font-style:normal; position:absolute; left:295px;}
+.v_left_title strong{ font-weight:100; position:absolute; right:10px;}
+
+.v_left_list{ width:707px; height:125px;  border-bottom:1px #e5e5e5 solid;}
+.v_left_list ul li{ width:235px; height:80px; text-align:center; float:left; margin-top:30px;}
+.v_left_list ul li p{ color:#323431; font-size: 14px; margin-bottom: 30px;}
+.v_left_list ul li span{ color:#fc6200; font-size:24px;}
+
+.v_con_all{ width:560px;}
+.v_con_danbao{ width:324px; font-size:14px; line-height:36px; color:#656567; padding:15px; float:left;}
+.v_con_danbao dt{margin-left:75px;}
+.v_con_danbao dt span{color:#4e4d4f;}
+.v_con_danbao dd{ background:url(../images/xing.png) 75px center no-repeat; padding-left:90px;}
+.v_con_danbao dd span{color:#d2040e; }
+.v_con_rongzi { font-size:14px; color:#656567; line-height:36px; float:right; display: block;  padding-top:20px;}
+.v_con_rongzi li{ overflow: hidden;}
+.v_con_rongzi li span{ width:99px; height:14px; background:url(../images/rzjd.png) no-repeat; display: block; float:right; margin-top:10px;}
+.v_con_rongzi li em{ font-style: normal; float:left;}
+
+.v_con_right{ width:395px; height:400px; float:right; border:1px #ccc solid;}
+.v_con_right h3{ width:395px; height:50px; font-size:16px; color:#545454; font-weight:100; line-height:50px; background:#f5f5f5; text-indent: 20px; border-bottom:1px #ccc solid;}
+.v_con_congzhi{margin: 0 auto; width:315px; height:75px; margin-top:25px; position:relative; border-bottom:1px #dcdcdc solid;}
+.v_con_congzhi p{ color:#555553; font-size:14px; }
+.v_con_congzhi span{ color:#565658; font-size:24px; line-height:57px; font-weight:900;}
+.v_con_congzhi a{ width:56px; height:36px; color:#fff; background:#75bc30; display: block; text-align:center; line-height:36px; border:1px #75BC30 solid; border-radius:5px; font-size:14px; position:absolute; top:25px; left:200px;}
+
+.v_con_touzi{ width:315px; height:170px;margin: 0 auto;margin-top:60px;}
+.v_con_touzi p{ color:#676566; font-size:14px; text-align:center; line-height:70px;}
+.v_list_touzi{width:271px; overflow:hidden;margin: 0 auto;}
+.v_touzi_text{ width:185px; height:30px; border:1px #cccccc solid; text-align:center; line-height:30px; font-size:14px; float:left;}
+.v_touzi_btn{ width:30px; height:30px; background:#f59469; color:#fff; font-size:24px; text-align:center; line-height:30px; float:left; margin-right:5px;}
+.v_touzi_btnt{ width:30px; height:30px; background:#f59469; color:#fff;font-size:24px; text-align:center; line-height:30px; float:right;}
+.v_touzi_link{ width:257px; height:33px; background:#ce4207; color:#fff; font-size:16px; margin-top:20px;}
+
+.v_about{ width:1200px; border:1px #d4d4d4 solid; margin-bottom:20px;}
+.v_about ul{ width:1200px; height:55px; border-bottom:1px #d4d4d4 solid;}
+.v_about ul li{ width:170px; float:left; text-align: center; border-right:1px #dddddd solid;}
+.v_about ul li .qiehuan{ width:170px; float:left; color:#555555;  line-height:50px; font-size:18px;}
+.v_overa{ border-top:2px #016ac6 solid;}
+.v_about_text{ display: none;}
+.v_about_text p{ color:#6b5f5f; font-size:14px; display: block; padding:50px; line-height:2em;}
+
+.v_record{ width:1200px; height:250px; border: 1px #d4d4d4 solid; margin-bottom:160px;}
+.v_record p{ width:1200px; height:55px; border-bottom:1px #d4d4d4 solid;}
+.v_record p a{ width:170px; color:#555; font-size:18px; line-height:50px; display: block; text-align: center; float:left; border-right:1px #dddddd solid;}
+.v_record p a:hover{ border-top:2px #016AC6 solid; }
+.v_record ul li{float:left; width:171px; height:90px;}
+.v_record ul li a{ color:#636363; font-size:18px; line-height:90px; text-align:center; width:171px; display:block; float:left;}
+
+
+
+
+
+
+
+
+
+
+

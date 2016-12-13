@@ -1,0 +1,64 @@
+﻿@charset "utf-8";
+
+/*认证中心*/
+input{border:1px solid #ccc; border-radius:3px;vertical-align:middle;outline:none; height:32px; line-height:32px;  margin-left:10px; padding-left:8px; color:#999;}
+table{border-collapse: collapse;}
+input:hover{border:1px solid #0095eb;}
+#list_1 #payID .top{background:#fff;border-bottom:none;color:#666}
+#saveOffLineId table tr,#saveOffLineId table td{float:none}
+#list_1 .xBox{border:solid 1px #CCC;margin:20px 0;}
+#list_1 .xBox .top input{margin-right:10px;}
+#list_1 .xBox .top span{color:#F30;font-size:16px;font-weight:bold;}
+#list_1 .xBox .top p{margin-top:10px;margin-left:200px;}
+#list_1 .xBox .top{border-bottom:solid 1px #CCC;height:auto;width:auto;}
+#list_1 .xBox .top .daxie{margin-bottom:10px;}
+#list_1 .xBox .bottom .zhifu{margin-top:10px;margin-left:200px;overflow:hidden;}
+#list_1 .xBox .bottom .zhifu div{float:left;}
+#list_1 .xBox .bottom .zhifu .fangshi a{display:block;background-image:url(../../images/chongzhi_03.png);background-repeat:no-repeat;background-position:center center;width:90px;height:50px; text-align:center;line-height:50px;margin-left:10px;}
+
+#submit{ width:845px; text-align:center; margin:20px 0;}
+.submit_bt{font:18px/34px "Microsoft YaHei";width:110px;height:36px; background: #11a9e1;color:#fff;cursor:pointer;margin:0 auto;border-radius:3px; border:0;}
+.submit_bt1{font:18px/34px "Microsoft YaHei";width:110px;height:36px; background: #ccc;color:#fff;margin:0 auto;border-radius:3px; border:0;}
+.submit_bt:hover{background:#ff9c00;border:0;}
+.cancel_bt{font:18px/34px "Microsoft YaHei";width:110px;height:36px; text-align:center; background: #ff9c00;color:#fff;cursor:pointer;margin-left:50px;border-radius:3px; border:0;}
+.cancel_bt:hover{background:#999;border:0;}
+
+
+#button{ width:650px; text-align:center;margin:20px 0;}
+.submit_bt{font:16px/34px "Microsoft YaHei";width:120px;height:36px; background:#f59b3b ;color:#fff;cursor:pointer;margin:0 auto;border-radius:3px; border:0;}
+.submit_bt:hover{background:#11a9e1;border:0;}
+
+
+#list_2 .table td{padding:10px;text-align:left}
+#list_2 .fr{ text-align:right; }
+#list_2 .fr input{margin-right:5px; }
+#list_2 .table{margin:10px 0;}
+#list_2 .table .chuan{border:none;width:150px; margin:0;}
+#list_2 .table span{font-size:12px;}
+#list_2 .table .yu{margin-left:10px; padding:5px 0;}
+#list_2 .table .lan{height:100px;border:solid 1px #ddd;margin-left:10px;}
+#list_2 .tijiao{width:240px;margin:10px 0;}
+#list_2 .tijiao .submit{text-align:center;background-color:#F93;color:#FFF;text-align:center;width:100px;}
+#list_2 .tijiao .button{text-align:center;background-color:#999;color:#000;text-align:center;width:100px;}
+
+
+#list_3 .tishi span{color:#F00;font-weight:bold;}
+#list_3 .tishi{margin-top:10px;}
+#list_3 .table1{margin-top:10px;text-align:center;}
+#list_3 .table1 tr th{background-color:#F0F0F0;height:40px;}
+#list_3 .table1 td{padding:7px 10px ;}
+
+
+
+
+#radio_wrap{ float:left; width:350px; padding-left:6px;}
+.zhifu span{  float:left;}
+#radio_wrap input{display: none;}
+#radio_wrap li{position:relative; width: 92px; height: 44px;    display:inline-block; *display:inline; *zoom:1; margin:0 6px;}
+#radio_wrap li.checked{border:1px solid #4bd162;margin:0px;}
+#radio_wrap li.checked i{width:10px; height:10px; position:absolute; right:0; bottom:0;_right:-1px; _bottom:-1px;background:url(../../images/sys_item_selected.gif)  no-repeat;}
+#radio_wrap li .zffs{ width:90px; height:42px; float:left; background:#f7f7f7; border:1px solid #ddd; color:#666; font-size:16px; text-align:center; line-height:45px;}
+
+/*验证样式*/
+#yanzhena{color:red;}
+#tishiyanzheng{text-align: center;width: 80%;display: block;font-size: 15px;margin-bottom: 20px;}

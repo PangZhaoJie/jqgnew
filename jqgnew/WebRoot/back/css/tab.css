@@ -1,0 +1,12 @@
+
+
+/*滑动效果css*/
+#hotnews_caption { position:relative;height:44px; border-bottom: 1px solid #d0dee5; margin-top:10px;s}
+#hotnews_caption ul{  padding:0;margin-left:70px;border-left: 1px solid #d3dbde; width:800px; float:left; }
+#hotnews_caption ul li {float:left;width:110px; background:url(../images/itabbg.png) 0px 0 repeat-x; line-height:44px;border-right:solid 1px #d3dbde; font-size:15px; text-align:center; cursor:pointer;  }
+#hotnews_caption .current{ color:#006ac7;cursor:pointer; border-left: 1px solid #d3dbde; line-height:42px;display:block; border-top:3px solid #006ac7; background:#fff;  }
+#hotnews_content{ padding:15px 0px ; float:left;}
+#hotnews_content .normal{ display:none;}
+#hotnews_content .current{ display:block;}
+
+#list_1,#list_2,#list_3,#list_4,#list_5,#list_6,#list_7{ float:left; padding: 0; }

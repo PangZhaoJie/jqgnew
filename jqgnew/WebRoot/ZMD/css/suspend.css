@@ -1,0 +1,32 @@
+.pd{
+	width: 280px;
+	height: 300px;
+	float: right;
+	position: absolute;
+	right: 100px;
+	top: 70px;
+	background:url(../../img/transp.png) repeat;
+   }
+   
+.pd ul{
+	width:100%;
+	height:100%;
+    }
+.denglu{
+	position: absolute;
+	top: 86%;
+	left: 55%;
+	font-weight:bold;
+	color: #FFFFFF;
+	font-size: 15px;
+}
+.zhuce{
+	position: absolute;
+	top: 70%;
+	left: 35%;
+	font-weight:bold;
+	color: #FFFFFF;
+	font-size: 15px;
+}
+    
+    

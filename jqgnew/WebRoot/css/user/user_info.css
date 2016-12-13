@@ -1,0 +1,45 @@
+﻿@charset "utf-8";
+.guide{ width:1180px;line-height:30px; font-size:15px;}
+
+/*基本资料*/
+input{border:1px solid #ccc; border-radius:3px;vertical-align:middle;outline:none; height:32px; float:left; margin-left:10px; padding-left:8px; color:#999;}
+#hotnews_caption { width:885px;  overflow:hidden;float:left; height:45px; border-bottom:1px solid #c2dae8;   }
+#hotnews_caption ul{ margin:0;padding-left:2px; display:block; overflow:hidden;background:#ebf1f6;}
+#hotnews_caption ul li {float:left;width:116px; line-height:44px; border-right:1px solid #c4d5e3; font-size:16px; text-align:center; cursor:pointer;  }
+#hotnews_caption .current{ color:#f59b3b;cursor:pointer; display:block; border-top:3px solid #f59b3b; background:#fff;  }
+#hotnews_content{width:845px;height:auto; padding:20px ;float:left;}
+#hotnews_content .normal{ display:none;}
+#hotnews_content .current{ display:block;}
+
+#list_1,#list_2,#list_3,#list_4,#list_5,#list_6{width:845px;height:auto; float:left; padding:15px 0; }
+#list_1 .info,#list_2 .info,#list_3 .info,#list_4 .info,#list_5 .info,#list_6 .info{ float:left; width:845px; padding:8px 0; line-height:32px;}
+#list_1 .info .title,#list_4 .info .title,#list_5 .info .title{ float:left; width:135px; text-align:right; }
+#list_1 .info .tip,#list_2 .info .tip,#list_3 .info .tip,#list_4.info .tip,#list_5 .info .tip,#list_6 .info .tip{ float:left; padding-left:15px;}
+#list_1 .info p em,#list_2 .info p em,#list_3 .info p em,#list_4 .info p em,#list_5 .info p em,#list_6 .info p em{ float:left; padding-left:5px;}
+
+#list_2 .info .title2,#list_3 .info .title2,#list_6 .info .title2{ float:left; width:105px; text-align:right; padding-left:100px; /* color:#f59b3b;*/}
+#list_1 .info input:hover,#list_2 .info input:hover,#list_3 .info input:hover,#list_4 .info input:hover,#list_5 .info input:hover,#list_6 .info input:hover{border:1px solid #0095eb;}
+
+.tip a{ color:#f59b3b; text-decoration:none;}
+.add{ float:left; width:650px; }
+.add span{ line-height:35px; float:left; padding:0px 15px 0px 10px;}
+
+/*表单下拉列表框*/
+#uboxstyle { float:left; width:189px;padding:0; margin-left:10px;}
+#uboxstyle .select_box{width:189px;height:37px; padding:0; }
+#uboxstyle div.tag_select{display:block;color:#666;width:169px;height:37px;background:transparent url(../../images/select_bg01.jpg) no-repeat 0 0;padding:0 10px;line-height:37px;}
+#uboxstyle div.tag_select_hover{display:block;color:#666;width:169px;height:37px;background:transparent url(../../images/select_bg03.jpg) no-repeat 0 0px;padding:0 10px;line-height:37px;}
+#uboxstyle div.tag_select_open{display:block;color:#666;width:169px;height:37px;background:transparent url(../../images/select_bg02.jpg) no-repeat 0 0px;padding:0 10px;line-height:37px;}
+#uboxstyle ul.tag_options{position:absolute;padding:0;margin:0px; list-style:none;background:transparent url(../../images/select_bg07.jpg) no-repeat right bottom;width:189px;padding:0 0 5px;}
+#uboxstyle ul.tag_options li{width:169px;background:transparent url(../../images/select_bg06.jpg) repeat-y 0 0;display:block;padding:0 10px;height:34px;text-decoration:none;line-height:34px;color:#666;}
+#uboxstyle ul.tag_options li.open_hover{background:transparent url(../../images/select_bg04.jpg) no-repeat 0 0px;color:#0066cc;}
+#uboxstyle ul.tag_options li.open_selected{background:transparent url(../../images/select_bg05.jpg) no-repeat 0 0px;color:#fff;}
+.person{ width:600px; height:100px;border:1px solid #ccc; margin-left:10px; }
+
+#savebtn{ width:860px; float:left;  margin-top:15px; }
+.save_bt{font:16px/36px "Microsoft YaHei";width:140px;height:38px; background: #f59b3b; float:left; margin-left:240px;color:#fff;cursor:pointer;border-radius:3px; border:0; display:inline;}
+.save_bt:hover{background:#56C1ED;}
+.skip_bt{font:16px/36px "Microsoft YaHei";width:140px;height:38px; background: #f59b3b; float:left; margin-left:40px;color:#fff;cursor:pointer;border-radius:3px; border:0; display:inline;}
+
+#boxstyle { float:left; padding:0; margin-left:10px;}
+#boxstyle .tag_select{width:160px;height:35px; padding:0; border:1px solid #ddd; height:35px; line-height:35px; }

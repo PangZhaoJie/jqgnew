@@ -1,0 +1,43 @@
+﻿@charset "utf-8";
+.guide{ width:1180px;line-height:30px; font-size:15px;}
+.user_l{ width:245px; background:#fff; border:1px solid #ddd; height:100%; margin-top:15px; float:left;}
+.user_l h2{ height:50px; background:#f59b3b; line-height:50px; text-align:center; color:#fff; font-weight:normal; font-size:20px; }
+.guide{ width:1180px;line-height:30px; font-size:15px; margin:0 auto;}
+table{border-collapse: collapse;}
+
+/*菜单个性设置*/
+.mem_l ul{list-style:none; text-align:center;}
+
+/*一级菜单*/
+.menu li.level1{line-height:45px;margin:12px 10px;  }
+.menu li.level1 a{display:block;  font-size:16px; padding-left:10px;background:url(../../images/men_hover_bg.jpg) no-repeat 200px 3px #f7f7f7;}
+.menu li.level1 a i{ padding:8px; float:left;}
+/*一级菜单两态样式,供JS调用*/
+.menu li.level1 a.hove{color:#f59b3b ;background:url(../../images/men_hover_bg.jpg) no-repeat 200px -45px #ebf1f6;}
+.menu li.level1 a.cur{color:#f59b3b ;background:url(../../images/men_hover_bg.jpg) no-repeat 200px -45px #ebf1f6;}
+
+
+/*二级菜单*/
+.menu li ul{ padding:10px 0px; margin:0; overflow:hidden;}
+.menu li ul.level2{width:200px; height:auto;display:none; padding:5px 10px 16px 10px;}
+.menu li ul.level2 li{height:36px;line-height:36px;border-bottom:1px solid #e9e9e9; background:url(../../images/dot.jpg) 22px center no-repeat;}
+.menu li ul.level2 li a{display:block; font-size:14px;color:#42556B; background:none;overflow:hidden; padding-left:35px;  } 
+
+/*二级菜单两态样式,供JS调用*/
+.menu li ul.level2 li a.hove1{color:#f59b3b ;}
+
+
+/*右侧*/
+.user_r{ width:885px; height:auto; float:right;border:1px solid #ddd;margin-top:15px; background:#fff; padding:15px;}
+
+/*右侧滑动*/
+#hotnews_caption { width:885px;  overflow:hidden;float:left; height:45px; border-bottom:1px solid #c2dae8;   }
+#hotnews_caption ul{ margin:0;padding-left:2px; display:block; overflow:hidden;background:#ebf1f6;}
+#hotnews_caption ul li {float:left;width:116px; line-height:45px; border-right:1px solid #c4d5e3; font-size:16px; text-align:center; cursor:pointer;  }
+#hotnews_caption .current{ color:#f59b3b;cursor:pointer; line-height:42px;display:block; border-top:3px solid #f59b3b; background:#fff;  }
+#hotnews_content{width:845px;min-height:440px;_height:440px;  padding:20px ;float:left;}
+#hotnews_content .normal{ display:none;}
+#hotnews_content .current{ display:block;}
+
+#list_1,#list_2,#list_3,#list_4,#list_5,#list_6{width:845px;height:auto; float:left; padding:15px 0; }
+.tablelink{color:#056dae;}

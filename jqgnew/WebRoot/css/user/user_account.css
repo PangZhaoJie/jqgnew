@@ -1,0 +1,57 @@
+﻿@charset "utf-8";
+
+/**/
+input{border:1px solid #ccc; border-radius:3px;vertical-align:middle;outline:none; height:32px; line-height:32px;  margin-left:10px; padding-left:8px; color:#999;}
+table{border-collapse: collapse;}
+input:hover{border:1px solid #0095eb;}
+#list_1 p,#list_2 p{width:825px; line-height:37px; color:#f59b3b ; background:url(../../images/info.gif) left center no-repeat; padding-left:20px;}
+#list_1 .title{ float:left; text-align:right; line-height:40px; padding-left:10px;}
+
+table{border-collapse: collapse;}
+.zh_table{  margin-top: 35px; float:left;}
+.zh_table .th1 { font-weight: bold;padding:0px 20px; text-align: left; height:40px; font-size:15px;}
+.zh_table .th2 { font-weight: bold; padding:0px 20px; text-align: left; height:65px; font-size:15px;}
+.zh_table .th3 { font-weight: bold; height:55px; font-size:15px; background:#f9f9f9;margin-top: 15px;}
+.zh_table th { background-color: #f9f9f9; border: 1px solid #ddd; font-weight: normal; text-align: center;}
+.zh_table td { border: 1px solid #ddd; text-align: center;line-height:20px; padding:10px 0;}
+.zh_table .fr{ width:160px; text-align:right; padding-right:8px;} 
+.zh_table .fc{ width:160px; text-align:center;} 
+.zh_table .fl{ width:500px; text-align:left;padding-left:8px;}
+ 
+.zh_table .zfl{width:132px; text-align:left;padding-left:8px;}
+.red{ color:#fc0000;}
+.green{ color: #090;}
+
+
+/*资金明细*/
+.a_tip1{width:825px; line-height:30px; color:#f59b3b ; background:url(../../images/info.gif) left 10px no-repeat; padding-left:20px;}
+.a_tip2{width:825px; line-height:40px; padding-left:20px; margin-top:10px; border:1px dashed #ccc;}
+.a_detail{width:845px; float:left; padding:8px 0; margin-top:2px; border-bottom:2px solid #ddd; }
+.a_detail_title{width:845px; height:40px; }
+
+/*表单下拉列表框*/
+#uboxstyle { float:left; padding:0; margin-left:10px;}
+#uboxstyle .select_box{width:189px;height:37px; padding:0; }
+#uboxstyle div.tag_select{display:block;color:#666;width:169px;height:37px;background:transparent url(../../images/select_bg01.jpg) no-repeat 0 0;padding:0 10px;line-height:37px;}
+#uboxstyle div.tag_select_hover{display:block;color:#666;width:169px;height:37px;background:transparent url(../../images/select_bg03.jpg) no-repeat 0 0px;padding:0 10px;line-height:37px;}
+#uboxstyle div.tag_select_open{display:block;color:#666;width:169px;height:37px;background:transparent url(../../images/select_bg02.jpg) no-repeat 0 0px;padding:0 10px;line-height:37px;}
+#uboxstyle ul.tag_options{position:absolute;padding:0;margin:0px; height:170px; overflow-x:hidden;overflow-y:auto;  list-style:none;border: 1px solid #00a8e7; border-radius: 4px;width:189px;padding:0 0 5px; background:#fff;}
+#uboxstyle ul.tag_options li{width:169px;display:block;padding:0 10px;height:34px;text-decoration:none;line-height:34px;color:#666;}
+#uboxstyle ul.tag_options li.open_hover{background:#d0e8f2 repeat;color:#0066cc;}
+#uboxstyle ul.tag_options li.open_selected{background:#049cf2 repeat;color:#fff;}
+#uboxstyle em{ float:left; padding-left:5px; }
+
+.date{ float: left; padding-left:15px;}
+.date input{height: 35px;line-height: 35px;width: 95px;margin:0 8px; color:#999;}
+.search{  float:left;  }
+.save_bt{font:16px/34px "Microsoft YaHei";width:90px;height:36px; background: #1483e3; margin:0; padding:0;color:#fff;cursor:pointer;border-radius:3px; border:0; display:inline;}
+.save_bt:hover{background:#ff9c00; color:#fff; border:0;}
+.search .download{  padding-left:10px; }
+
+
+/*翻页 样式*/
+.page{ float:left;padding:10px 0px; height:35px; font-size:14px; text-align: center;  width:845px ; margin-top:20px;}
+.page a {border-color: #dbdbdb; border-right: 1px solid #dbdbdb; border-style:solid;border-width: 1px; color: #555; background:#f6f6f6; margin: 3px 7px; padding: 4px 9px;text-decoration: none;}
+.page span.disabled,.page a:hover,.page a:active { border:1px solid #00a0ec;   color: #555;   margin: 3px 7px; padding: 4px 9px;}
+.page span.skip{ padding:0px 10px;}
+.page span.skip input{ margin:0px 5px;}

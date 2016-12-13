@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+  <constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+     <package name="appjson" namespace="/appjson"  extends="json-default">
+        <!-- 登陆 -->
+         <action name="login" class="com.jqg.app.UservipAction"  method="login"></action>
+         <action name="sendCode" class="com.jqg.app.UservipAction"  method="sendCode"></action>
+         <action name="updatePassword" class="com.jqg.app.UservipAction"  method="updatePassword"></action>
+         <action name="findPhotosByType" class="com.jqg.app.UservipAction"  method="findPhotosByType"></action>
+         <action name="getAccountInfo" class="com.jqg.app.UserCenterAction"  method="getAccountInfo"></action>
+         <action name="fundsRecordInfo" class="com.jqg.app.UserCenterAction"  method="fundsRecordInfo"></action>
+         <action name="findInvestRecord" class="com.jqg.app.UserCenterAction"  method="findInvestRecord"></action>
+         <action name="getBankCardList" class="com.jqg.app.UserCenterAction"  method="getBankCardList"></action>
+         <action name="showBank" class="com.jqg.app.UserCenterAction"  method="showBank"></action>
+         <action name="addBankCardInList" class="com.jqg.app.UserCenterAction"  method="addBankCardInList"></action>
+         <action name="deleteBankCard" class="com.jqg.app.UserCenterAction"  method="deleteBankCard"></action>
+         <action name="addPayPassword" class="com.jqg.app.UserCenterAction"  method="addPayPassword"></action>
+         <action name="updatePwd" class="com.jqg.app.UserCenterAction"  method="updatePwd"></action>
+         <!-- 注册 -->
+         <action name="captcha" class="com.jqg.app.RegisterAction" method="captcha"></action>
+         <action name="register" class="com.jqg.app.RegisterAction" method="register"></action>
+         <action name="save" class="com.jqg.app.RegisterAction" method="save"></action>
+         <!-- 投资人列表 -->
+         <action name="GetInvestmentList" class="com.jqg.app.IndexAction" method="GetInvestmentList"></action>
+         <action name="findLssuingById" class="com.jqg.app.IndexAction" method="findLssuingById"></action>
+         <!-- 购买接口 -->
+         <action name="Buy" class="com.jqg.app.IndexAction" method="Buy"></action>
+         <!-- 购买接口 -->
+          <action name="lcBuy" class="com.jqg.app.IndexAction" method="lcBuy"></action>
+         <!-- 充值接口 -->
+         <action name="recharge" class="com.jqg.app.IndexAction" method="recharge"></action>
+         <!-- 验证用户状态 -->
+         <action name="checkUserState" class="com.jqg.app.IndexAction" method="checkUserState"></action>
+         <!-- 提现手机验证码 -->
+         <action name="sendMessage" class="com.jqg.app.IndexAction" method="sendMessage"></action>
+         <!-- 提现申请 -->
+         <action name="withdraw" class="com.jqg.app.IndexAction" method="withdraw"></action>
+         <!-- 新标预告 -->
+         <action name="Recommend" class="com.jqg.app.IndexAction" method="Recommend"></action>
+         <!-- 最新活动接口 -->
+         <action name="GetActivity" class="com.jqg.app.IndexAction" method="GetActivity"></action>
+         <!-- 借款列表 -->
+         <action name="lssuing" class="com.jqg.app.IndexAction" method="lssuing"></action>
+         <!-- 获取更多的投标记录 -->
+         <action name="getLssuingRecord" class="com.jqg.app.IndexAction" method="getLssuingRecord"></action>
+         <!--身份证验证接口 -->
+		 <action name="IDCardCertification" class="com.jqg.app.AppCertificationAction" method="IDCardCertification"></action>
+		 <!-- 邮箱验证接口 -->
+		 <action name="mailCertification" class="com.jqg.app.AppCertificationAction" method="mailCertification"></action>
+		 <!--手机认证短信验证接口 -->
+		 <action name="phoneMessage" class="com.jqg.app.AppCertificationAction" method="phoneMessage"></action>
+		 <!--手机认证接口 -->
+		 <action name="phoneSet" class="com.jqg.app.AppCertificationAction" method="phoneSet"></action>
+		 <!--个人认证信息接口 -->
+		 <action name="certificationInfo" class="com.jqg.app.UserCenterAction" method="certificationInfo"></action>
+		 <!-- 开通托管账户 -->
+         <action name="openUser" class="com.jqg.app.IndexAction" method="openUser"></action>
+         <!-- 开通授权 -->
+         <action name="authorize" class="com.jqg.app.IndexAction" method="authorize"></action>
+         <!-- 债权转让详情列表 -->
+         <action name="findTransferByID" class="com.jqg.app.IndexAction" method="findTransferByID"></action>
+         <!-- 撤销债权转让 -->
+         <action name="cancelTransfer" class="com.jqg.app.IndexAction" method="cancelTransfer"></action>
+         <!-- 债权转让购买 -->
+         <action name="transferBuy" class="com.jqg.app.IndexAction" method="transferBuy"></action>
+         <!-- 可转让债权列表 -->
+         <action name="transferlistPage" class="com.jqg.app.IndexAction" method="transferlistPage"></action>
+     </package>
+</struts>

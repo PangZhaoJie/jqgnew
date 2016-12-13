@@ -1,0 +1,55 @@
+
+/*------------弹窗效果css------------*/
+
+.black_overlay{  display: none; position: fixed; top: 0%; left: 0%;  width: 100%; height: 100%; background-color: black; z-index:1001;  -moz-opacity: 0.3; opacity:0.3; filter: alpha(opacity=30); } 
+.white_content { display: none; position: absolute; top:7%; left: 25%; border:5px solid #ddd; width:800px;  height:auto; padding:0px ; background-color:#fff; z-index:1002; overflow: auto; } 
+.light_title{ width:100%; height:42px; background:#0b76ba;}
+.light_title span{ width:350px;line-height:42px; float:left; color:#fff; font-size:16px; text-indent:10px;}
+.close{ width:30px; height:30px; float:right; padding-top:8px;}
+.light_box{ padding:30px 16px 20px 16px; }
+
+
+/*----------弹窗内的滑动效果css----------*/
+
+/* tabbtn */
+.tabbtn {height:44px; border-bottom: 1px solid #d0dee5;border-left: 1px solid #d3dbde; }
+.tabbtn li {float:left;position:relative;display:block;width:110px; background:url(../images/itabbg.png) repeat-x; line-height:44px;border-right:solid 1px #d3dbde; font-size:15px; text-align:center; cursor:pointer;}
+.tabbtn li.current {color:#006ac7;cursor:pointer; width:110px;line-height:42px;display:block; border-top:3px solid #006ac7; background:#fff;}
+/* tabcon */
+.tabcon {position:relative;/*必要元素*/height:auto;width:768px; padding:15px 0px ;overflow:hidden;}
+.tabcon .subbox {position:absolute;/*必要元素*/left:0;top:0;}
+.tabcon .sublist {width:768px; height:auto;}
+/* leftcon */
+#leftcon .subbox {width:9999em;}
+#leftcon .subbox .sublist {float:left;width:748px;}
+/* sublist */
+.sublist {padding:0px;}
+.sublist li {line-height:28px;font-size:12px;}
+.sublist li span {margin:0 5px 0 0;font-family:"宋体";font-size:12px;font-weight:400;color:#ddd;}
+
+.sublist dl {}
+.sublist .lineD { position: relative;border-bottom: 1px dashed #e2e2e2; float:left; width:768px;}
+.sublist dt { color: #666; float: left; margin: 0;line-height:35px;font-size:14px; text-align: right;width: 120px;}
+.sublist dt b{ color: #093; width: 120px;}
+.sublist dd  {width: 250px; float:left; margin-left: 10px; line-height:35px; vertical-align: middle;}
+
+.sublist .lineD  dd span{color: #7d7d7d; margin-top:5px;}
+#xwidth {width: 500px;float:left;margin-left: 10px; line-height:35px;}
+.sublist dd i{float:left;background:url(../images/tend_pic.png) no-repeat; font-style:normal;width:60px;height:26px;text-indent:26px;color:#fff;line-height:26px!important;font-size:12px!important;margin:0 8px 6px 0;cursor:pointer}
+.sublist dd .sm{background-position:0 -24px;}
+.sublist dd .sm.yes{background-position:0 -54px;}
+.sublist dd .tel{background-position:-130px -24px;}
+.sublist dd .tel.yes{background-position:-130px -54px;}
+.sublist dd .mail{background-position:-66px -24px;}
+.sublist dd .mail.yes{background-position:-66px -54px;}
+.sublist dd .pay{background-position:-195px -24px;}
+.sublist dd .pay.yes{background-position:-195px -54px;}
+.sublist dd .video{background-position:-262px -24px;}
+.sublist dd .video.yes{background-position:-262px -54px;}
+.sublist dd .datum{background-position:-330px -24px;}
+.sublist dd .datum.yes{background-position:-330px -54px;}
+
+.sublist li #info_title { width:100px; display:block; float:left;}
+
+.sublist li{ width:100%;margin:6px 0; float:left; line-height:34px;}
+.sublist li span{  padding-left:10px; color:#999; float:left; }

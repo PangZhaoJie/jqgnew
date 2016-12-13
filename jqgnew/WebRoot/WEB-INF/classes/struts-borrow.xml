@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+  <constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+    
+ 
+    <package name="borrow" namespace="/borrow" extends="default">
+    
+    
+    	<!-- 定义一个拦截器 -->  
+        <interceptors>  
+            <interceptor name="boorow"  
+                class="com.jqg.Interceptor.CkeckBackLogin">  
+            </interceptor>  
+
+            <!-- 拦截器栈 -->  
+                <interceptor-stack name="teamwareStack">  
+                <interceptor-ref name="defaultStack" />  
+                 <interceptor-ref name="boorow" />  
+
+            </interceptor-stack>  
+        </interceptors>  
+       <!--  <default-interceptor-ref name="teamwareStack"/>  同一个package默认此拦截器-->
+        
+         <!-- 定义全局Result -->  
+        <global-results>  
+            <!-- 当返回login视图名时，转入/login.jsp页面 -->  
+            <result name="login"  type="redirect">/login/login.jsp</result>  
+        </global-results> 
+ 		<!-- 发标页面初始化 -->
+        <action name="toLssuing" class="com.jqg.struts.LssuingAction" method="toLssuing">
+        	<result>/borrow/borrow.jsp</result>	  
+            <interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+        </action>
+        <!-- 保存发标 -->
+       <action name="saveLssuing" class="com.jqg.struts.LssuingAction" method="saveLssuing">
+       <interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+	        <result name="success" >/jump.jsp</result>
+         </action>
+ 		<!-- 自动投标页面初始化 -->
+        <action name="automaticbid" class="com.jqg.struts.LssuingAction" method="toAutomaticbid">
+             <interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+        	<result name="success">/user/user_invest.jsp</result>
+        </action>
+        <!-- 自动投标页面-新增 -->
+        <action name="addAutomaticbid" class="com.jqg.struts.LssuingAction" method="addAutomaticbid">
+        <interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+        	<result name="success" type="redirectAction">
+        	 	<param name="actionName">automaticbid?userId=${userId}</param>
+        	</result>
+        </action>
+        <!-- 自动投标页面-修改页面初始化 -->
+        <action name="toUpdateAutomaticbid" class="com.jqg.struts.LssuingAction" method="toUpdateAutomaticbid">
+        <interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+        	<result name="success">/user/user_invest.jsp</result>
+        </action>
+        <!-- 自动投标页面-修改 -->
+        <action name="updateAutomaticbid" class="com.jqg.struts.LssuingAction" method="updateAutomaticbid">
+        <interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+        	<result name="success" type="redirectAction">
+        	 	<param name="actionName">automaticbid?userId=${userId}</param>
+        	</result>
+        </action>
+        <!-- 自动投标页面-删除 -->
+        <action name="toDeleteInvest" class="com.jqg.struts.LssuingAction" method="toDelete">
+        <interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+        	<result name="success" type="redirectAction">
+        	 	<param name="actionName">automaticbid?userId=${userId}</param>
+        	</result>
+        </action>  
+        
+          <!-- 资金统计 -->
+        <action name="toAccount" class="com.jqg.struts.MoneyCountAction" method="toAccount">
+        <interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+        	<result name="success">/user/user_account.jsp</result>
+        </action>   
+        <!-- 资金历史记录 -->
+        <action name="toAccountHistory" class="com.jqg.struts.MoneyCountAction" method="toAccountHistory">
+        <interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+        	<result name="success">/user/user_money_list.jsp</result>
+        </action>  
+       <!-- 充值 --> 
+        <action name="toChongzhi" class="com.jqg.struts.RechargeAction" method="toChongzhi">
+        <interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+        	<result name="success">/user/user_chongzhi.jsp</result>
+        </action>
+        <!-- 托管充值处理 -->
+        <action name="trustRecharge" class="com.jqg.struts.RechargeAction" method="trustRecharge">
+        <interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+        	<result name="success">/loan/tranjump.jsp</result>
+        </action> 
+ 
+       <!-- 关闭 --> 
+        <action name="toOffLine" class="com.jqg.struts.RechargeAction" method="toOffLine">
+        <interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+        	<result name="success">/user/user_chongzhi.jsp</result>
+        </action>
+        <!-- 保存 --> 
+        <action name="saveOffLine" class="com.jqg.struts.RechargeAction" method="saveOffLine">
+        <interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+         	<result name="success" type="redirectAction">
+        	 	<param name="actionName">toChongzhi?userId=${userId}</param>
+<!--			<result name="success">/jump.jsp</result>-->
+			</result>
+        </action> 
+        <!-- 充值 --> 
+        <action name="toNote" class="com.jqg.struts.RechargeAction" method="toNote">
+        <interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+        	<result name="success">/user/user_chongzhi.jsp</result>
+        </action>
+        <!-- 充值 --> 
+        <action name="toBaofu" class="com.jqg.struts.RechargeAction" method="toBaofu">
+        <interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+        	<result name="success">/baofoo/post.jsp</result>
+        </action>
+        <!-- 充值 --> 
+        <action name="huichao" class="com.jqg.struts.RechargeAction" method="huichao">
+        <interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+        	<result name="success">/huichao/paysubmit.jsp</result>
+        </action>
+        <!-- 充值 --> 
+        <action name="yibao" class="com.jqg.struts.RechargeAction" method="toYiBao">
+        <interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+        	<result name="success">/yibao/reqpay.jsp</result>
+        </action>
+         <!-- 充值 --> 
+        <action name="guofubao" class="com.jqg.struts.RechargeAction" method="guoFuBao">
+        <interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+        	<result name="success">/guofubao/sign.jsp</result>
+        </action>
+         <!--易通支付 --> 
+        <action name="easypay" class="com.jqg.struts.RechargeAction" method="easypay">
+        <interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+        	<result name="success">/easypay/sign.jsp</result>
+        </action>
+          <!-- 充值 --> 
+        <action name="toResultPage" class="com.jqg.struts.RechargeAction" method="toResultPage">
+        <interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+        	<result name="success" type="redirectAction">
+        	 	<param name="actionName"></param>
+        	</result>
+        </action> 
+        
+        <!-- 借款总表 --> 
+        <action name="toBorrowTotal" class="com.jqg.struts.LssuingAction" method="toBorrowTotal">
+        <interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+        	<result name="success">/user/user_borrow_total.jsp</result>
+        </action>
+         <!-- 发布列表 --> 
+        <action name="toLssuingList" class="com.jqg.struts.LssuingAction" method="toLssuingList">
+        <interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+        	<result name="success">/user/user_borrow_total.jsp</result>
+        	<result name="toReturn">/user/user_repay.jsp</result>
+        </action>
+      
+        <!-- 还款列表--> 
+        <action name="toRePayList" class="com.jqg.struts.LssuingAction" method="toRePayList">
+        <interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+        	<result name="success">/user/user_repay.jsp</result>
+        </action>
+        <!-- 理财还款列表--> 
+        <action name="LCRePayList" class="com.jqg.struts.LssuingAction" method="toRePayList">
+        	<result name="success">/back/2_return2.jsp</result>
+        </action>
+        
+         <!-- 我要还款--> 
+        <action name="toFenMoney" class="com.jqg.struts.LssuingAction" method="toFenMoney">
+        <interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+        	<result name="success" type="redirect">
+        	 	 /borrow/toRePayList?lssuingId=${lssuingId}&amp;resultReturn=${resultReturn} 
+        	</result>
+        	<result name="loanjump">/loan/tranjump.jsp</result>
+        </action>  
+        
+        
+        
+        <!-- 借款管理 -还款操作-->
+        <action name="tobackFenMoney" class="com.jqg.struts.BackLssuingAction" method="tobackFenMoney">
+        	<result name="success">/back/jump.jsp</result>
+        	<result name="loanjump">/loan/tranjump.jsp</result>
+        	 <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <!-- 借款管理 -还款-->
+        <action name="rePayList" class="com.jqg.struts.BackLssuingAction" method="rePayList">
+        	<result name="success">/back/2_repaylist.jsp</result>
+        	 <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <!-- 后台还款列表-还款-->
+        <action name="toBackLssuing" class="com.jqg.struts.BackLssuingAction" method="toBackLssuing">
+        	<result name="success">/back/2_return1.jsp</result>
+        	 <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>  
+        <!-- 逾期借款查询-->
+        <action name="overdueLassuing" class="com.jqg.struts.BackLssuingAction" method="overdueLassuing">
+        	<result name="success">/back/2_return2.jsp</result>
+        	 <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <!-- 网站垫付 -->
+        <action name="webAdvance" class="com.jqg.struts.BackLssuingAction" method="webAdvance">
+        	<result name="success" type="redirect">
+        	 	 /borrow/overdueLassuing
+        	</result>
+        	<result name="loanjump">/loan/tranjump.jsp</result>
+        	 <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <!-- 借款管理 -投资清单-->
+        <action name="investList" class="com.jqg.struts.BackLssuingAction" method="investList">
+        	<result name="success">/back/2_return.jsp</result>
+        	 <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+          <!-- 借款管理 -后台发布视图-->
+        <action name="toBackLssuingView" class="com.jqg.struts.BackLssuingAction" method="toBackLssuingView">
+        	<result name="success">/back/2_tab.jsp</result>
+        	 <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+         <!-- 借款管理 -后台发布体验视图-->
+        <action name="toTiroLssuing" class="com.jqg.struts.BackLssuingAction" method="toTiroLssuing">
+        	<result name="success" type="redirect">/borrow/toBackLssuingView?lssuingId=${lssuingId}&amp;queryFlag=${queryFlag}&amp;mark=${mark} </result>
+        	<result name="other" type="redirect">/borrow/toBackLssuing?queryFlag=${queryFlag}</result>
+        </action>
+        <!-- 借款管理-更新发布 -->
+        <action name="toUpdateLssuing" class="com.jqg.struts.BackLssuingAction" method="toUpdateLssuing">
+        	<result name="success" type="redirect">/borrow/toBackLssuingView?lssuingId=${lssuingId}&amp;queryFlag=${queryFlag}&amp;mark=${mark}&amp;lssuingType=${lssuingType}</result>
+        	<result name="success2" type="redirect">/borrow/findLssuingById?lssuingId=${lssuingId}&amp;queryFlag=${queryFlag}&amp;mark=${mark}&amp;lssuingType=${lssuingType} </result>
+        	<result name="other" type="redirect">/borrow/toBackLssuing?queryFlag=${queryFlag}&amp;lssuingType=${lssuingType}</result>
+        	<result name="loanjump">/loan/tranjump.jsp</result>
+  
+         </action> 
+         
+         <!-- 借款期限时间未满标-流标处理 -->
+         <action name="miscarryTender" class="com.jqg.struts.BackLssuingAction" method="miscarryTender">
+        	<result name="success" type="redirect">/borrow/toBackLssuingView?lssuingId=${lssuingId}&amp;queryFlag=${queryFlag}&amp;mark=${mark} </result>
+        	<result name="other" type="redirect">/borrow/toBackLssuing?queryFlag=${queryFlag}</result>
+        	<result name="loanjump" >/loan/tranjump.jsp</result>
+  		</action>  
+        
+        <!-- 借款管理===审核=借款方图片 -->
+        <action name="toSavePhoto" class="com.jqg.struts.BackLssuingAction" method="toSavePhoto">
+        	<result name="success" type="redirect">/borrow/toBackLssuingView?lssuingId=${lssuingId}&amp;mark=${mark} </result>
+ 
+        </action>
+        <!-- 借款管理===审核=删除借款方图片 -->
+        <action name="toDelete" class="com.jqg.struts.BackLssuingAction" method="toDelete">
+        	<result name="success" type="redirect">/borrow/toBackLssuingView?lssuingId=${lssuingId}&amp;mark=${mark} </result>
+        </action>  
+		<!-- 企业借款===添加企业借款 -->
+        <action name="toFirmView" class="com.jqg.struts.BackLssuingAction" method="toFirmView">
+        	<result name="success">/back/2_createFirm.jsp</result>
+        	 <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+       <!-- 企业借款===保存企业借款 -->
+       <action name="saveFirmLssuing" class="com.jqg.struts.LssuingAction" method="saveFirmLssuing">
+	        <result name="success" >/back/jump.jsp</result>
+	        <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+       <!-- 查找企业直投详细信息 -->
+       <action name="findFirmLssuing" class="com.jqg.struts.LssuingAction" method="findFirmLssuing">
+         <result name="success">/back/2_updateFirm.jsp</result>
+          <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+       </action>
+       <!-- 修改企业直投信息 -->
+        <action name="updateFirmLssuing" class="com.jqg.struts.LssuingAction" method="updateFirmLssuing">
+         <result name="success" type="redirect">/borrow/toBackLssuing?queryFlag=${queryFlag}&amp;lssuingType=6</result>
+          <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+       </action>
+    
+    	<!-- 理财宝===添加理财宝-->
+        <action name="toLcView" class="com.jqg.struts.BackLssuingAction" method="toFirmView">
+        	<result name="success">/back/2_createLc.jsp</result>
+        	 <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+       <!-- 理财宝===保存理财宝 -->
+       <action name="saveLcLssuing" class="com.jqg.struts.LssuingAction" method="saveLcLssuing">
+	        <result name="success" >/back/jump.jsp</result>
+	        <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+    
+    
+      <!-- 根据借款ID招标中借款的信息 -->
+      <action name="findLssuingById" class="com.jqg.struts.LssuingAction" method="findLssuingById">
+         <result name="success">/back/2_updtab.jsp</result>
+          <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+       </action>
+	  <!-- 修改招标中借款的信息 -->
+	  <action name="updateLssuing" class="com.jqg.struts.LssuingAction" method="updateLssuing">
+	  <result name="success"  type="redirect">/borrow/toBackLssuing?queryFlag=2</result>
+	   <interceptor-ref name="defaultStack" /> 
+        <interceptor-ref name="authority" />  
+	  </action>
+	  <!-- 体验标发标页面初始化 -->
+        <action name="toLssuing2" class="com.jqg.struts.LssuingAction" method="toLssuing">
+        	<result name="success">/back/2_createPractice.jsp</result>	  
+        </action>
+  <!-- 保存体验发标 -->
+       <action name="savePracticeLssuing" class="com.jqg.struts.LssuingAction" method="savePracticeLssuing">
+	        <result name="success" >/back/jump.jsp</result>
+       </action>
+       <!-- 新手标发标页面初始化 -->
+        <action name="toLssuingNew" class="com.jqg.struts.LssuingAction" method="toLssuing">
+        	<result name="success">/back/2_createNewHand.jsp</result>	  
+        </action>
+        <!-- 保存新手标 -->
+       <action name="saveNewHandLssuing" class="com.jqg.struts.LssuingAction" method="saveNewHandLssuing">
+	        <result name="success" >/back/jump.jsp</result>
+       </action>
+   </package>
+</struts>

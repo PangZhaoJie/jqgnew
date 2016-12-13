@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+  <constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+    
+    <package name="bbs" namespace="/bbs" extends="json-default"> 
+ 		<!-- 进入论坛首页 -->
+        <action name="toBbsIndex" class="com.jqg.struts.BbsAction" method="toBbsIndex">
+        	<result name="success">/bbs/bbs_index.jsp</result>
+        </action>
+        <!-- 查看帖子详情 -->
+        <action name="toBbsView" class="com.jqg.struts.BbsAction" method="toBbsView">
+        	<result name="success">/bbs/bbs_view.jsp</result>
+        </action>
+        <!-- 新增帖子 -->
+        <action name="toBbsAdd" class="com.jqg.struts.BbsAction" method="toBbsAdd">
+         	<result name="success" type="redirectAction">
+        	 	<param name="actionName">toType</param>
+        	</result>
+        </action>
+         <!-- 新增帖子评论 --> 
+        <action name="toCommentAdd" class="com.jqg.struts.BbsAction" method="toCommentAdd">
+         	<result name="success" type="redirect">/bbs/toBbsView!toBbsView.action?askId=${askId}</result>
+        </action>
+          <!-- 进入帖子列表 -->
+        <action name="toBbsList" class="com.jqg.struts.BbsAction" method="toBbsList">
+        </action>
+        <action name="toType" class="com.jqg.struts.BbsAction" method="toType">
+        	<result name="success">/bbs/bbs_list.jsp</result>
+        </action>
+        
+         <action name="toTest" class="com.jqg.struts.BbsAction" method="toTest">
+        	<result name="success">/back/test.jsp</result>
+        </action>
+     </package>
+
+</struts>

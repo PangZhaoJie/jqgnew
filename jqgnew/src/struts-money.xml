@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+  <constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+    
+ 
+    <package name="money" namespace="/money" extends="default">		 
+       
+        <action name="toUserMoney" class="com.jqg.struts.MoneyAllAction" method="toUserMoney">
+        	<result name="success" >/back/7_list.jsp</result>
+        	 <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+         <!-- 导出会员帐户资金统计 excel-->
+         <action name="upLoadUserMoney" class="com.jqg.struts.MoneyAllAction" method="upLoadUserMoney">
+        	<result name="success" >/back/7_list.jsp</result>
+        	 <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+         <!--  -->
+          <action name="toMoneyhistorydetail" class="com.jqg.struts.MoneyAllAction" method="toMoneyhistorydetail">
+        	<result name="success" >/back/7_record.jsp</result>
+        	 <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+<!--          EXCEL下载 -->
+         <action name="toExcel" class="com.jqg.struts.MoneyAllAction" method="toExcel">
+        	<result name="success" >/back/7_record.jsp</result>
+        	 <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+          <action name="toMoneyTotal" class="com.jqg.struts.MoneyAllAction" method="toMoneyTotal">
+        	<result name="success" >/back/7_count.jsp</result>
+        	 <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>  
+       
+     </package>
+
+</struts>

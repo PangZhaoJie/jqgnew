@@ -1,0 +1,33 @@
+﻿@charset "utf-8";
+
+/*form*/
+.formbody{padding:10px 18px; }
+.formtitle{border-bottom:solid 1px #d0dee5; line-height:35px; position:relative; height:35px; margin-bottom:28px;}
+.formtitle span{font-weight:bold;font-size:15px; border-bottom:solid 3px #66c9f3;float:left; position:absolute; z-index:100; bottom:-1px; padding:0 12px; height:35px; line-height:35px;}
+.m_forminfo{padding:0px; margin:0;}
+.m_forminfo li{ width:100%;margin:6px 0; line-height:34px;}
+.m_forminfo li i{color:#f00;padding:20px 0px 0px 6px;  font-style:normal; }
+.m_forminfo li p{display:block;  float:left; }
+.dfinput1{ height:32px; line-height:32px; border:solid 1px #ced9df; float:left; background:url(../images/inputbg.gif) repeat-x; text-indent:10px;}
+.textinput{border-top:solid 1px #a7b5bc; border-left:solid 1px #a7b5bc; border-right:solid 1px #ced9df; border-bottom:solid 1px #ced9df; background:url(../images/inputbg.gif) repeat-x; padding:10px; width:504px; height:135px; line-height:20px; overflow:hidden;}
+.info_textarea{border-top:solid 1px #a7b5bc; border-left:solid 1px #a7b5bc; border-right:solid 1px #ced9df; border-bottom:solid 1px #ced9df; background:url(../images/inputbg.gif) repeat-x; padding:10px; width:600px; height:135px; line-height:20px; overflow:hidden;}
+.btn{width:137px;height:35px; margin-left: 80px ; margin-top:15px;background:url(../images/btnbg.png) no-repeat; font-size:14px;font-weight:bold;color:#fff; cursor:pointer;}
+.m_info_title{ width:155px;line-height:34px; display:block; float:left; text-align:right; margin-right:10px;}
+
+.m_forminfo li .input {
+    border-color: #a7b5bc #ced9df #ced9df #a7b5bc;
+    border-style: solid;
+    border-width: 1px;
+    color: #333333;
+    float: left;
+    height: 34px;
+    line-height: 34px;
+    padding-left: 5px; 
+	width:270px;
+}
+
+/* pop */
+.pop{position:absolute;left:30%;top:18%;width:auto;height:auto;border:1px solid #ccc ; background:#fff;}
+.pop_head{position:relative;}
+.pop_head a.close{width:22px;height:22px;background:url(../images/close.png ) no-repeat;position:absolute;right:-10px;line-height:22px;color:#000;text-decoration:none;top:-10px;}
+.pop_body{padding:10px;background:#fff;width:auto;height:auto;overflow:hidden;}

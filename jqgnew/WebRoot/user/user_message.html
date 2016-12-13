@@ -1,0 +1,437 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>个人中心-会员留言</title>
+<link rel="icon" href="<%=path %>/image/favicon/favicon.ico" type="image/x-icon" />
+<link href="../css/public.css" type="text/css" rel="stylesheet"/>
+<link href="../css/user/user_public.css" type="text/css" rel="stylesheet"/>
+<link href="../css/user/user_message.css" type="text/css" rel="stylesheet"/>
+<!--导航下拉菜单 js-->
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<!--表单下拉列表框-->
+<script type="text/javascript" src="../js/select2css.js"></script>
+
+<!--左侧折叠菜单-->
+<script type="text/javascript" src="../js/menu.js"></script>
+
+
+</head>
+<body> 
+<!--头部开始-->
+<div class="header">
+   <div class="header_top">
+		<div class="conbox fn_cle">
+			<div class="contact fn_left">
+				 <span class="welcome">你好，欢迎来到XXX金融服务平台！</span>
+                 <span> <a href="" class="bor_none reg">免费注册</a>|<a href="" class="login">立即登录</a></span>
+			</div>	
+			<div class="top_rig fn_rig">
+				<span><a href="#">我的账户</a>|<a href="#">帮助中心</a></span>
+					 <i class="telico"></i>
+				    <span class="tel">服务热线：<em>400-8888-666</em></span>
+			</div>	
+		</div>
+        
+	</div>
+    
+    <div class="header_cont conbox fn_cle">
+		<h1 class="fn_left"><a href="#"><img src="../images/logo.jpg" alt="" /></a></h1>
+		<div class="navbar fn_rig">
+			<ul>
+				<li id="home" class="ui_nav_item">
+					<a href="#">首页</a>
+                    <ul class="nav_dropdown">
+						<li class="arrow"><span></span></li>
+                        <li><a href="#">行业活动</a></li>
+                        <li><a href="#">新标预告</a></li>
+						<li><a href="#">平台原理</a></li>
+						<li><a href="#">产品说明</a></li>
+						<li><a href="#">政策法规</a></li>
+						
+					</ul>
+				</li>
+				<li id="tender" class="ui_nav_item">
+					<a href="#">我要投资</a>
+					<ul class="nav_dropdown">
+						<li class="arrow"><span></span></li>
+						<li><a href="#">新标预告</a></li>
+						<li><a href="#">直投列表</a></li>
+						<li><a href="#">债权转让</a></li>
+						
+					</ul>
+				</li>
+				<li id="borrow" class="ui_nav_item">
+					<a href="#">我要借款</a>
+					<ul class="nav_dropdown">
+						<li class="arrow"><span></span></li>
+						<li><a href="#">信用标</a></li>
+						<li><a href="#">担保标</a></li>
+						<li><a href="#">净值标</a></li>
+						<li><a href="#">抵押标</a></li>
+                        <li><a href="#">秒标</a></li>
+					</ul>
+				</li>
+                <li class="ui_nav_item"><a href="#">新手指引</a></li>
+                <li id="tool" class="ui_nav_item"><a href="#">网贷工具</a>
+                  <ul class="nav_dropdown">
+						<li class="arrow"><span></span></li>
+						<li><a href="#">借款计算器</a></li>
+						<li><a href="#">投资计算器</a></li>
+					</ul>
+                </li>
+                <li id="cooperate" class="ui_nav_item"><a href="#">合作机构</a>
+                  <ul class="nav_dropdown">
+						<li class="arrow"><span></span></li>
+						<li><a href="#">监督指导</a></li>
+						<li><a href="#">担保机构</a></li>
+						<li><a href="#">战略合作</a></li>
+						
+				  </ul>
+                </li>
+                
+				<li class="ui_nav_item"><a href="#">关于我们</a></li>
+			</ul>	
+		</div>
+		
+	</div>
+    
+</div>
+<!--头部结束-->
+<div class="maincontent">
+  
+  <div class="conbox fn_cle">
+   <P class="guide mt10">当前位置：<a href="#">网站首页</a> > <a href="#">我的账户</a></P>
+   
+   <div class="conbox">
+     <div class="user_l">
+     <h2>我的账户</h2> 
+     <ul class="menu">
+      
+      <li class="level1" ><a href="#"><i><img src="../images/user_ico01.png" /></i>基本设置</a>
+        <ul class="level2" style="display:block;">
+          <li><a href="#none">我的资料</a></li>
+          <li><a href="#none">头像与密码</a></li>
+          <li><a href="#none">站内信</a></li>
+          <li><a href="#none">安全中心</a></li>
+          <li><a href="#none">认证中心</a></li>
+        </ul>
+      </li>
+      <li class="level1" ><a href="#"><i><img src="../images/user_ico02.png" /></i>资金管理</a>
+        <ul class="level2">
+          <li><a href="#none">账户详情</a></li>
+          <li><a href="#none">资金明细</a></li>
+          <li><a href="#none">我要充值</a></li>
+          <li><a href="#none">我要提现</a></li>
+          <li><a href="#none">银行账户</a></li>
+          <li><a href="#none">积分记录</a></li>
+        </ul>
+      </li>
+      
+     <li class="level1"><a href="#"><i><img src="../images/user_ico03.png" /></i>投资管理</a>
+        <ul class="level2">
+          <li><a href="#">投资总表</a></li>
+          <li><a href="#">自动投标</a></li>
+        </ul>
+      </li>  
+       
+      <li class="level1"><a href="#"><i><img src="../images/user_ico04.png" /></i>借款管理</a>
+        <ul class="level2">
+          <li><a href="#">借款总表</a></li>
+          <li><a href="#">我要还款</a></li>
+          <li><a href="#">额度申请</a></li>
+          <li><a href="#">资料上传</a></li>
+        </ul>
+      </li>  
+      
+     <li class="level1"><a href="#"><i><img src="../images/user_ico05.png" /></i>好友管理</a>
+        <ul class="level2">
+          <li><a href="#">好友列表</a></li>
+          <li><a href="#">邀请好友</a></li>
+          <li><a href="#">会员留言</a></li>
+          <li><a href="#">奖金记录</a></li>
+        </ul>
+      </li>  
+      
+    </ul>
+   
+   </div>
+   
+     <div class="user_r">
+         <div id="hotnews_caption">
+            <ul id="h_menu">                  
+                 <li class="current" onclick="secBoard('hotnews_caption','list',1);">会员留言</li>
+                 <li class="normal" onclick="secBoard('hotnews_caption','list',2);">我发出的留言</li>
+                 
+                 
+            </ul>
+         </div>
+         
+         <div id="hotnews_content">
+            <div class="current" id="list_1">
+              
+               <div class="count">未读<a href="#">3</a>封，已读<a href="#">4</a>封，共<a href="#">7</a>封</div>
+               <table cellspacing="0" cellpadding="0" width="100%" border="0"  class="letter_table">
+                                <tbody>
+                                <tr>
+                                    <th width="70"><input type="checkbox">全选</th>
+                                    <th width="80">标记</th>
+                                    <th width="100">发件人</th>
+                                    <th width="210">标题</th>
+                                    <th width="300">内容</th>
+                                    <th width="100">发送时间</th>	
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>未读</td>
+                                    <td>admin</td>
+                                    <td ><a href="#" class="w180">生意经营贷款，短期资金周转，短期资金周转，短期资金周转</a></td>
+                                    <td><a href = "javascript:void(0)" class="w280" onclick = "document.getElementById('light1').style.display='block';document.getElementById('fade').style.display='block'">生意经营贷款，短期资金周转（一）</a></td>
+                                    <td>2012-07-16</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>未读</td>
+                                    <td>admin</td>
+                                    <td ><a href="#" class="w180">生意经营贷款，短期资金周转，短期资金周转，短期资金周转</a></td>
+                                    <td><a href = "javascript:void(0)" class="w280" onclick = "document.getElementById('light2').style.display='block';document.getElementById('fade').style.display='block'">删除自动投标</a></td>
+                                    <td>2012-07-16</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                     <td class="red">已读</td>
+                                    <td>admin</td>
+                                     <td ><a href="#" class="w180">生意经营贷款，短期资金周转，短期资金周转，短期资金周转</a></td>
+                                    <td><a href = "javascript:void(0)" class="w280" onclick = "document.getElementById('light3').style.display='block';document.getElementById('fade').style.display='block'">编辑自动投标</a></td>
+                                    <td>2012-07-16</td>
+                                </tr>
+                                 <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td class="red">已读</td>
+                                    <td>admin</td>
+                                    <td ><a href="#" class="w180">生意经营贷款，短期资金周转，短期资金周转，短期资金周转</a></td>
+                                    <td><a href = "javascript:void(0)" class="w280" onclick = "document.getElementById('light4').style.display='block';document.getElementById('fade').style.display='block'">添加自动投标</a></td>
+                                    <td>2012-07-16</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td class="red">已读</td>
+                                    <td>admin</td>
+                                    <td ><a href="#" class="w180">生意经营贷款，短期资金周转，短期资金周转，短期资金周转</a></td>
+                                    <td><a href = "javascript:void(0)" class="w280" onclick = "document.getElementById('light5').style.display='block';document.getElementById('fade').style.display='block'">添加自动投标</a></td>
+                                    <td>2012-07-16</td>
+                                </tr>
+                                 <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td class="red">已读</td>
+                                    <td>admin</td>
+                                    <td ><a href="#" class="w180">生意经营贷款，短期资金周转，短期资金周转，短期资金周转</a></td>
+                                    <td><a href = "javascript:void(0)" class="w280" onclick = "document.getElementById('light6').style.display='block';document.getElementById('fade').style.display='block'">您的VIP申请审核已通过</a></td>
+                                    <td>2012-07-16</td>
+                                </tr>
+                                 <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>未读</td>
+                                    <td>admin</td>
+                                     <td ><a href="#" class="w180">生意经营贷款，短期资金周转，短期资金周转，短期资金周转</a></td>
+                                    <td><a href = "javascript:void(0)" class="w280" onclick = "document.getElementById('light7').style.display='block';document.getElementById('fade').style.display='block'">恭喜您注册成功</a></td>
+                                    <td>2012-07-16</td>
+                                </tr>
+                                 
+                                 <tr>
+                                    <th colspan="6">
+                                  <div class="del"><a href="#">删除</a> </div> 
+                                  <div class="page"><span>7</span>条/页<a href="#">上一页</a><a href="#">下一页</a> <span class="skip">转到<input name="page" type="text" value="" size="3" style="height:26px; line-height:26px;" />页</span><a href="#">共5页</a>
+          </div></th>	
+                                </tr>
+                            </tbody>
+                         </table>
+               
+            <div id="light1" class="white_content">
+            <div class="light_title"><span>查看留言</span> <a href = "javascript:void(0)" onclick = "document.getElementById('light1').style.display='none';document.getElementById('fade').style.display='none'" class="close"><img src="../images/close.png" /></a></div>
+            <div class="letter_info">
+             <P>生意经营贷款，短期资金周转（一）</P>
+            </div>
+            
+           </div> 
+           
+           <div id="light2" class="white_content">
+            <div class="light_title"><span>查看信息</span> <a href = "javascript:void(0)" onclick = "document.getElementById('light2').style.display='none';document.getElementById('fade').style.display='none'" class="close"><img src="../images/close.png" /></a></div>
+            <div class="letter_info">
+             <P> 删除自动投标</P>
+            </div>
+            
+           </div>
+           
+           
+               
+           <div id="fade" class="black_overlay"></div> 
+               
+               
+           </div>
+         
+           <div class="normal" id="list_2">
+                
+               <div class="count">未读<a href="#">1</a>封，已读<a href="#">6</a>封，共<a href="#">7</a>封</div>
+               <table cellspacing="0" cellpadding="0" width="100%" border="0"  class="letter_table">
+                                <tbody>
+                                <tr>
+                                    <th width="80"><input type="checkbox">全选</th>
+                                    <th width="100">标记</th>
+                                    <th width="120">收件人</th>
+                                    <th width="410">标题</th>
+                                    <th width="155">发送时间</th>	
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>未读</td>
+                                    <td>康康</td>
+                                    <td><a href = "" >删除自动投标</a></td>
+                                    <td>2012-07-16</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>未读</td>
+                                    <td>旮旯妹</td>
+                                    <td><a href = "" >删除自动投标</a></td>
+                                    <td>2012-07-16</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                     <td>未读</td>
+                                    <td>埃德加</td>
+                                    <td><a href = "" >编辑自动投标</a></td>
+                                    <td>2012-07-16</td>
+                                </tr>
+                                 <tr>
+                                    <td><input type="checkbox"></td>
+                                     <td class="red">已读</td>
+                                    <td>阿冬砂锅居</td>
+                                    <td><a href = "" >添加自动投标</a></td>
+                                    <td>2012-07-16</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                     <td>未读</td>
+                                    <td>扣儿卡片</td>
+                                    <td><a href = "" >添加自动投标</a></td>
+                                    <td>2012-07-16</td>
+                                </tr>
+                                 <tr>
+                                    <td><input type="checkbox"></td>
+                                     <td>未读</td>
+                                    <td>儿童期</td>
+                                    <td><a href = "" >您的VIP申请审核已通过</a></td>
+                                    <td>2012-07-16</td>
+                                </tr>
+                                 <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>未读</td>
+                                    <td>耳机哦</td>
+                                    <td><a href ="" >恭喜您注册成功</a></td>
+                                    <td>2012-07-16</td>
+                                </tr>
+                                 
+                                 <tr>
+                                    <th colspan="5">
+                                  <div class="del"><a href="#">删除</a> </div> 
+                                  <div class="page"><span>7</span>条/页<a href="#">上一页</a><a href="#">下一页</a> <span class="skip">转到<input name="page" type="text" value="" size="3" style="height:26px; line-height:26px;" />页</span><a href="#">共5页</a>
+          </div></th>	
+                                </tr>
+                            </tbody>
+                         </table>
+               
+           
+                
+           </div>
+           
+           
+           
+          <script type="text/javascript" src="../js/tabs.js" language="javascript"></script>
+        </div>
+        
+   </div>
+    
+    
+  </div>
+</div> 
+
+</div>
+<!--footer 开始-->
+<div class="footer">
+  <div class="footer_top fn_cle">
+         <div class="footer_nav">
+           <dl>
+               <dt class="nav_ico1">新手指引</dt>
+               <dd><a href="#">我要借款</a> </dd>
+               <dd><a href="#">我要投资</a></dd> 
+           </dl>
+           
+            <dl>
+               <dt class="nav_ico2">客服中心</dt> 
+               <dd><a href="#">平台原理</a> </dd>
+               <dd><a href="#">监督指导</a></dd>
+               <dd><a href="#">产品说明</a></dd> 
+              
+           </dl>
+           
+            <dl>
+               <dt class="nav_ico3">帮助中心</dt>
+               <dd><a href="#">常见问题</a> </dd>
+               <dd><a href="#">担保机构</a></dd>
+               <dd><a href="#">联系我们</a></dd>
+           </dl>
+           
+            <dl>
+               <dt class="nav_ico4">关于我们</dt>
+               <dd><a href="#">公司简介</a> </dd>
+               <dd><a href="#">公司资质</a></dd>
+               <dd><a href="#">团队风采</a></dd> 
+              
+           </dl>
+           
+          
+         </div>
+         
+         <div class="gz">
+             <h3>关注我们</h3>
+            <div class="kind fn_cle"><a href="#" class="wx"></a><a href="#" class="sina"></a><a href="#" class="tent"></a></div>
+         </div>
+         
+         
+         
+         <div class="contact_info">
+             <img src="../images/phone.png" />
+             <em>全国咨询热线</em>
+             <span>400-8686-966</span>
+             <P>（咨询时间：周一至周五  08:30—18:00）</P>
+         </div>
+    
+    
+    </div>
+  <div class="copy_right">
+     <p>河南XXX金融服务有限公司 版权所有      豫ICP备14006907号</p>
+     <div class="copy_rz">
+        <a href="#"><img src="../images/renzhen01.png" /></a>
+        <a href="#"><img src="../images/renzhen02.png" /></a>
+        <a href="#"><img src="../images/renzhen03.png" /></a>
+     </div>
+  </div>
+</div>
+<!--footer 结束-->
+
+
+<!--右边漂浮 开始-->
+<!-- <div id="service">
+	<a href="<%=path%>/tool/borrow_tool.jsp" class="srvLog"   title="网贷计算器">网贷计算器</a>
+	<a href="tencent://message/?uin=285772998&Site=企业网站&Menu=yes" class="srvCns" title="官方交流群">官方交流群</a>
+	<a href="<%=path%>/tender/totenderList" class="srvDj"   title="投资理财">投资理财</a>
+	<a class="goTop" id="goTop" title="返回顶部" style="display:none" >返回顶部</a>
+</div>
+<script type="text/javascript" src="../js/service.js">	</script> -->
+<!--右边漂浮 结束-->
+
+</body>
+</html>

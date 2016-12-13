@@ -1,0 +1,35 @@
+﻿@charset "utf-8";
+
+/*论坛 */
+.bbs{ padding-top:15px;font-size: 14px}
+.Box .newsImge{border:solid 1px #CCC;height:316px;width:385px;float:left;margin-right:10px;}
+.Box{overflow:hidden;}
+.newsImge a{ display:block;}
+.newsBox .newsImge .ctrlBtnBox .ctrlBtn{overflow:hidden;margin-right:150px;margin-top:20px;}
+.newsBox .newsImge .ctrlBtnBox .ctrlBtn li{margin-right:10px;float:right;width:14px;height:14px;background-image:url(../../images/new_ctrlBtn_01.png);background-repeat:no-repeat;background-position:center center;}
+.newsBox .newsImge .ctrlBtnBox .ctrlBtn{ overflow:hidden;}
+.newsBox .newsImge .ctrlBtnBox .ctrlBtn .this{background-image:url(../../images/new_ctrlBtn_02.png);}
+.contentTop .contentOne{height:40px;width:1176px;background-image:url(../../images/content.png);background-repeat:repeat-x;border:solid 1px #CCC;}
+.contentTop .contentOne div{line-height:40px;font-size:16px;padding-left:10px;}
+.cont .contT{float:left;padding-left:20px;}
+.contS .contT{float:left;padding-left:20px;}
+.contS{overflow:hidden;padding-top:20px}
+.cont{overflow:hidden;width:580px;padding-top:20px;float:left;}
+.content{overflow:hidden;}
+.contentTop{margin:20px 0; border:solid 1px #CCC;padding-bottom:20px;}
+.contTT .contS{float:left;margin-right:20px;}
+.contTT{overflow:hidden;float:right;width:400px;}
+.contentBox{ border-bottom:inherit 1px #CCC;}
+.contentTop a,.xontentTop div{margin-right:10px;}
+
+
+/*幻灯片*/
+.flexslider { width:385px; float:left; margin-right:10px; position: relative; height: 318px; overflow: hidden;z-index:1; background: url(../..images/loading.gif) 50% no-repeat;}
+.slides { position: relative; z-index: 1;}
+.slides li { height: 318px;text-align:center;}
+.slides li img {width:385px;  height: 318px;}
+.slides li a{display:block; width:100%; height:100%;}
+.flex-control-nav { position: absolute; bottom: 20px; z-index: 2; width: 100%; text-align: center;}
+.flex-control-nav li { display: inline-block; width: 13px; height: 13px; margin: 0 5px; *display: inline; zoom: 1;}
+.flex-control-nav a { display: inline-block; width: 13px; height: 13px; line-height: 40px; overflow: hidden; background: url(../../images/dot.png) right 0 no-repeat; cursor: pointer;}
+.flex-control-nav .flex-active { background-position: 0 0;}

@@ -1,0 +1,351 @@
+.lanmu {
+    height: auto;
+    margin: 0 auto;
+    width: 1200px;
+}
+.lanmu-title {
+    color: #333;
+    display: block;
+    font-family: "微软雅黑";
+    font-size: 22px;
+    height: 80px;
+    line-height: 80px;
+    margin: auto;
+    width: 100%;
+}
+.lanmu-title > a {
+    color: #999;
+    float: right;
+    font-size: 14px;
+}
+.lanmubox {
+    height: auto;
+    width: 100%;
+}
+.lanmuimg {
+    background: #ec5655 none repeat scroll 0 0;
+    float: left;
+    height: 440px;
+    position: relative;
+    width: 25%;
+}
+.lanmuimg > a {
+    color: #fff;
+    display: block;
+    font-size: 35px;
+    line-height: 1.8;
+    margin: 30px 0;
+    overflow: hidden;
+}
+.lanmuimg > a > span {
+    float: left;
+    margin-left: 50px;
+}
+.lanmuimg > a #arrow {
+    float: left;
+    margin-left: 20px;
+    margin-top: 12px;
+    position: relative;
+    transition: all 0.5s ease 0s;
+}
+#arrow {
+    background: rgba(0, 0, 0, 0) url("../image/homeImg.png") no-repeat scroll -471px -103px;
+    height: 39px;
+    width: 39px;
+}
+.lanmuimg > p {
+    color: #fff;
+    display: block;
+    font-size: 25px;
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
+    z-index: 10;
+}
+.lanmuimg > span {
+    background: rgba(0, 0, 0, 0) url("../image/homeImg.png") no-repeat scroll 4px -139px;
+    bottom: 0;
+    height: 193px;
+    left: 20px;
+    position: absolute;
+    width: 249px;
+    z-index: 1;
+}
+.lanmubox-s::after {
+    border-left: 15px solid #b8473e;
+    border-top: 15px solid transparent;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: -15px;
+    top: 0;
+    width: 0;
+}
+.lanmubox-s {
+    background: #ec5655 none repeat scroll 0 0;
+    height: 15px;
+    left: 0;
+    position: absolute;
+    top: -15px;
+    width: 100%;
+}
+.lanmu-card {
+    background: #fff none repeat scroll 0 0;
+    box-shadow: 0 0 5px #eee;
+    float: left;
+    height: 440px;
+    width: 75%;
+}
+.lanmu-card > li:nth-of-type(1) {
+    border-right: 1px solid #e2e2e2;
+}
+.lanmu-card > li {
+    float: left;
+    height: 100%;
+    width: 33.3%;
+}
+.lanmu-card-index {
+    overflow: hidden;
+    padding: 20px 30px;
+    position: relative;
+    transition: all 0.5s ease 0s;
+}
+.lanmu-card-index-title > p {
+    background: #5aa8fa none repeat scroll 0 0;
+    border-radius: 3px;
+    color: #fff;
+    float: left;
+    font-size: 14px;
+    height: 25px;
+    line-height: 25px;
+    margin-right: 20px;
+    text-align: center;
+    width: 40px;
+}
+.lanmu-card-index-title > h3 {
+    color: #333;
+    float: left;
+    font-size: 20px;
+}
+.lanmu-card-index-cont {
+    border: 1px solid #faa55a;
+    border-radius: 5px;
+    color: #faa55a;
+    font-size: 16px;
+    margin: 15px 0;
+    overflow: hidden;
+    padding: 8px;
+    width: 115px;
+}
+.lanmu-card-index:hover {
+    transform: translateX(5px);
+}
+.lanmu-card-index-numbox-day {
+    float: right;
+    margin-right: 20px;
+}
+.lanmu-card-index-numbox > li {
+    line-height: 50px;
+}
+.lanmu-card-index-numbox-day > span {
+    color: #666;
+    float: left;
+    font-size: 14px;
+    margin-left: 10px;
+}
+.lanmu-card-index-numbox-day > p {
+    color: #fea01b;
+    float: left;
+    font-size: 28px;
+}
+.lanmu-card-index-numbox > li > h2 {
+    color: #ee5a50;
+    float: right;
+    font-size: 36px;
+}
+.lanmu-card-index-numbox > li > h3 {
+    color: #fea01b;
+    float: right;
+    font-size: 28px;
+    margin-right: 10px;
+}
+.lanmu-card-index-numbox > li > span {
+    color: #666;
+    float: left;
+    font-size: 14px;
+}
+.lanmu-card > li:nth-of-type(2) {
+    border-right: 1px solid #e2e2e2;
+}
+.lanmu-card-index-zhu {
+    color: #6e6e6e;
+    font-size: 14px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.lanmu-card-index-numbox {
+    margin: 20px 0;
+}
+.lanmu-card-index > button {
+    background: #ee5a50 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    height: 40px;
+    margin: 0 auto;
+    width: 190px;
+}
+.lanmu-title {
+    color: #333;
+    display: block;
+    font-family: "微软雅黑";
+    font-size: 22px;
+    height: 80px;
+    line-height: 80px;
+    margin: auto;
+    width: 100%;
+}
+.lanmu-title > a {
+    color: #999;
+    float: right;
+    font-size: 14px;
+}
+.lanmu-card-index-zhu {
+    color: #6e6e6e;
+    font-size: 14px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.lanmu-card-index-baifenbi {
+    display: block;
+    margin: 20px 0 40px;
+}
+.lanmu-card-index > button[no] {
+    background: #d7d7d7 none repeat scroll 0 0;
+    color: #666;
+}
+.lanmu-card-index-baifenbi {
+    display: block;
+    margin: 20px 0 40px;
+}
+.lanmu-card-index-baifenbibox {
+    background: #ebebeb none repeat scroll 0 0;
+    border-radius: 10px;
+    float: left;
+    height: 10px;
+    margin: 20px 0;
+    overflow: hidden;
+    width: 180px;
+}
+.lanmu-card-index-baifenbibox > P {
+    background: #ee5a50 none repeat scroll 0 0;
+    border-radius: 10px;
+    height: 100%;
+}
+.lanmu-card-index-baifenbi > span {
+    color: #666;
+    float: right;
+    font-size: 14px;
+    padding-top: 18px;
+}
+.lanmu-card-index-baifenbi > p {
+    color: #999;
+    display: block;
+    float: left;
+    font-size: 16px;
+}
+.lanmu-card-index-baifenbibox > p[green] {
+    background: #86d05e none repeat scroll 0 0;
+}
+.lanmubox.hezuobox {
+    box-shadow: 0 0 5px #eee;
+    margin-bottom: 50px;
+}
+.lanmubox.hezuobox > li {
+    display: block;
+    float: left;
+    height: 95px;
+    width: 14.28%;
+}
+.lanmubox.hezuobox > li > a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.lanmu-card-index > button {
+    background: #ee5a50 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    height: 40px;
+    margin: 0 auto;
+    width: 190px;
+    cursor:pointer;
+}
+input, button {
+    outline: medium none;
+}
+
+.lanmuimg > a #arrow {
+    float: left;
+    margin-left: 20px;
+    margin-top: 12px;
+    position: relative;
+    transition: all 0.5s ease 0s;
+}
+#arrow {
+    background: rgba(0, 0, 0, 0) url("../images/homeImg.png") no-repeat scroll -471px -103px;
+    height: 39px;
+    width: 39px;
+}
+.lanmuimg > a:hover #arrow {
+    transform: translateX(10px);
+}
+.lanmuimg > a:hover .jian-anmine {
+    transform: translateX(10px);
+}
+
+.lanmuimg > span {
+    background: rgba(0, 0, 0, 0) url("../images/homeImg.png") no-repeat scroll 4px -139px;
+    bottom: 0;
+    height: 193px;
+    left: 20px;
+    position: absolute;
+    width: 249px;
+    z-index: 1;
+}
+#yiliao{
+	background:  url("../images/yiliao.png") no-repeat;
+	margin-bottom:30px;
+	margin-left:70px;
+	bottom: 0;
+    height: 95px;
+    left: 20px;
+    position: absolute;
+    width: 115px;
+    z-index: 1;
+}
+.lanmuimg.licais {
+    background: #7bbff9 none repeat scroll 0 0;
+}
+.lanmuimg.licais.lm {
+    background: #fea01b none repeat scroll 0 0;
+}
+.lanmuimg.licais .lanmubox-s {
+    background: #7bbff9 none repeat scroll 0 0;
+}
+.lanmuimg.licais .lanmubox-s::after {
+    border-left: 15px solid #5998ce;
+}
+
+.lanmuimg.licais > span {
+    background: rgba(0, 0, 0, 0) url("../images/homeImg.png") no-repeat scroll -240px -145px;
+    height: 187px;
+    left: 40px;
+    width: 220px;
+}

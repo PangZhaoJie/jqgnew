@@ -1,0 +1,70 @@
+﻿@charset "utf-8";
+
+/*网贷工具 */
+input{border:1px solid #ccc; border-radius:3px;vertical-align:middle;outline:none; height:35px; }
+input:hover{border:1px solid #0095eb;}
+textarea,dt{border-radius:3px;}
+.tool_ct{ width:1180px; height:auto; background: url(../images/ct_bg.jpg) repeat-y;}
+.guide{ width:1180px;line-height:30px; font-size:14px;}
+
+.s_banner{ width: 100%; display: block;height: 165px;position: relative;}
+.s_banner img{   height: 165px;left: 50%; margin-left: -980px;position: absolute; top: 0; width: 1920px;}
+
+.conbox_l{ width:210px; float:left;}
+.conbox_r{ width:950px; float:right;}
+
+/*conbox_l左侧*/
+.conbox_l dl{ padding:0; margin:0; min-height:700px;_height:700px;}
+.conbox_l dt{ width:200px; height:48px; margin-bottom:10px; line-height:48px; background: #f59b3b; color:#fff; font-size:20px; float:left; padding-left:10px; }
+.conbox_l dt i{ padding:3px 10px 5px 0px; }
+.conbox_l dl dd{ width:190px; line-height:40px; margin:5px 10px; display:inline; float:left; font-size:15px; text-align:center; border-bottom:1px solid #ddd; } 
+.conbox_l dl dd a{ text-decoration:none; color:#666; display:block; background: url(../images/men_hover_bg.jpg) 20px 0px no-repeat;}
+.conbox_l dl dd a:hover{color:#006ac7;background: url(../images/men_hover_bg.png) 20px 7px no-repeat #d1e8f2;}
+/*conbox_r右侧*/
+.conbox_r h3{ width:950px; float:left; color: #f59b3b;  border-bottom:1px solid #ddd;border-top:1px solid #ddd; background:url(../images/title_ico.jpg) 8px center no-repeat;}
+.conbox_r h3 span{  float:left; line-height:45px; padding-left:35px; }
+.conbox_r_nr{ width:910px; float:left; padding:20px ;}
+.conbox_r_nr p{ width:910px; line-height:35px; padding-top:10px;}
+.borrow_counter{ padding-top:10px; float:left;}
+.counter_title{ width:910px; float:left; font-size:18px; line-height:45px; color: #f59b3b; padding-top:15px;}
+.b_counter_nr{ width:870px; float:left; padding:25px 20px;border-top:1px dashed #ccc; margin-top:10px;}
+.b_counter_nr ul{ padding:0; margin:0; }
+.b_counter_nr ul li{ width:430px; line-height:35px; float:left; padding:12px 0px; font-size:14px;}
+.b_counter_nr ul li label{ width:120px; float:left; text-align:right;}
+.b_counter_nr ul li em{ padding-left:5px;}
+.b_counter_nr ul li input{ }
+/*表单下拉列表框*/
+#uboxstyle { float:left; width:189px;padding:0;}
+#uboxstyle .select_box{width:189px;height:37px; padding:0; }
+#uboxstyle div.tag_select{display:block;color:#666;width:169px;height:37px;background:transparent url(../images/select_bg01.jpg) no-repeat 0 0;padding:0 10px;line-height:37px;}
+#uboxstyle div.tag_select_hover{display:block;color:#666;width:169px;height:37px;background:transparent url(../images/select_bg03.jpg) no-repeat 0 0px;padding:0 10px;line-height:37px;}
+#uboxstyle div.tag_select_open{display:block;color:#666;width:169px;height:37px;background:transparent url(../images/select_bg02.jpg) no-repeat 0 0px;padding:0 10px;line-height:37px;}
+#uboxstyle ul.tag_options{position:absolute;padding:0;margin:0px; height:170px; overflow-x:hidden;overflow-y:auto;  list-style:none;border: 1px solid #00a8e7; border-radius: 4px;width:189px;padding:0 0 5px; background:#fff;}
+#uboxstyle ul.tag_options li{width:169px;display:block;padding:0 10px;height:34px;text-decoration:none;line-height:34px;color:#666;}
+#uboxstyle ul.tag_options li.open_hover{background:#d0e8f2 repeat;color:#0066cc;}
+#uboxstyle ul.tag_options li.open_selected{background:#049cf2 repeat;color:#fff;}
+
+
+.count_btn{ width:910px; text-align:center; float:left; padding:25px 0; border-top:1px solid #ddd;}
+.submit_bt{font:18px/44px "Microsoft YaHei";width:180px;height:46px; background: #ff9c00;color:#fff;cursor:pointer;margin:0 auto;border-radius:3px; border:0;}
+.submit_bt:hover{background:#11a9e1;border:0;}
+
+/*计算结果*/
+.result{ width:870px; float:left; padding:25px 20px;border:1px dashed #ccc; margin:15px 0;}
+.return,.interest{ width:200px; float:left; padding:10px 110px ; text-align:center; font-size:16px;}
+.return span,.interest span{ width:200px; float:left; font-size:28px;  color:#ff8400; line-height:45px; }
+
+#head-color{  background-color: #f59b3b;height:50px; }
+#head-color th{ color: #fff ; font-size: 15px;height:45px; border: 1px solid #fff; text-align: center;}
+.return_table{ margin-top:10px;  float:left;}
+.return_table .th1{ background-color: #f9f9f9; height:40px; border: 1px solid #ddd; font-weight: normal; text-align: center;}
+.return_table td { border: 1px solid #ddd;line-height:40px; text-align:center;}
+.return_table td a{ padding:0px 10px;}
+
+
+
+
+
+
+
+

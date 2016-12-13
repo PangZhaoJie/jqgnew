@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.multipart.saveDir" value="/tmp"></constant>
+    <package name="use" namespace="/use" extends="default">
+            <action name="searchAll" class="com.jqg.struts.MoneyuseAction" method="searchAll">
+            <result>/back/9_cs1.jsp</result> 
+             <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+            </action>
+        <!-- 借款用途表-->
+        <action name="createMu" class="com.jqg.struts.MoneyuseAction" method="createMu">
+        <result>/back/9_cs1.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="delMu" class="com.jqg.struts.MoneyuseAction" method="delMu">
+        <result>/back/9_cs1.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="editMu" class="com.jqg.struts.MoneyuseAction" method="editMu">
+        <result>/back/9_cs1.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action> 
+        <!-- 最小金额 -->
+        <action name="createMmin" class="com.jqg.struts.MoneyuseAction" method="createMmin">
+        <result>/back/9_cs1.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="delMmin" class="com.jqg.struts.MoneyuseAction" method="delMmin">
+        <result>/back/9_cs1.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="editMmin" class="com.jqg.struts.MoneyuseAction" method="editMmin">
+        <result>/back/9_cs1.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action> 
+        <!-- 最大金额 -->
+        <action name="createMmax" class="com.jqg.struts.MoneyuseAction" method="createMmax">
+        <result>/back/9_cs1.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="delMmax" class="com.jqg.struts.MoneyuseAction" method="delMmax">
+        <result>/back/9_cs1.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="editMmax" class="com.jqg.struts.MoneyuseAction" method="editMmax">
+        <result>/back/9_cs1.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <!-- 募资时间 -->
+        <action name="createVt" class="com.jqg.struts.MoneyuseAction" method="createVt">
+        <result>/back/9_cs1.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="delVt" class="com.jqg.struts.MoneyuseAction" method="delVt">
+        <result>/back/9_cs1.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="editVt" class="com.jqg.struts.MoneyuseAction" method="editVt">
+        <result>/back/9_cs1.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <!-- 查询余额 -->
+         <action name="createFm" class="com.jqg.struts.MoneyuseAction" method="createFm">
+        <result>/back/9_cs1.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="delFm" class="com.jqg.struts.MoneyuseAction" method="delFm">
+        <result>/back/9_cs1.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="editFm" class="com.jqg.struts.MoneyuseAction" method="editFm">
+        <result>/back/9_cs1.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <!-- 提现银行 -->
+         <action name="createBp" class="com.jqg.struts.MoneyuseAction" method="createBp">
+        <result>/back/9_cs1.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="delBp" class="com.jqg.struts.MoneyuseAction" method="delBp">
+        <result>/back/9_cs1.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="editBp" class="com.jqg.struts.MoneyuseAction" method="editBp">
+        <result>/back/9_cs1.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <!-- 积分参数 -->
+         <action name="createIp" class="com.jqg.struts.MoneyuseAction" method="createIp">
+        <result>/back/9_cs1.jsp</result> 
+        <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="delIp" class="com.jqg.struts.MoneyuseAction" method="delIp">
+        <result>/back/9_cs1.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="editIp" class="com.jqg.struts.MoneyuseAction" method="editIp">
+        <result>/back/9_cs1.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        
+        <!-- 费用参数 -->
+        <action name="createSysconf" class="com.jqg.struts.MoneyuseAction" method="createSysconf">
+        <result>/back/9_cs1.jsp</result> 
+        <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        
+        <action name="editSysconf" class="com.jqg.struts.MoneyuseAction" method="editSysconf">
+        <result>/back/9_cs1.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action> 
+        
+          <!-- 借款期限（天）-->
+        <action name="createDay" class="com.jqg.struts.MoneyuseAction" method="createDay">
+        <result>/back/9_cs1.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="delDay" class="com.jqg.struts.MoneyuseAction" method="delDay">
+        <result>/back/9_cs1.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="editDay" class="com.jqg.struts.MoneyuseAction" method="editDay">
+        <result>/back/9_cs1.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action> 
+         <!-- 借款期限（月）-->
+        <action name="createTime" class="com.jqg.struts.MoneyuseAction" method="createTime">
+        <result>/back/9_cs1.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="delTime" class="com.jqg.struts.MoneyuseAction" method="delTime">
+        <result>/back/9_cs1.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="editTime" class="com.jqg.struts.MoneyuseAction" method="editTime">
+        <result>/back/9_cs1.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action> 
+        
+        
+    </package>
+</struts>

@@ -1,0 +1,158 @@
+*{ margin:0; padding:0;}
+body{ background-color:#fff; font-family:"微软雅黑"; font-size:12px; color:#333;}
+ul, li, ol{ list-style:none;}
+em, b, strong, i{ font-style:normal;}
+a{ text-decoration:none; color:#333;}
+img{ border:none; vertical-align:middle;}
+.v_fl{ float:left;}
+.v_fr{ float: right;}
+.bg1{ background:#fff;}
+/*header部分开始*******/
+.v_top{ width:100%; height:44px; border-bottom:1px solid #dddddd;}
+.v_top_con{ width:1200px; clear:both; margin:0 auto; color:#000; line-height:44px;}
+.v_top_con a{ color:#000;}
+.v_top_l{ float:left; }
+.v_top_l li{ float:left; padding-right:5px; position: relative;}
+.v_top_l li a{ padding-left:5px;}
+/**qq下拉框*****/
+.v_top_l li ul{ width:140px; background:#789BFC;z-index: 100; position:absolute; display:none; top:44px; left:-2px; padding-left: 10px;margin-left: -38px}
+.v_top_qq li{ float: none;}
+.v_top_qq li a{color:#fff; display: block;}
+.v_top_l li:hover ul{ display:block;}
+.v_top_r{ float:right; overflow:hidden;}
+.v_top_r li{ float:left; padding-left:18px;}
+.v_top_r li a{ padding: 0 20px 0 5px; border-right:1px solid #ddd;}
+.v_top_r li .v_help{ border:none; padding-right:0;}
+.v_top_r li:hover ul{ display:block;}
+.v_top_r li ul{ width:auto; background:#333333;z-index: 100; position:absolute; display:none; top:44px; left:72%;top:0px; }
+/*logo及右侧导航*********/
+.v_nav{ width:1200px; height:90px; margin:0 auto; overflow:hidden; padding-top:15px;}
+.v_nav img{ float:left;}
+.v_nav_con{ float:right;}
+.v_nav_con li{ float:left;margin-right:40px;padding-top:35px;}
+.v_nav_con li a{ color:#666666; font-size:16px;}
+.v_nav dl{ overflow:hidden; padding-top:25px;width:200px;}
+.v_nav dl a{ color:#fff;width:90px; height:40px; line-height:40px; text-align:center; display: block;}
+.v_nav dl dt{ background: #77b716; border-radius: 5px; margin-right:10px;}
+.v_nav dl dd{ background:#ff6803; border-radius: 5px;}
+/*banner*/
+.content{ background:#f3f3f3;}
+.banner {width: 100%;}
+.full_banner {background: none repeat scroll 0 0 #fff;clear: both;height: 445px;overflow: hidden;position: relative;width: 100%;}
+.full_banner .bd ul {width: 100% !important;}
+.full_banner .bd li {float: left;height: 445px;overflow: hidden;text-align: center;width: 100% !important;}
+.full_banner .bd li a {display: block;height: 445px;}
+.full_banner .hd {bottom: 0;height: 30px;left: 0;line-height: 30px;position: absolute;text-align: center;width: 100%;z-index: 1;}
+.full_banner .hd ul {padding-top: 5px;text-align: center;}
+.full_banner .hd ul li {background: orange;border-radius: 5px;cursor: pointer;display: inline-block;height: 5px;line-height: 9999px;margin: 5px;overflow: hidden;width: 40px;}
+.full_banner .hd ul .on {background: red;}
+/*优势*/
+.v_strength{color:#000; overflow:hidden; width: 1200px; margin:20px auto;}
+.v_strength dt{float:right; margin-left:20px;}
+.v_strength dd{background:#fff; float:left; width:284px; border-bottom:1px solid #ddd; border-top:1px solid #53a0e3; text-align:center; padding:15px 0 40px; border-right:1px solid #ddd;}
+.v_strength dd img{ display:block; margin:0 auto; padding-bottom: 30px;}
+.v_strength dd span{ font-size:20px; display:block; padding:20px 0 35px;}
+.v_strength dd p{padding-bottom:3px; line-height:18px;}
+.v_strength dd p b{ font-size:18px; font-weight:100;}
+/*右侧二维码*/
+.v_strength_ewm{ border:1px solid #ddd; overflow: hidden; padding:10px 20px; width:280px;}
+.v_strength_ewm p{ padding-right:14px; color:#999;width: 140px;}
+.v_strength_ewm p span{ display: block; color:#01abf9; font-size: 20px; padding:15px 0 5px;}
+.v_strength_ewm p b{ display: block; color:#000; font-weight:500; font-size:28px; padding-left:20px;}
+.v_news_con2{ padding: 5px 15px 14px;}
+.v_news_a .v_news_tit_tj{ border-bottom:none; border-top-color:#ff6f3d; background:#fff;}
+.v_news_con2 li{ line-height:22px; overflow:hidden; padding-left:12px; background:url(../images/li_lg.png) left center no-repeat; vertical-align:bottom;}
+.v_news_con2 li b{ float:left; font-size:21px;}
+.v_news_con2 li a{ display: block; width:150px; float:left; overflow:hidden; text-overflow:ellipsis; white-space: nowrap;}
+.v_new_a li a{ width: 200px; line-height:34px;}
+.v_news_con2 li span{ float:right;}
+.v_news_con2 .v_news_more{ border-bottom:none; text-align:right;}
+.v_news_con2 .v_news_more a{ width:325px;}
+.v_strength_gongao{ border:1px solid #ddd; margin-top:20px;width:320px;}
+.v_strength_gongao p{ overflow: hidden; padding:20px 20px 0;}
+.v_strength_gongao p span{ font-size:16px;}
+.v_strength_gongao p a{ color:#999;}
+/*数据统计*/
+.v_data{ height:148px; background: url(../images/data_bg.png) center center no-repeat; overflow: hidden; width: 1200px; margin:0 auto;}
+.v_data li{ font-size: 16px; float:left; padding-top:42px; width:400px; text-align:center;color:#fff;}
+.v_data li p{ font-size:26px; padding-top:15px; font-weight: 600;}
+/*投资列表*/
+.v_list{ width:1200px; margin:0 auto;}
+.v_list_tit{ padding-top:20px; line-height:50px; overflow:hidden; border-bottom:3px solid #135194;}
+.v_list_tit span{ font-size:18px; float:left; line-height:42px; color:#515151; font-size:20px; font-weight:500; }
+.v_list_tit span em{ font-size: 12px; color:#999999; padding-left:40px;}
+.v_list_tit a{ float:right; font-size:12px; color:#999;}
+.v_list_con{overflow: hidden; padding:20px 0; margin-top:10px;}
+.v_list_con li{ float: left; width:185px; text-align: center; color:#000; background: #fff; font-size:18px;}
+.v_list_con li em{color:#888888; display: block; font-size: 12px; padding-top:3px;}
+.v_list_con .v_lilv dl{ position:relative;}
+.v_lilv dl dd{position:absolute; color:#fff; width: 61px; font-size:14px; left:110px; top:-10px; background:url(../images/list_bg.png) center top no-repeat; height:35px;}
+.v_lilv dl dt{text-align:left; padding-left: 70px;}
+.v_list_con .v_left_tit{ text-align:left; font-size:14px; padding-left:20px; width: 360px; border-right: 1px solid #ececec;}
+.v_left_tit a{color:#135194; font-size:18px; padding-bottom:5px; display: block; width: 220px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.v_list_con li .v_jindu{ width:130px; height:3px; background:#ececec; position:absolute; top:42px;left:60px;}
+.v_jindu .v_tiao{ height:3px; background:#ef7814; display:block; float:left;}
+.v_list_con li.v_jdt{ position:relative; width:200px; padding-left:50px; height:50px; border-left: 1px solid #ececec; float: right;}
+.v_jdt b{ font-size:12px; font-weight:500;position:absolute; top:45px; left:108px;}
+.v_jdt a{ display:block; width:130px; height:32px; border-radius: 5px; background:#ef7814; text-align:center; line-height:32px; color:#fff; font-size:14px; position:absolute;left:60px;}
+.v_list_more{ display: block; text-align:center; line-height:40px; font-size:16px; color:#999; margin-top: 10px;}
+/*广告*/
+.v_index_pic{ background: url(../images/index_pic.png) center center no-repeat; height:188px; width:100%; margin:20px 0;}
+/*新闻及排行榜*/
+.v_news{ padding-top:20px;}
+.v_news_box{ border-top:none; overflow:hidden; width:1200px; margin:0 auto;}
+.v_news_box .v_news_1{ float:left; width:405px; margin-right:20px;}
+.v_news_1 p, .v_rank_tit{ overflow:hidden; font-size:18px;}
+.v_news_1 p span, .v_rank_tit span,.v_news_r h4{ display:block; height:46px; line-height:46px; float:left; width:100px; text-align:center; border-bottom:1px solid #23a3dd;}
+.v_news_1 p a{ float:right; font-size:12px; line-height:46px; padding-right:20px;}
+.v_news_1 .v_news_con{ padding: 10px 20px;}
+.v_news_a .v_news_tit_tj{ border-bottom:none; border-top-color:#ff6f3d; background:#fff;}
+.v_news_1 .v_news_con li{ height:38px; line-height:38px; overflow:hidden; vertical-align:bottom; padding-left:10px;background:url(../images/v_new_li.png) left center no-repeat;}
+.v_news_con li b{ float:left; font-size:21px;}
+.v_news_con li a{ font-size:15px; padding:0 5px; display: block; width:240px; float:left; overflow:hidden; text-overflow:ellipsis; white-space: nowrap;}
+.v_news_con li span{ float:right;}
+.v_news_con li:hover, .v_news_con li:hover a{ color:#23a3dd;}
+.v_news_con li:hover{ background:url(../images/v_new_li_hove.png) left center no-repeat;}
+.v_news_1 .v_news_con .v_news_more{ border-bottom:none; text-align:right;}
+.v_news_con .v_news_more a{ width:325px;}
+.v_news_2 p{ border-bottom:1px solid #ddd;}
+/*排行榜*/
+.v_news_r{ width:350px; float:left;border-left:none; position:relative;}
+.v_news_r h4{ position:absolute; top:-1px; color:#666; font-size:18px; font-weight:500;}
+.v_ranking_tit{ overflow:hidden; position:absolute; right:0; top:12px;}
+.v_ranking_tit li{ float:left; width:22px; height:22px;line-height:22px; text-align:center;}
+.v_ranking_tit .tianjia{ background:#23a3dd; color:#fff;}
+.v_ranking_con{display:none; background:url(../images/v_ranking.png) 32px 0 no-repeat;margin-top:13px;}
+.v_ranking_con li{ overflow:hidden; line-height:39px; vertical-align: bottom; color:#6a6c6b; padding-left: 80px;}
+.v_ranking_con li span{ float:left;}
+.v_ranking_con li p{ float:right; padding-right: 20px;}
+.v_ranking_con li em{ color:#fe8147;}
+/*合作机构*/
+.v_partner{ width: 1200px; margin:40px auto 0;}
+.v_partner h3, .v_link_more h3{ color:#666; font-size:16px; }
+.v_partner h3 img{padding-right: 5px;}
+.v_partner_con{ margin:10px 0 30px; overflow:hidden; padding:22px 12px; border:1px solid #ddd;}
+.v_partner_con li{ float:left; border:1px solid #eaeaea; margin-right:10px; width:183px; height:55px;}
+.v_partner_con li img{ width:183px; height:55px;}
+.v_link_more{ width:1200px; margin:0 auto;overflow: hidden;}
+.v_link_more ul{ overflow:hidden; padding:0 20px; margin:10px 0 20px; border:1px solid #ddd;}
+.v_link_more ul li{ float:left; padding-right:20px; line-height:38px;}
+/*footer部分*/
+.footer{ background:#e7e7e7; border-top:1px solid #ddd;}
+.v_footer{ width: 1200px; margin:0 auto;}
+.v_footer_box{ padding-bottom:30px;}
+.v_footer_top{ overflow:hidden; padding-top:40px;}
+.v_footer_top dt{ float:right; overflow: hidden;width:680px;}
+.v_footer_top dd{ float:left; padding-right:100px;}
+.v_footer_top dd p{ font-size:16px; color:#323234;}
+.v_footer_top dd a{ color:#888;display:block; line-height:28px;}
+.v_footer_kefu p{ color:#575151; padding-bottom:25px;}
+.v_footer_kefu{ padding-right:130px;}
+.v_footer_ewm p{ padding-left:20px; font-size:14px;}
+.v_footer_ewm p span{display: block; font-size:16px; padding:6px 0;margin-left:-20px;}
+.v_footer_kefu em a{ padding-right:5px;}
+.v_footer_box{ border-bottom:1px solid #ddd;}
+.v_beian{ padding:30px 0; text-align: center; color:#a5a5a5;}
+.footerimg{ float: right;margin-right: 80px;}
+.footerimg p{text-align: center;}
+.footerimg p span{font-size: 14px;}

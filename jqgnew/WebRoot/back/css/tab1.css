@@ -1,0 +1,24 @@
+
+
+/*滑动效果css*/
+#hotnews_caption { position:relative;height:44px; border-bottom: 1px solid #d0dee5; margin-top:10px;}
+#hotnews_caption ul{  padding:0;margin-left:100px;border-left: 1px solid #d3dbde; width:950px; float:left; }
+#hotnews_caption ul li {float:left;width:110px; background:url(../images/itabbg.png) 0px 0 repeat-x; line-height:44px;border-right:solid 1px #d3dbde; font-size:15px; text-align:center; cursor:pointer;  }
+#hotnews_caption .current{ color:#006ac7;cursor:pointer; border-left: 1px solid #d3dbde; line-height:42px;display:block; border-top:3px solid #006ac7; background:#fff;  }
+#hotnews_content{ padding:15px 0px ; }
+#hotnews_content .normal{ display:none;}
+#hotnews_content .current{ display:block;}
+
+#list_1,#list_2,#list_3,#list_4,#list_5,#list_6,#list_7{  padding: 0; }
+
+
+.m_forminfo li{ width:100%;margin:6px 0; float:left; line-height:34px; border-bottom:1px dashed #ddd; padding-bottom:10px;}
+.m_forminfo li p{display:block;  float:left; }
+#list_1 .list_tip ,#list_2 .list_tip,#list_3 .list_tip,#list_4 .list_tip,#list_5 .list_tip,#list_6 .list_tip,#list_7 .list_tip{ border: 1px dashed #b7cfe4; margin-bottom: 10px ; padding: 10px 0; background: #eaf2f7;}
+#list_1 .list_tip ul ,#list_2 .list_tip ul,#list_3 .list_tip ul,#list_4 .list_tip ul,#list_5 .list_tip ul,#list_6 .list_tip ul,#list_7 .list_tip ul{margin: 0; padding: 0;}
+#list_1 .list_tip ul li,#list_1 .list_tip ul li,#list_2 .list_tip ul li,#list_3 .list_tip ul li,#list_4 .list_tip ul li,#list_5 .list_tip ul li,#list_6 .list_tip ul li,#list_7 .list_tip ul li { line-height:25px; padding-left:35px; width:95%; color:#013d87; }
+.m_info_title1{ width:200px;line-height:34px; display:block; float:left; text-align:right; margin-right:10px;}
+.tablelist{ margin-top:0px; width:100%; float:left;}
+.tablelist td .input { color: #333333;padding: 0px 5px;  height: 28px; line-height: 28px; margin:8px 0 8px 10px; float:left;border-color: #a7b5bc #ced9df #ced9df #a7b5bc;  border-style: solid;  border-width: 1px;}
+.tablelist td { border: 1px solid #ddd;}
+.toolbar{ width:100%; padding:6px 0; margin-bottom:10px; background:#eaf2f7;}

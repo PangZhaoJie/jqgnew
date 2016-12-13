@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.multipart.saveDir" value="/tmp"></constant>
+    <package name="overall" namespace="/overall" extends="default">
+    <result-types>
+			<result-type name="json" class="org.apache.struts2.json.JSONResult" />
+		</result-types>
+		<!-- 定义一个拦截器 -->
+		<interceptors>
+			<interceptor name="json"
+				class="org.apache.struts2.json.JSONInterceptor" />
+			<interceptor name="user" class="com.jqg.Interceptor.CkeckBackLogin">
+			</interceptor>
+			<interceptor name="authority"
+				class="com.jqg.Interceptor.LoginInterceptor">
+			</interceptor>
+			<!-- 拦截器栈 -->
+			<interceptor-stack name="teamwareStack">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="json" />
+				<interceptor-ref name="user" />
+				<interceptor-ref name="authority" />
+			</interceptor-stack>
+		</interceptors>
+    
+         <!--查找所有广告 -->
+         <action name="findAverts" class="com.jqg.struts.OverallAction" method="findAverts">
+            <result>/back/1_avert_set.jsp</result>
+             <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+               
+         </action>
+         <!-- 查找单个广告 -->
+         <action name="findAvert" class="com.jqg.struts.OverallAction" method="findAvert">
+            <result>/back/1_edit_ad.jsp</result>
+             <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+         <!-- 更新广告 -->
+         <action name="updateAvert" class="com.jqg.struts.OverallAction" method="updateAvert">
+            <result>/overall/findAverts</result>
+             <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+         <!-- 更新网站设置 -->
+        <action name="updateWebsite" class="com.jqg.struts.OverallAction" method="updateWebsite">
+            <result>/overall/findWebsite</result>
+             <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+         <!-- 查找网站设置-->
+         <action name="findWebsite" class="com.jqg.struts.OverallAction" method="findWebsite">
+            <result>/back/1_login_set.jsp</result>
+             <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+         <!-- 后台首页所需数据查找 -->
+         <action name="index" class="com.jqg.struts.OverallAction" method="index">
+            <result>/back/default.jsp</result>
+             <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+         <!-- 查找所有友情链接 -->
+         <action name="findFriendlink" class="com.jqg.struts.OverallAction" method="findFriendlink">
+          <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+         <!-- 添加友情链接 -->
+         <action name="addFriendlink" class="com.jqg.struts.OverallAction" method="addFriendlink">
+            <result>/back/1_link.jsp</result>
+             <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+         <!-- 更新友情链接 -->
+         <action name="updateFriendlink" class="com.jqg.struts.OverallAction" method="updateFriendlink">
+            <result>/back/1_link.jsp</result>
+             <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+         <!-- 删除友情链接-->
+         <action name="deleteFriendlink" class="com.jqg.struts.OverallAction" method="deleteFriendlink">
+            <result>/back/1_link.jsp</result>
+             <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+         <!-- 查找友情链接数据传给更新页面 -->
+         <action name="findFriendlinkOne" class="com.jqg.struts.OverallAction" method="findFriendlinkOne">
+            <result>/back/1_uptlink.jsp</result>
+             <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+         <!-- 查找所有操作日志 -->
+         <action name="findOerationlog" class="com.jqg.struts.OverallAction" method="findOerationlog">
+          <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+          <!-- 根据搜索条件查找所有操作日志 -->
+         <action name="searchOerationlogs" class="com.jqg.struts.OverallAction" method="searchOerationlogs">
+          <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+        <!-- 查找所有文章并分页 -->
+         <action name="findnews" class="com.jqg.struts.MenuNewAction" method="findnews">
+          <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+         <!-- 根据类别查找所有文章并分页 -->
+         <action name="findnewsBymenu" class="com.jqg.struts.MenuNewAction" method="findnewsBymenu">
+          <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+          <!-- 查找所有能发文章的菜单传至添加文章页面-->
+         <action name="findmenus" class="com.jqg.struts.MenuNewAction" method="findmenus">
+          <result>/back/5_edit.jsp</result>
+           <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+         <!-- 查找菜单 -->
+		<action name="findMenu" class="com.jqg.struts.MenuNewAction" method="findMenu">
+			<result>/back/6_list.jsp</result>
+			<interceptor-ref name="defaultStack" />
+			<interceptor-ref name="authority" />
+		</action>
+           <!-- 查找文章传至更新页面-->
+         <action name="findnew" class="com.jqg.struts.MenuNewAction" method="findnew">
+          <result>/back/5_uptedit.jsp</result>
+           <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+           <!-- 删除文章-->
+         <action name="deletenew" class="com.jqg.struts.MenuNewAction" method="deletenew">
+          <result>/back/5_list.jsp</result>
+           <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+            <!-- 更新菜单-->
+         <action name="updateMenu" class="com.jqg.struts.MenuNewAction" method="updateMenu">
+          <result>findMenu</result>
+           <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+         <!-- 查找所有用户-->
+         <action name="findUsers" class="com.jqg.struts.UserMangerAction" method="findUsers">
+          <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+<!--          用户导出excel -->
+         <action name="findUsersExcel" class="com.jqg.struts.UserMangerAction" method="findUsersExcel">
+          <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+          <!-- 根据条件搜索用户-->
+         <action name="searchUsers" class="com.jqg.struts.UserMangerAction" method="searchUsers">
+          <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+              <!-- 查找为进行邮箱验证的用户-->
+         <action name="findUsersByemail" class="com.jqg.struts.UserMangerAction" method="findUsersByemail">
+          <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+          <!-- 查找进行视频认证或现场认证的用户-->
+         <action name="findUsersByvidio" class="com.jqg.struts.UserMangerAction" method="findUsersByvidio">
+          <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+         <!-- 查找vip会员所有的用户-->
+         <action name="findUsersByVip" class="com.jqg.struts.UserMangerAction" method="findUsersByVip">
+           <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+             <!--修改用户密码-->
+         <action name="uptpwd" class="com.jqg.struts.UserMangerAction" method="uptpwd">
+         <result>/back/3_list.jsp</result>
+          <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+          <!--修改用户余额-->
+         <action name="uptmoney" class="com.jqg.struts.UserMangerAction" method="uptmoney">
+        <result name="loanjump">/loan/tranjump.jsp</result>
+        <result name="jump">/back/jump.jsp</result>
+         	<result name="success">/back/3_list.jsp</result>
+          <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+         <!--修改信用额度-->
+         <action name="uptcredit" class="com.jqg.struts.UserMangerAction" method="uptcredit">
+         <result>/back/3_list.jsp</result>
+          <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+        <!--视频认证-->
+       <action name="vidio" class="com.jqg.struts.UserMangerAction" method="vidio">
+         <result>/back/3_list3.jsp</result>
+          <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+      <!--现场认证-->
+        <action name="scene" class="com.jqg.struts.UserMangerAction" method="scene">
+         <result>/back/3_list4.jsp</result>
+          <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+           <!--审核信用额度申请-->
+        <action name="quota" class="com.jqg.struts.UserMangerAction" method="quota">
+         <result>/back/3_list5.jsp</result>
+          <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+          <!--实名认证-->
+        <action name="realname" class="com.jqg.struts.UserMangerAction" method="realname">
+         <result>/back/3_namelist.jsp</result>
+          <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+         <!--vip会员认证-->
+        <action name="vipMember" class="com.jqg.struts.UserMangerAction" method="vipMember">
+         	<result name="jump">/back/jump.jsp</result>
+         	<result name="success">/back/3_vipList.jsp</result>
+          	<interceptor-ref name="defaultStack" /> 
+            <interceptor-ref name="authority" />  
+        </action>
+         <!-- 查找待审核额度申请的用户-->
+         <action name="findquota" class="com.jqg.struts.UserMangerAction" method="findquota">
+          <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+          <!-- 查找待审核实名认证的客户-->
+         <action name="findcertification" class="com.jqg.struts.UserMangerAction" method="findcertification">
+          <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+          <!-- 
+         <action name="beifen" class="com.jqg.struts.SqlAction" method="beifen">
+         <result>/back/3_namelist.jsp</result>
+         </action>
+   
+         <action name="huanyuan" class="com.jqg.struts.SqlAction" method="huanyuan">
+         <result>/back/3_namelist.jsp</result>
+         </action>
+ 
+         <action name="delete" class="com.jqg.struts.SqlAction" method="delete">
+         <result>/back/3_namelist.jsp</result>
+         </action>-->
+              <!-- 查找所有管理员并分页-->
+         <action name="mangerlist" class="com.jqg.struts.ManagerAction" method="mangerlist">
+       <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+    
+                <!-- 删除管理员-->
+         <action name="deletemanager" class="com.jqg.struts.ManagerAction" method="deletemanager">
+         <result name="success" >/back/8_list.jsp</result>
+           <interceptor-ref name="defaultStack" />
+           <interceptor-ref name="json" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+                <!-- 删除管理员-->
+         <action name="out" class="com.jqg.struts.ManagerAction" method="out">
+         <result>/back/login.jsp</result>
+           <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+              <!-- 查找首页新标预告-->
+         <action name="findlssh" class="com.jqg.struts.NewsAction" method="findlssh">
+         
+         <result>/back/9_uptherald.jsp</result>
+           <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+              <!-- 更新首页新标预告-->
+         <action name="uptlssh" class="com.jqg.struts.NewsAction" method="uptlssh">
+         <result>/back/9_uptherald.jsp</result>
+            <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+         </action>
+         <!-- 查找app图片所有列表-->
+         <action name="findPhotos" class="com.jqg.struts.PhotoAction"  method="findPhotos">
+         	<result name="success">/back/photo.jsp</result>
+         	<interceptor-ref name="defaultStack" /> 
+            <interceptor-ref name="authority" />  
+         </action>
+         <!-- 根据id查找app图片-->
+         <action name="findPhotoByAppId" class="com.jqg.struts.PhotoAction"  method="findPhotoByAppId">
+         	<result name="success">/back/photo_update.jsp</result>
+         	<interceptor-ref name="defaultStack" /> 
+            <interceptor-ref name="authority" />  
+         </action>
+          <!-- 删除app图片-->
+         <action name="deletePhotoByApp" class="com.jqg.struts.PhotoAction"  method="deletePhotoByApp">
+         	<result type="redirectAction">
+         		<param name="actionName">findPhotos</param>
+         	</result>
+         	<interceptor-ref name="defaultStack" /> 
+            <interceptor-ref name="authority" />  
+         </action>
+    </package>
+</struts>

@@ -1,0 +1,80 @@
+﻿@charset "utf-8";
+
+/*认证中心*/
+input{border:1px solid #ccc; border-radius:3px;vertical-align:middle;outline:none; height:32px; line-height:32px;  margin-left:10px; padding-left:8px; color:#999;}
+table{border-collapse: collapse;}
+input:hover{border:1px solid #0095eb;}
+
+
+#list_1 .xinxi{float:left;margin-right:20px;}
+#list_1 .xinxi p{line-height:35px;}
+#list_1{overflow:hidden;}
+#list_1 .xinxi .yanzheng input{background-image:url(../../images/yanzheng_03.png);background-repeat:no-repeat;background-position:center center;width:140px;border:none; cursor:pointer;background-color:#FFF;}
+#list_1 .xinxi .tishi .fasong a{color:#333;}
+#list_1 .xinxi .tishi a{color:#333;}
+#list_1 .xinxi .tishi{margin-top:20px;color:#999;font-size:12px;}
+#list_1 .xinxi .tishi img{margin-right:20px;}
+#list_1 .xinxi .tishi .xin input{height:20px;}
+
+
+#list_2 .shouji{float:left;margin-right:60px;}
+#list_2 .shouji .sjH .M{float:left;}
+#list_2 .shouji .sjH .M a{margin-left:10px;color:#69F;}
+#list_2 .shouji p{margin-top:10px;}
+#list_2 .shouji div{margin-top:10px;}
+#list_2 .shouji .yzM div{float:left;}
+#list_2 .shouji .yzM{overflow:hidden;}
+#list_2 .shouji .sjH{overflow:hidden;}
+#list_2 .shouji .sjH div input{height:20px;}
+#list_2 .shouji .yzM div input{height:20px;}
+#list_2 .shouji .wancheng input{background-image:url(../../images/wancheng_03.png);background-repeat:no-repeat;background-position:center center;width:142px;border:none;cursor:pointer;background-color:#FFF;}
+#list_2 .shouji .wancheng{margin-left:60px;}
+#list_2 .shouji .zhuyi{font-size:12px;color:#999;}
+
+
+#list_3 .shouji p{margin-top:10px;}
+#list_3 .shouji{float:left;margin-right:30px;}
+#list_3 .shouji div{margin-top:0px;}
+#list_3 .shouji .sjH{overflow:hidden; padding-top:15px;}
+#list_3 .shouji .sjH div{float:left;}
+#list_3 .shouji .sjH div input{height:32px; line-height:32px;}
+#list_3 .shouji .sjH .button input{background-image:url(../../images/xuanze_03.png);background-repeat:no-repeat;background-position:center center;width:80px;border:none;cursor:pointer;background-color:#FFF;}
+#list_3 .shouji .sjH .xuanze{color:#000;line-height:20px;}
+#list_3 .shouji .yanzheng input{background-image:url(../../images/wancheng_04_03.png);background-repeat:no-repeat;background-position:center center;width:142px;border:none;cursor:pointer;background-color:#FFF;}
+#list_3 .shouji .yanzheng{margin-left:60px;}
+#list_3 .shouji .zhuyi{font-size:12px;color:#999;}
+#list_3 .shouji .zhuyi img{margin-right:20px;}
+#list_3 .shouji .zhuyi img{margin-right:20px;}
+#list_3 .shouji .shangchuan{border:solid 1px #CCC;width:150px;height:100px;}
+
+
+
+#list_4 a{color:#ff5800;margin-left:10px;}
+
+
+
+#list_5 a{color:#ff5800;margin-left:10px;}
+
+#uboxstyle { float:left; padding:0; margin-left:10px;margin-bottom:10px;}
+#uboxstyle .select_box{width:500px;height:37px; padding:0; }
+#uboxstyle div.tag_select{display:block;color:#666;width:239px;height:37px;background: url(../../images/115select_bg05.png) ;padding:0 10px;line-height:37px;}
+#uboxstyle div.tag_select_hover{display:block;color:#666;width:259px;height:37px;background:transparent url(../../images/115select_bg04.png) no-repeat 0 0px;padding:0 10px;line-height:37px;}
+#uboxstyle div.tag_select_open{display:block;color:#666;width:259px;height:37px;background:transparent url(../../images/115select_bg06.png) no-repeat 0 0px;padding:0 10px;line-height:37px;}
+#uboxstyle ul.tag_options{position:absolute;padding:0;margin:0px; height:170px; overflow-x:hidden;overflow-y:auto;  list-style:none;border: 1px solid #00a8e7; border-radius: 4px;width:259px;padding:0 0 5px; background:#fff;}
+#uboxstyle ul.tag_options li{width:259px;display:block;padding:0 10px;height:34px;text-decoration:none;line-height:34px;color:#666;}
+#uboxstyle ul.tag_options li.open_hover{background:#d0e8f2 repeat;color:#0066cc;}
+#uboxstyle ul.tag_options li.open_selected{background:#049cf2 repeat;color:#fff;}
+#uboxstyle em{ float:left; padding-left:5px; }
+
+#list_6 .shouji{float:left;margin-right:60px;}
+#list_6 .shouji .title{float:left;}
+#list_6 .shouji .daan{margin-bottom:10px;}
+#list_6 .shouji .daan input{width:249px;}
+/* #list_6 .shouji .anquan input{background:url(../../images/wenti_03.png) no-repeat 0 0px;width:142px;border:none;cursor:pointer;background-color:#FFF;margin-left:100px;} */
+#list_6 .shouji .zhuyi{font-size:12px;color:#999;line-height:30px; margin-top:15px;}
+#list_6 .shouji .zhuyi img{margin-right:20px;}
+#submit{ width:845px; text-align:center; }
+.submit_bt{font:18px/34px "Microsoft YaHei";width:180px;height:36px; background: #f59b3b;color:#fff;cursor:pointer;margin-left:10px;border-radius:3px; border:0;}
+.submit_bt:hover{background:#11a9e1;border:0;}
+.tj_bt{font:16px/34px "Microsoft YaHei";width:140px;height:36px; text-align:center; background:#11a9e1;color:#fff;cursor:pointer;margin:10px 0px 0px 100px;border-radius:3px; border:0;}
+.tj_bt:hover{background:#999;border:0;}

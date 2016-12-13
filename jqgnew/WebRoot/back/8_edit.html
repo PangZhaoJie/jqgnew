@@ -1,0 +1,627 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+
+<script>
+function select_all(id){
+	var se = id+"_son";
+	if($("#"+id).attr('checked')){
+		$("input:[data="+se+"]").each(function(i,obj){
+			$(obj).attr('checked','true');
+		
+		});
+	}else{
+		$("input:[data="+se+"]").each(function(i,obj){
+			$(obj).attr('checked','');
+		
+		});
+	}
+
+}
+
+</script>
+
+<style>
+.set_form{ padding:10px; float:left; }
+.lineD input { color: #333333;padding: 5px; margin:0px 4px 0px 8px;}
+
+</style>
+</head>
+
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">权限</a></li>
+    <li><a href="#">用户级权限配置</a></li>
+    </ul>
+    </div>
+    
+    <div class="rightinfo">
+      <div class="set">
+       <form action="" method="post" class="set_form">
+       
+       <dl class="lineD">
+          <dt>用户组名称：</dt>
+	      <dd><input type="text" value="财务" size="30" class="input" id="groupname" name="groupname"></dd>
+       </dl> 
+       <dl class="lineD">
+          <dt><b>全局设置</b></dt>
+	      <dd>请选择相关权限<input type="checkbox" id="fa0" onclick="select_all('fa0');"><label for="fa0">全选</label></dd>
+       </dl> 
+       <dl class="lineD">
+		  <dt>网站设置：</dt>
+		  <dd>
+								<input data="fa0_son" name="model[global][]" class="check" value="at1" id="globalat1" type="checkbox"><label for="globalat1">列表</label>
+								<input data="fa0_son" name="model[global][]" class="check" value="at2" id="globalat2" type="checkbox"><label for="globalat2">增加</label>
+								<input data="fa0_son" name="model[global][]" class="check" value="at3" id="globalat3" type="checkbox"><label for="globalat3">删除</label>
+								<input data="fa0_son" name="model[global][]" class="check" value="at4" id="globalat4" type="checkbox"><label for="globalat4">修改</label>
+	      </dd>
+	   </dl> 
+       <dl class="lineD">
+		  <dt>友情链接：</dt>
+		  <dd>
+								<input data="fa0_son" name="model[global][]" class="check" value="at5" id="globalat5" type="checkbox"><label for="globalat5">列表</label>
+								<input data="fa0_son" name="model[global][]" class="check" value="at6" id="globalat6" type="checkbox"><label for="globalat6">增加</label>
+								<input data="fa0_son" name="model[global][]" class="check" value="at7" id="globalat7" type="checkbox"><label for="globalat7">删除</label>
+								<input data="fa0_son" name="model[global][]" class="check" value="at8" id="globalat8" type="checkbox"><label for="globalat8">修改</label>
+								<input data="fa0_son" name="model[global][]" class="check" value="att8" id="globalatt8" type="checkbox"><label for="globalatt8">搜索</label>
+		 </dd>
+		</dl> 
+        <dl class="lineD">
+		  <dt>所有缓存：</dt>
+		  <dd>
+								<input data="fa0_son" name="model[global][]" class="check" value="at22" id="globalat22" type="checkbox"><label for="globalat22">清除</label>
+		  </dd>
+		</dl>
+         <dl class="lineD">
+		  <dt>后台操作日志：</dt>
+		  <dd>
+								<input data="fa0_son" name="model[global][]" class="check" value="at23" id="globalat23" type="checkbox"><label for="globalat23">列表</label>
+								<input data="fa0_son" name="model[global][]" class="check" value="at24" id="globalat24" type="checkbox"><label for="globalat24">删除</label>
+								<input data="fa0_son" name="model[global][]" class="check" value="at25" id="globalat25" type="checkbox"><label for="globalat25">删除一月前操作日志</label>
+		  </dd>
+		</dl>
+         <dl class="lineD">
+		  <dt>广告管理：</dt>
+		  <dd>
+								<input data="fa0_son" name="model[ad][]" class="check" value="ad1" id="adad1" type="checkbox"><label for="adad1">列表</label>
+								<input data="fa0_son" name="model[ad][]" class="check" value="ad2" id="adad2" type="checkbox"><label for="adad2">增加</label>
+								<input data="fa0_son" name="model[ad][]" class="check" value="ad4" id="adad4" type="checkbox"><label for="adad4">删除</label>
+								<input data="fa0_son" name="model[ad][]" class="check" value="ad3" id="adad3" type="checkbox"><label for="adad3">修改</label>
+		</dd>
+		</dl>
+         <dl class="lineD">
+		  <dt>登陆接口管理：</dt>
+		  <dd>
+								<input data="fa0_son" name="model[loginonline][]" class="check" value="dl1" id="loginonlinedl1" type="checkbox"><label for="loginonlinedl1">查看</label>
+								<input data="fa0_son" name="model[loginonline][]" class="check" value="dl2" id="loginonlinedl2" type="checkbox"><label for="loginonlinedl2">修改</label>
+		 </dd>
+		</dl> 
+        <dl class="lineD">
+          <dt><b>借款管理</b></dt>
+	      <dd>请选择相关权限<input onClick="select_all('fa1');" id="fa1" type="checkbox"><label for="fa1">全选</label></dd>
+        </dl>
+        <dl class="lineD">
+		  <dt>初审待审核借款：</dt>
+		  <dd>
+								<input data="fa1_son" name="model[borrow][]" class="check" value="br1" id="borrowbr1" type="checkbox"><label for="borrowbr1">列表</label>
+								<input data="fa1_son" name="model[borrow][]" class="check" value="br2" id="borrowbr2" type="checkbox"><label for="borrowbr2">审核</label>
+		 </dd>
+		</dl>
+        <dl class="lineD">
+		  <dt>复审待审核借款：</dt>
+		  <dd>
+								<input data="fa1_son" name="model[borrow][]" class="check" value="br3" id="borrowbr3" type="checkbox"><label for="borrowbr3">列表</label>
+								<input data="fa1_son" name="model[borrow][]" class="check" value="br4" id="borrowbr4" type="checkbox"><label for="borrowbr4">审核</label>
+		 </dd>
+		</dl> 
+        <dl class="lineD">
+		  <dt>招标中的借款：</dt>
+		  <dd>
+								<input data="fa1_son" name="model[borrow][]" class="check" value="br5" id="borrowbr5" type="checkbox"><label for="borrowbr5">列表</label>
+								<input data="fa1_son" name="model[borrow][]" class="check" value="br6" id="borrowbr6" type="checkbox"><label for="borrowbr6">审核</label>
+								<input data="fa1_son" name="model[borrow][]" class="check" value="br8" id="borrowbr8" type="checkbox"><label for="borrowbr8">人工处理</label>
+		</dd>
+		</dl>
+        <dl class="lineD">
+		  <dt>还款中的借款：</dt>
+		  <dd>
+								<input data="fa1_son" name="model[borrow][]" class="check" value="br7" id="borrowbr7" type="checkbox"><label for="borrowbr7">列表</label>
+								<input data="fa1_son" name="model[borrow][]" class="check" value="br7" id="borrowbr7" type="checkbox"><label for="borrowbr7">一周内到期标</label>
+								<input data="fa1_son" name="model[borrow][]" class="check" value="br15" id="borrowbr15" type="checkbox"><label for="borrowbr15">投资记录</label>
+		</dd>
+		</dl>
+        <dl class="lineD">
+		  <dt>已完成的借款：</dt>
+		  <dd>
+				<input data="fa1_son" name="model[borrow][]" class="check" value="br9" id="borrowbr9" type="checkbox"><label for="borrowbr9">列表</label>
+		 </dd>
+		</dl>
+        <dl class="lineD">
+		  <dt>已流标借款：</dt>
+		  <dd>
+			<input data="fa1_son" name="model[borrow][]" class="check" value="br11" id="borrowbr11" type="checkbox"><label for="borrowbr11">列表</label>
+		  </dd>
+		</dl> 
+        <dl class="lineD">
+		  <dt>初审未通过的借款：</dt>
+		  <dd>
+			<input data="fa1_son" name="model[borrow][]" class="check" value="br13" id="borrowbr13" type="checkbox"><label for="borrowbr13">列表</label>
+		 </dd>
+		</dl>
+        <dl class="lineD">
+		  <dt>复审未通过的借款：</dt>
+		  <dd>
+					<input data="fa1_son" name="model[borrow][]" class="check" value="br14" id="borrowbr14" type="checkbox"><label for="borrowbr14">列表</label>
+		  </dd>
+		</dl> 
+        <dl class="lineD">
+		  <dt>债权转让：</dt>
+		  <dd>
+								<input data="fa1_son" name="model[debt][]" class="check" value="debt1" id="debtdebt1" type="checkbox"><label for="debtdebt1">查看</label>
+								<input data="fa1_son" name="model[debt][]" class="check" value="debt2" id="debtdebt2" type="checkbox"><label for="debtdebt2">审核</label>
+		 </dd>
+		</dl>
+        <dl class="lineD">
+		  <dt>逾期借款管理：</dt>
+		  <dd>
+								<input data="fa1_son" name="model[expired][]" class="check" value="yq1" id="expiredyq1" type="checkbox"><label for="expiredyq1">查看</label>
+								<input data="fa1_son" name="model[expired][]" class="check" value="yq2" id="expiredyq2" type="checkbox"><label for="expiredyq2">代还</label>
+		</dd>
+		</dl>
+        <dl class="lineD">
+		  <dt>逾期会员列表：</dt>
+		  <dd>
+								<input data="fa1_son" name="model[expired][]" class="check" value="yq3" id="expiredyq3" type="checkbox"><label for="expiredyq3">列表</label>
+		 </dd>
+		</dl>
+        <dl class="lineD">
+            <dt><b>会员管理</b></dt>
+	       <dd>请选择相关权限<input onClick="select_all('fa2');" id="fa2" type="checkbox"><label for="fa2">全选</label></dd>
+        </dl>
+        <dl class="lineD">
+		  <dt>会员列表：</dt>
+		  <dd>
+								<input data="fa2_son" name="model[members][]" class="check" value="me1" id="membersme1" type="checkbox"><label for="membersme1">列表</label>
+								<input data="fa2_son" name="model[members][]" class="check" value="mx2" id="membersmx2" type="checkbox"><label for="membersmx2">调整余额</label>
+								<input data="fa2_son" name="model[members][]" class="check" value="mx3" id="membersmx3" type="checkbox"><label for="membersmx3">调整授信</label>
+								<input data="fa2_son" name="model[members][]" class="check" value="mxw" id="membersmxw" type="checkbox"><label for="membersmxw">删除会员</label>
+								<input data="fa2_son" name="model[members][]" class="check" value="xmxw" id="membersxmxw" type="checkbox"><label for="membersxmxw">修改客户类型</label>
+		 </dd>
+		</dl>
+        <dl class="lineD">
+		  <dt>会员资料：</dt>
+		  <dd>
+								<input data="fa2_son" name="model[members][]" class="check" value="me3" id="membersme3" type="checkbox"><label for="membersme3">列表</label>
+								<input data="fa2_son" name="model[members][]" class="check" value="me4" id="membersme4" type="checkbox"><label for="membersme4">查看</label>
+		  </dd>
+		</dl>
+        <dl class="lineD">
+		  <dt>额度申请待审核：</dt>
+		  <dd>
+								<input data="fa2_son" name="model[members][]" class="check" value="me7" id="membersme7" type="checkbox"><label for="membersme7">列表</label>
+								<input data="fa2_son" name="model[members][]" class="check" value="me6" id="membersme6" type="checkbox"><label for="membersme6">审核</label>
+		</dd>
+		</dl>
+        <dl class="lineD">
+		  <dt>会员详细资料：</dt>
+		  <dd>
+								<input data="fa2_son" name="model[common][]" class="check" value="mex5" id="commonmex5" type="checkbox"><label for="commonmex5">查询</label>
+								<input data="fa2_son" name="model[common][]" class="check" value="sms1" id="commonsms1" type="checkbox"><label for="commonsms1">账户通讯</label>
+								<input data="fa2_son" name="model[common][]" class="check" value="sms2" id="commonsms2" type="checkbox"><label for="commonsms2">具体通讯</label>
+								<input data="fa2_son" name="model[common][]" class="check" value="sms3" id="commonsms3" type="checkbox"><label for="commonsms3">节日通讯</label>
+								<input data="fa2_son" name="model[common][]" class="check" value="sms4" id="commonsms4" type="checkbox"><label for="commonsms4">通讯记录</label>
+		 </dd>
+		</dl>
+        <dl class="lineD">
+		  <dt>推荐人管理：</dt>
+		  <dd>
+				<input data="fa2_son" name="model[refereedetail][]" class="check" value="referee_1" id="refereedetailreferee_1" type="checkbox"><label for="refereedetailreferee_1">列表</label>
+								<input data="fa2_son" name="model[refereedetail][]" class="check" value="referee_2" id="refereedetailreferee_2" type="checkbox"><label for="refereedetailreferee_2">导出</label>
+		</dd>
+		</dl>
+        <dl class="lineD">
+		  <dt>举报信息：</dt>
+		  <dd>
+								<input data="fa2_son" name="model[jubao][]" class="check" value="me5" id="jubaome5" type="checkbox"><label for="jubaome5">列表</label>
+						  </dd>
+		</dl>
+																		
+		
+    <dl class="lineD">
+      <dt class="t"><b>认证及申请管理</b></dt>
+	  <dd>请选择相关权限<input onClick="select_all('fa3');" id="fa3" type="checkbox"><label for="fa3">全选</label></dd>
+    </dl>
+	
+											<dl class="lineD">
+		  <dt>VIP申请列表：</dt>
+		  <dd>
+								<input data="fa3_son" name="model[vipapply][]" class="check" value="vip1" id="vipapplyvip1" type="checkbox"><label for="vipapplyvip1">列表</label>
+								<input data="fa3_son" name="model[vipapply][]" class="check" value="vip2" id="vipapplyvip2" type="checkbox"><label for="vipapplyvip2">审核</label>
+						  </dd>
+		</dl>
+																									<dl class="lineD">
+		  <dt>会员实名认证管理：</dt>
+		  <dd>
+								<input data="fa3_son" name="model[memberid][]" class="check" value="me10" id="memberidme10" type="checkbox"><label for="memberidme10">列表</label>
+								<input data="fa3_son" name="model[memberid][]" class="check" value="me9" id="memberidme9" type="checkbox"><label for="memberidme9">审核</label>
+								<input data="fa3_son" name="model[memberid][]" class="check" value="me8" id="memberidme8" type="checkbox"><label for="memberidme8">导出</label>
+						  </dd>
+		</dl>
+																									<dl class="lineD">
+		  <dt>会员上传资料管理：</dt>
+		  <dd>
+								<input data="fa3_son" name="model[memberdata][]" class="check" value="dat1" id="memberdatadat1" type="checkbox"><label for="memberdatadat1">列表</label>
+								<input data="fa3_son" name="model[memberdata][]" class="check" value="dat3" id="memberdatadat3" type="checkbox"><label for="memberdatadat3">审核</label>
+								<input data="fa3_son" name="model[memberdata][]" class="check" value="dat4" id="memberdatadat4" type="checkbox"><label for="memberdatadat4">上传资料</label>
+								<input data="fa3_son" name="model[memberdata][]" class="check" value="dat5" id="memberdatadat5" type="checkbox"><label for="memberdatadat5">上传展示资料</label>
+						  </dd>
+		</dl>
+																									<dl class="lineD">
+		  <dt>手机认证会员：</dt>
+		  <dd>
+								<input data="fa3_son" name="model[verifyphone][]" class="check" value="vphone1" id="verifyphonevphone1" type="checkbox"><label for="verifyphonevphone1">列表</label>
+								<input data="fa3_son" name="model[verifyphone][]" class="check" value="vphone2" id="verifyphonevphone2" type="checkbox"><label for="verifyphonevphone2">导出</label>
+								<input data="fa3_son" name="model[verifyphone][]" class="check" value="vphone3" id="verifyphonevphone3" type="checkbox"><label for="verifyphonevphone3">审核</label>
+						  </dd>
+		</dl>
+																									<dl class="lineD">
+		  <dt>视频认证申请：</dt>
+		  <dd>
+								<input data="fa3_son" name="model[verifyvideo][]" class="check" value="vpv1" id="verifyvideovpv1" type="checkbox"><label for="verifyvideovpv1">列表</label>
+								<input data="fa3_son" name="model[verifyvideo][]" class="check" value="vpv2" id="verifyvideovpv2" type="checkbox"><label for="verifyvideovpv2">审核</label>
+						  </dd>
+		</dl>
+																									<dl class="lineD">
+		  <dt>现场认证申请：</dt>
+		  <dd>
+								<input data="fa3_son" name="model[verifyface][]" class="check" value="vface1" id="verifyfacevface1" type="checkbox"><label for="verifyfacevface1">列表</label>
+								<input data="fa3_son" name="model[verifyface][]" class="check" value="vface2" id="verifyfacevface2" type="checkbox"><label for="verifyfacevface2">审核</label>
+						  </dd>
+		</dl>
+																		
+		
+    <dl class="lineD">
+      <dt class="t"><b>充值提现</b></dt>
+	  <dd>请选择相关权限<input onClick="select_all('fa4');" id="fa4" type="checkbox"><label for="fa4">全选</label></dd>
+    </dl>
+	
+											<dl class="lineD">
+		  <dt>充值记录：</dt>
+		  <dd>
+								<input data="fa4_son" name="model[paylog][]" class="check" value="cz" id="paylogcz" type="checkbox"><label for="paylogcz">列表</label>
+								<input data="fa4_son" name="model[paylog][]" class="check" value="czgl" id="paylogczgl" type="checkbox"><label for="paylogczgl">充值处理</label>
+						  </dd>
+		</dl>
+																									<dl class="lineD">
+		  <dt>提现管理：</dt>
+		  <dd>
+								<input data="fa4_son" name="model[withdrawlog][]" class="check" value="cg2" id="withdrawlogcg2" type="checkbox"><label for="withdrawlogcg2">列表</label>
+								<input data="fa4_son" name="model[withdrawlog][]" class="check" value="cg3" id="withdrawlogcg3" type="checkbox"><label for="withdrawlogcg3">审核</label>
+						  </dd>
+		</dl>
+																									<dl class="lineD">
+		  <dt>待提现列表：</dt>
+		  <dd>
+								<input data="fa4_son" name="model[withdrawlogwait][]" class="check" value="cg4" id="withdrawlogwaitcg4" type="checkbox"><label for="withdrawlogwaitcg4">列表</label>
+								<input data="fa4_son" name="model[withdrawlogwait][]" class="check" value="cg5" id="withdrawlogwaitcg5" type="checkbox"><label for="withdrawlogwaitcg5">审核</label>
+						  </dd>
+		</dl>
+																									<dl class="lineD">
+		  <dt>提现处理中列表：</dt>
+		  <dd>
+								<input data="fa4_son" name="model[withdrawloging][]" class="check" value="cg6" id="withdrawlogingcg6" type="checkbox"><label for="withdrawlogingcg6">列表</label>
+								<input data="fa4_son" name="model[withdrawloging][]" class="check" value="cg7" id="withdrawlogingcg7" type="checkbox"><label for="withdrawlogingcg7">审核</label>
+						  </dd>
+		</dl>
+																		
+		
+    <dl class="lineD">
+      <dt class="t"><b>文章管理</b></dt>
+	  <dd>请选择相关权限<input onClick="select_all('fa5');" id="fa5" type="checkbox"><label for="fa5">全选</label></dd>
+    </dl>
+	
+											<dl class="lineD">
+		  <dt>文章管理：</dt>
+		  <dd>
+								<input data="fa5_son" name="model[article][]" class="check" value="at1" id="articleat1" type="checkbox"><label for="articleat1">列表</label>
+								<input data="fa5_son" name="model[article][]" class="check" value="at2" id="articleat2" type="checkbox"><label for="articleat2">添加</label>
+								<input data="fa5_son" name="model[article][]" class="check" value="at3" id="articleat3" type="checkbox"><label for="articleat3">删除</label>
+								<input data="fa5_son" name="model[article][]" class="check" value="at4" id="articleat4" type="checkbox"><label for="articleat4">修改</label>
+						  </dd>
+		</dl>
+																									<dl class="lineD">
+		  <dt>文章分类：</dt>
+		  <dd>
+								<input data="fa5_son" name="model[acategory][]" class="check" value="act1" id="acategoryact1" type="checkbox"><label for="acategoryact1">列表</label>
+								<input data="fa5_son" name="model[acategory][]" class="check" value="act2" id="acategoryact2" type="checkbox"><label for="acategoryact2">添加</label>
+								<input data="fa5_son" name="model[acategory][]" class="check" value="act5" id="acategoryact5" type="checkbox"><label for="acategoryact5">批量添加</label>
+								<input data="fa5_son" name="model[acategory][]" class="check" value="act3" id="acategoryact3" type="checkbox"><label for="acategoryact3">删除</label>
+								<input data="fa5_son" name="model[acategory][]" class="check" value="act4" id="acategoryact4" type="checkbox"><label for="acategoryact4">修改</label>
+						  </dd>
+		</dl>
+																		
+		
+    <dl class="lineD">
+      <dt class="t"><b>导航菜单管理</b></dt>
+	  <dd>请选择相关权限<input onClick="select_all('fa6');" id="fa6" type="checkbox"><label for="fa6">全选</label></dd>
+    </dl>
+	
+											<dl class="lineD">
+		  <dt>导航菜单：</dt>
+		  <dd>
+								<input data="fa6_son" name="model[navigation][]" class="check" value="nav1" id="navigationnav1" type="checkbox"><label for="navigationnav1">列表</label>
+								<input data="fa6_son" name="model[navigation][]" class="check" value="nav2" id="navigationnav2" type="checkbox"><label for="navigationnav2">添加</label>
+								<input data="fa6_son" name="model[navigation][]" class="check" value="nav5" id="navigationnav5" type="checkbox"><label for="navigationnav5">批量添加</label>
+								<input data="fa6_son" name="model[navigation][]" class="check" value="nav3" id="navigationnav3" type="checkbox"><label for="navigationnav3">删除</label>
+								<input data="fa6_son" name="model[navigation][]" class="check" value="nav4" id="navigationnav4" type="checkbox"><label for="navigationnav4">修改</label>
+						  </dd>
+		</dl>
+																		
+		
+    <dl class="lineD">
+      <dt class="t"><b>评论管理</b></dt>
+	  <dd>请选择相关权限<input onClick="select_all('fa7');" id="fa7" type="checkbox"><label for="fa7">全选</label></dd>
+    </dl>
+	
+											<dl class="lineD">
+		  <dt>评论管理：</dt>
+		  <dd>
+								<input data="fa7_son" name="model[comment][]" class="check" value="msg1" id="commentmsg1" type="checkbox"><label for="commentmsg1">列表</label>
+								<input data="fa7_son" name="model[comment][]" class="check" value="msg2" id="commentmsg2" type="checkbox"><label for="commentmsg2">查看</label>
+								<input data="fa7_son" name="model[comment][]" class="check" value="msg3" id="commentmsg3" type="checkbox"><label for="commentmsg3">删除</label>
+						  </dd>
+		</dl>
+																		
+		
+    <dl class="lineD">
+      <dt class="t"><b>资金统计</b></dt>
+	  <dd>请选择相关权限<input onClick="select_all('fa8');" id="fa8" type="checkbox"><label for="fa8">全选</label></dd>
+    </dl>
+	
+											<dl class="lineD">
+		  <dt>会员帐户：</dt>
+		  <dd>
+								<input data="fa8_son" name="model[capitalaccount][]" class="check" value="capital_1" id="capitalaccountcapital_1" type="checkbox"><label for="capitalaccountcapital_1">列表</label>
+								<input data="fa8_son" name="model[capitalaccount][]" class="check" value="capital_2" id="capitalaccountcapital_2" type="checkbox"><label for="capitalaccountcapital_2">导出</label>
+						  </dd>
+		</dl>
+																									<dl class="lineD">
+		  <dt>充值记录：</dt>
+		  <dd>
+								<input data="fa8_son" name="model[capitalonline][]" class="check" value="capital_3" id="capitalonlinecapital_3" type="checkbox"><label for="capitalonlinecapital_3">列表</label>
+								<input data="fa8_son" name="model[capitalonline][]" class="check" value="capital_4" id="capitalonlinecapital_4" type="checkbox"><label for="capitalonlinecapital_4">导出</label>
+						  </dd>
+		</dl>
+													<dl class="lineD">
+		  <dt>提现记录：</dt>
+		  <dd>
+								<input data="fa8_son" name="model[capitalonline][]" class="check" value="capital_5" id="capitalonlinecapital_5" type="checkbox"><label for="capitalonlinecapital_5">列表</label>
+								<input data="fa8_son" name="model[capitalonline][]" class="check" value="capital_6" id="capitalonlinecapital_6" type="checkbox"><label for="capitalonlinecapital_6">导出</label>
+						  </dd>
+		</dl>
+																									<dl class="lineD">
+		  <dt>备注信息：</dt>
+		  <dd>
+								<input data="fa8_son" name="model[remark][]" class="check" value="rm1" id="remarkrm1" type="checkbox"><label for="remarkrm1">列表</label>
+								<input data="fa8_son" name="model[remark][]" class="check" value="rm2" id="remarkrm2" type="checkbox"><label for="remarkrm2">增加</label>
+								<input data="fa8_son" name="model[remark][]" class="check" value="rm3" id="remarkrm3" type="checkbox"><label for="remarkrm3">修改</label>
+						  </dd>
+		</dl>
+																									<dl class="lineD">
+		  <dt>会员资金记录：</dt>
+		  <dd>
+								<input data="fa8_son" name="model[capitaldetail][]" class="check" value="capital_7" id="capitaldetailcapital_7" type="checkbox"><label for="capitaldetailcapital_7">列表</label>
+								<input data="fa8_son" name="model[capitaldetail][]" class="check" value="capital_8" id="capitaldetailcapital_8" type="checkbox"><label for="capitaldetailcapital_8">导出</label>
+						  </dd>
+		</dl>
+																									<dl class="lineD">
+		  <dt>网站资金统计：</dt>
+		  <dd>
+								<input data="fa8_son" name="model[capitalall][]" class="check" value="capital_9" id="capitalallcapital_9" type="checkbox"><label for="capitalallcapital_9">查看</label>
+						  </dd>
+		</dl>
+																									<dl class="lineD">
+		  <dt>客服客户统计：</dt>
+		  <dd>
+								<input data="fa8_son" name="model[customer][]" class="check" value="capital_10" id="customercapital_10" type="checkbox"><label for="customercapital_10">查看</label>
+						  </dd>
+		</dl>
+																		
+		
+    <dl class="lineD">
+      <dt class="t"><b>权限管理</b></dt>
+	  <dd>请选择相关权限<input onClick="select_all('fa9');" id="fa9" type="checkbox"><label for="fa9">全选</label></dd>
+    </dl>
+	
+											<dl class="lineD">
+		  <dt>权限管理：</dt>
+		  <dd>
+								<input data="fa9_son" name="model[acl][]" class="check" value="at73" id="aclat73" type="checkbox"><label for="aclat73">列表</label>
+								<input data="fa9_son" name="model[acl][]" class="check" value="at74" id="aclat74" type="checkbox"><label for="aclat74">增加</label>
+								<input data="fa9_son" name="model[acl][]" class="check" value="at75" id="aclat75" type="checkbox"><label for="aclat75">删除</label>
+								<input data="fa9_son" name="model[acl][]" class="check" value="at76" id="aclat76" type="checkbox"><label for="aclat76">修改</label>
+						  </dd>
+		</dl>
+																		
+		
+    <dl class="lineD">
+      <dt class="t"><b>管理员管理</b></dt>
+	  <dd>请选择相关权限<input onClick="select_all('fa10');" id="fa10" type="checkbox"><label for="fa10">全选</label></dd>
+    </dl>
+	
+											<dl class="lineD">
+		  <dt>管理员管理：</dt>
+		  <dd>
+								<input data="fa10_son" name="model[adminuser][]" class="check" value="at77" id="adminuserat77" type="checkbox"><label for="adminuserat77">列表</label>
+								<input data="fa10_son" name="model[adminuser][]" class="check" value="at78" id="adminuserat78" type="checkbox"><label for="adminuserat78">增加</label>
+								<input data="fa10_son" name="model[adminuser][]" class="check" value="at79" id="adminuserat79" type="checkbox"><label for="adminuserat79">删除</label>
+								<input data="fa10_son" name="model[adminuser][]" class="check" value="at99" id="adminuserat99" type="checkbox"><label for="adminuserat99">上传头像</label>
+								<input data="fa10_son" name="model[adminuser][]" class="check" value="at80" id="adminuserat80" type="checkbox"><label for="adminuserat80">修改</label>
+						  </dd>
+		</dl>
+																		
+		
+    <dl class="lineD">
+      <dt class="t"><b>数据库管理</b></dt>
+	  <dd>请选择相关权限<input onClick="select_all('fa11');" id="fa11" type="checkbox"><label for="fa11">全选</label></dd>
+    </dl>
+	
+											<dl class="lineD">
+		  <dt>数据库信息：</dt>
+		  <dd>
+								<input data="fa11_son" name="model[db][]" class="check" value="db1" id="dbdb1" type="checkbox"><label for="dbdb1">查看</label>
+								<input data="fa11_son" name="model[db][]" class="check" value="db2" id="dbdb2" type="checkbox"><label for="dbdb2">备份</label>
+								<input data="fa11_son" name="model[db][]" class="check" value="db3" id="dbdb3" type="checkbox"><label for="dbdb3">查看表结构</label>
+						  </dd>
+		</dl>
+													<dl class="lineD">
+		  <dt>数据库备份管理：</dt>
+		  <dd>
+								<input data="fa11_son" name="model[db][]" class="check" value="db4" id="dbdb4" type="checkbox"><label for="dbdb4">备份列表</label>
+								<input data="fa11_son" name="model[db][]" class="check" value="db5" id="dbdb5" type="checkbox"><label for="dbdb5">删除备份</label>
+								<input data="fa11_son" name="model[db][]" class="check" value="db6" id="dbdb6" type="checkbox"><label for="dbdb6">恢复备份</label>
+								<input data="fa11_son" name="model[db][]" class="check" value="db7" id="dbdb7" type="checkbox"><label for="dbdb7">打包下载</label>
+						  </dd>
+		</dl>
+													<dl class="lineD">
+		  <dt>清空数据：</dt>
+		  <dd>
+								<input data="fa11_son" name="model[db][]" class="check" value="db8" id="dbdb8" type="checkbox"><label for="dbdb8">清空数据</label>
+						  </dd>
+		</dl>
+																		
+		
+    <dl class="lineD">
+      <dt class="t"><b>图片上传</b></dt>
+	  <dd>请选择相关权限<input onClick="select_all('fa12');" id="fa12" type="checkbox"><label for="fa12">全选</label></dd>
+    </dl>
+	
+											<dl class="lineD">
+		  <dt>图片上传：</dt>
+		  <dd>
+								<input data="fa12_son" name="model[kissy][]" class="check" value="at81" id="kissyat81" type="checkbox"><label for="kissyat81">图片上传</label>
+						  </dd>
+		</dl>
+																		
+		
+    <dl class="lineD">
+      <dt class="t"><b>扩展管理</b></dt>
+	  <dd>请选择相关权限<input onClick="select_all('fa13');" id="fa13" type="checkbox"><label for="fa13">全选</label></dd>
+    </dl>
+	
+											<dl class="lineD">
+		  <dt>安全检测：</dt>
+		  <dd>
+								<input data="fa13_son" name="model[scan][]" class="check" value="scan1" id="scanscan1" type="checkbox"><label for="scanscan1">安全检测</label>
+						  </dd>
+		</dl>
+																									<dl class="lineD">
+		  <dt>文件管理：</dt>
+		  <dd>
+								<input data="fa13_son" name="model[mfields][]" class="check" value="at82" id="mfieldsat82" type="checkbox"><label for="mfieldsat82">文件管理</label>
+								<input data="fa13_son" name="model[mfields][]" class="check" value="at83" id="mfieldsat83" type="checkbox"><label for="mfieldsat83">空间检查</label>
+						  </dd>
+		</dl>
+																									<dl class="lineD">
+		  <dt>业务参数管理：</dt>
+		  <dd>
+								<input data="fa13_son" name="model[bconfig][]" class="check" value="fb1" id="bconfigfb1" type="checkbox"><label for="bconfigfb1">查看</label>
+								<input data="fa13_son" name="model[bconfig][]" class="check" value="fb2" id="bconfigfb2" type="checkbox"><label for="bconfigfb2">修改</label>
+						  </dd>
+		</dl>
+																									<dl class="lineD">
+		  <dt>信用级别管理：</dt>
+		  <dd>
+								<input data="fa13_son" name="model[leve][]" class="check" value="jb1" id="levejb1" type="checkbox"><label for="levejb1">查看</label>
+								<input data="fa13_son" name="model[leve][]" class="check" value="jb2" id="levejb2" type="checkbox"><label for="levejb2">修改</label>
+						  </dd>
+		</dl>
+													<dl class="lineD">
+		  <dt>投资级别管理：</dt>
+		  <dd>
+								<input data="fa13_son" name="model[leve][]" class="check" value="jb3" id="levejb3" type="checkbox"><label for="levejb3">查看</label>
+								<input data="fa13_son" name="model[leve][]" class="check" value="jb4" id="levejb4" type="checkbox"><label for="levejb4">修改</label>
+						  </dd>
+		</dl>
+																									<dl class="lineD">
+		  <dt>合同居间方资料上传管理：</dt>
+		  <dd>
+								<input data="fa13_son" name="model[hetong][]" class="check" value="ht1" id="hetonght1" type="checkbox"><label for="hetonght1">查看</label>
+								<input data="fa13_son" name="model[hetong][]" class="check" value="ht2" id="hetonght2" type="checkbox"><label for="hetonght2">上传</label>
+						  </dd>
+		</dl>
+																									<dl class="lineD">
+		  <dt>QQ客服管理：</dt>
+		  <dd>
+								<input data="fa13_son" name="model[qq][]" class="check" value="qq5" id="qqqq5" type="checkbox"><label for="qqqq5">列表</label>
+								<input data="fa13_son" name="model[qq][]" class="check" value="qq6" id="qqqq6" type="checkbox"><label for="qqqq6">增加</label>
+								<input data="fa13_son" name="model[qq][]" class="check" value="qq7" id="qqqq7" type="checkbox"><label for="qqqq7">删除</label>
+						  </dd>
+		</dl>
+													<dl class="lineD">
+		  <dt>QQ群管理：</dt>
+		  <dd>
+								<input data="fa13_son" name="model[qq][]" class="check" value="qun5" id="qqqun5" type="checkbox"><label for="qqqun5">列表</label>
+								<input data="fa13_son" name="model[qq][]" class="check" value="qun6" id="qqqun6" type="checkbox"><label for="qqqun6">增加</label>
+								<input data="fa13_son" name="model[qq][]" class="check" value="qun7" id="qqqun7" type="checkbox"><label for="qqqun7">删除</label>
+						  </dd>
+		</dl>
+													<dl class="lineD">
+		  <dt>客服电话管理：</dt>
+		  <dd>
+								<input data="fa13_son" name="model[qq][]" class="check" value="tel5" id="qqtel5" type="checkbox"><label for="qqtel5">列表</label>
+								<input data="fa13_son" name="model[qq][]" class="check" value="tel6" id="qqtel6" type="checkbox"><label for="qqtel6">增加</label>
+								<input data="fa13_son" name="model[qq][]" class="check" value="tel7" id="qqtel7" type="checkbox"><label for="qqtel7">删除</label>
+						  </dd>
+		</dl>
+																									<dl class="lineD">
+		  <dt>线上支付接口管理：</dt>
+		  <dd>
+								<input data="fa13_son" name="model[payonline][]" class="check" value="jk1" id="payonlinejk1" type="checkbox"><label for="payonlinejk1">查看</label>
+								<input data="fa13_son" name="model[payonline][]" class="check" value="jk2" id="payonlinejk2" type="checkbox"><label for="payonlinejk2">修改</label>
+						  </dd>
+		</dl>
+																									<dl class="lineD">
+		  <dt>线下充值银行管理：</dt>
+		  <dd>
+								<input data="fa13_son" name="model[payoffline][]" class="check" value="offline1" id="payofflineoffline1" type="checkbox"><label for="payofflineoffline1">查看</label>
+								<input data="fa13_son" name="model[payoffline][]" class="check" value="offline2" id="payofflineoffline2" type="checkbox"><label for="payofflineoffline2">修改</label>
+						  </dd>
+		</dl>
+																									<dl class="lineD">
+		  <dt>通知信息接口管理：</dt>
+		  <dd>
+								<input data="fa13_son" name="model[msgonline][]" class="check" value="jk3" id="msgonlinejk3" type="checkbox"><label for="msgonlinejk3">查看</label>
+								<input data="fa13_son" name="model[msgonline][]" class="check" value="jk4" id="msgonlinejk4" type="checkbox"><label for="msgonlinejk4">修改</label>
+						  </dd>
+		</dl>
+													<dl class="lineD">
+		  <dt>通知信息模板管理：</dt>
+		  <dd>
+								<input data="fa13_son" name="model[msgonline][]" class="check" value="jk5" id="msgonlinejk5" type="checkbox"><label for="msgonlinejk5">查看</label>
+								<input data="fa13_son" name="model[msgonline][]" class="check" value="jk6" id="msgonlinejk6" type="checkbox"><label for="msgonlinejk6">修改</label>
+						  </dd>
+		</dl>
+																		
+	
+    
+    </form>
+   
+      </div>
+      
+    <div class="page_btn"> <input type="submit" value="修改" class="btn_b"> </div>
+    </div>
+    
+    
+</body>
+
+</html>

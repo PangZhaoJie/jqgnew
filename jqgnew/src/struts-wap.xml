@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="wap" namespace="/wap" extends="json-default">
+    <!-- 定义一个拦截器 -->
+		<interceptors>
+			<interceptor name="json"
+				class="org.apache.struts2.json.JSONInterceptor" />
+			<interceptor name="user" class="com.jqg.Interceptor.WapCkeckBackLogin" />
+			
+			<!-- 拦截器栈 -->
+			<interceptor-stack name="teamwareStack">
+<!-- 				<interceptor-ref name="defaultStack" /> -->
+<!-- 				<interceptor-ref name="authority" /> -->
+<!-- 				<interceptor-ref name="json" /> -->
+			</interceptor-stack>
+		</interceptors>
+			<!-- 定义全局Result -->
+		<global-results>
+			<!-- 当返回login视图名时，转入/login.jsp页面 -->
+			<result name="login" type="redirect">/wap/login.jsp</result>
+		</global-results>
+		
+ 		<!-- 手机首页 -->
+        <action name="index" class="com.jqg.wap.WapIndexAction" method="index">
+        	<result name="success">/wap/index.jsp</result>
+        </action>
+        
+        <!-- 我的账户 -->
+        <action name="findUsers" class="com.jqg.wap.WapUserAction" method="findUsers">
+        	<result name="success">/wap/user.jsp</result>
+        	<interceptor-ref name="user" /><!-- 使用此拦截器 -->
+        </action>
+        <!-- 我的账户 -->
+        <action name="login" class="com.jqg.wap.WapUserAction" method="login">
+        	<result name="success" type="redirectAction">
+				<param name="actionName">findUsers</param>
+			</result>
+        	<result name="error">/wap/jump.jsp</result>
+        </action>
+        <!-- 注册1 -->
+        <action name="quit" class="com.jqg.wap.WapUserAction" method="quit">
+        	<result name="success">/wap/login.jsp</result>
+        </action>
+        <!-- 注册1 -->
+        <action name="regJump" class="com.jqg.wap.WapUserAction" method="regJump">
+        	<result name="success">/wap/reg2.jsp</result>
+        	<result name="error">/wap/jump.jsp</result>
+        </action>
+        
+         <!-- 注册完成 -->
+        <action name="reg" class="com.jqg.wap.WapUserAction" method="reg">
+        	<result name="success" type="redirectAction">
+				<param name="actionName">findUsers</param>
+			</result>
+        	<result name="error">/wap/jump.jsp</result>
+        </action>
+         <!-- 认证完成 -->
+        <action name="certifiOver" class="com.jqg.wap.WapUserAction" method="reg">
+        	<result name="success">
+				/wap/index.jsp
+			</result>
+        	<result name="error">/wap/jump.jsp</result>
+        </action>
+        <!--手机站手机认证 -->
+		<action name="wapPhoneSet" class="com.jqg.wap.WapCertificationAction"
+			method="wapPhoneSet">
+			<result name="success" type="json">
+			   <param name="root">result</param>
+			</result>
+			<result name="error" type="json">
+			    <param name="root">result</param>
+			</result>
+			<result name="repeat" type="json">
+			   <param name="root">result</param>
+			</result>
+		</action>
+			<!-- 根据手机号查找用户 -->
+		<action name="findphone" class="com.jqg.wap.WapCertificationAction"
+			method="findBasicinforByphone">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+			<!-- 手机站认证时短信验证 -->
+		<action name="wapSendMessage" class="com.jqg.wap.WapCertificationAction"
+			method="wapSendMessage">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+			<!-- 手机站发送邮件 -->
+		<action name="wapSendMail" class="com.jqg.wap.WapCertificationAction"
+			method="sendMail">
+			<result name="success">
+			  /wap/index.jsp
+			</result>
+			<result name="error">/wap/jump.jsp</result>
+		</action>
+			<!-- 根据邮箱查找用户 -->
+		<action name="findmail" class="com.jqg.wap.WapCertificationAction"
+			method="findUservipByMail">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+			<!--手机站实名认证 -->
+		<action name="wapCertification" class="com.jqg.wap.WapCertificationAction"
+			method="IDCardCertification">
+			<result name="success" >/wap/wapCertification.jsp</result>
+			<result name="error">/wap/jump.jsp</result>
+		</action>
+		<!--手机站图片ajax上传，无刷新 -->
+		<action name="wapFileUploadAction" class="com.jqg.wap.WapCertificationAction"
+			method="fileUploadAction">
+			<result name="success">
+				<param name="contentType">
+					text/html
+				</param>
+			</result>
+			<result name="error">
+				<param name="contentType">
+					text/html
+				</param>
+			</result>
+		</action>
+		<!-- 手机站用户基本资料 -->
+		<action name="searchBasic" class="com.jqg.wap.WapCertificationAction"
+			method="search">
+			<result name="success">/wap/wapCertification.jsp</result>
+		</action>
+        <!-- 我的投资 -->
+        <action name="toInverst" class="com.jqg.wap.WapLssuingtAction" method="toInverst">
+        	<result name="success">/wap/user_inverst.jsp</result>
+        	<interceptor-ref name="user" /><!-- 使用此拦截器 -->
+        </action>
+        
+        <!-- 我的借款 -->
+        <action name="toBorrow" class="com.jqg.wap.WapLssuingtAction" method="toBorrow">
+        	<result name="success">/wap/user_borrow.jsp</result>
+        	<interceptor-ref name="user" /><!-- 使用此拦截器 -->
+        </action>
+        <!-- 总资产 -->
+        <action name="toAssets" class="com.jqg.wap.WapUserAction" method="toAssets">
+        	<result name="success">/wap/user_assets.jsp</result>
+        	<interceptor-ref name="user" /><!-- 使用此拦截器 -->
+        </action>
+        <!-- 充值前 -->
+        <action name="tochongzhi" class="com.jqg.wap.WapUserAction" method="toAssets">
+        	<result name="success">/wap/chongzhi.jsp</result>
+        	<interceptor-ref name="user" /><!-- 使用此拦截器 -->
+        </action>
+       <!-- wap托管充值处理 -->
+        <action name="waptrustRecharge" class="com.jqg.wap.WapUserAction" method="trustRecharge">
+        	<result name="success">/loan/tranjump.jsp</result>
+        	<interceptor-ref name="user" /><!-- 使用此拦截器 -->
+        </action> 
+        <!-- 提现前 -->
+        <action name="totixian" class="com.jqg.wap.WapUserAction" method="totixian">
+        	<result name="success">/wap/tixian.jsp</result>
+        	<interceptor-ref name="user" /><!-- 使用此拦截器 -->
+        </action>
+        
+        <!-- wap提现 -->
+		<action name="wapcreatetranslate" class="com.jqg.wap.WapUserAction"
+			method="createtranslate">
+			<result name="loanjump">/loan/tranjump.jsp</result>
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+			 <result name="jump">/wap/jump.jsp</result>
+		</action>
+        <!-- 开通托管账户 -->
+		<action name="registerbind" class="com.jqg.wap.WapUserAction"
+			method="registerbind">
+			<result name="success">/loan/registerbind.jsp</result>
+			<result name="message">/wap/jump.jsp</result>
+		</action>
+		<!-- 开通托管返回处理 -->
+		<action name="registerbindreturn" class="com.jqg.wap.WapUserAction"
+			method="registerbindreturn">
+			<result>/wap/jump.jsp</result>
+		</action>
+		<!-- 开通托管异步通知接口-->
+		<action name="registerbindnotify" class="com.jqg.wap.WapUserAction"
+			method="registerbindnotify">
+			<result>/wap/jump.jsp</result>
+		</action>
+ 		<!-- 开通授权返回接口-->
+		<action name="loanauthorizereturn" class="com.jqg.wap.WapUserAction"
+			method="loanauthorizereturn">
+			<result>/wap/jump.jsp</result>
+		</action>
+		<!-- 开通授权异步通知接口-->
+		<action name="loanauthorizenotify" class="com.jqg.wap.WapUserAction"
+			method="loanauthorizenotify">
+			<result>/wap/jump.jsp</result>
+		</action>
+		<!-- 开通授权接口-->
+		<action name="loanauthorize" class="com.jqg.wap.WapUserAction"
+			method="loanAuthorize">
+			<result name="success">/loan/loanauthorize.jsp</result>
+			<result name="message">/wap/jump.jsp</result>
+		</action>
+         
+         <!-- 资金记录 -->
+        <action name="fundhistory" class="com.jqg.wap.WapUserAction" method="fundhistory">
+        	<result name="success">/wap/user_fundhistory.jsp</result>
+        	<interceptor-ref name="user" /><!-- 使用此拦截器 -->
+        </action>
+         <!-- 我的银行卡 -->
+        <action name="myCard" class="com.jqg.wap.WapUserAction" method="myCard">
+        	<result name="success">/wap/user_card.jsp</result>
+        	<interceptor-ref name="user" /><!-- 使用此拦截器 -->
+        </action>
+        <!-- 跳转到银行卡页面 -->
+        <action name="jumpCard" class="com.jqg.wap.WapUserAction" method="jumpCard">
+        	<result name="success">/wap/user_addCard.jsp</result>
+        	<interceptor-ref name="user" /><!-- 使用此拦截器 -->
+        </action>
+         <!-- 添加银行卡 -->
+        <action name="addCard" class="com.jqg.wap.WapUserAction" method="addCard">
+        	<result name="success" type="redirectAction">
+				<param name="actionName">myCard</param>
+			</result>
+			<result name="error">/wap/jump.jsp</result>
+        	<interceptor-ref name="user" /><!-- 使用此拦截器 -->
+        </action>
+        <!-- 删除银行卡 -->
+       <action name="deleteCard" class="com.jqg.wap.WapUserAction" method="deleteCard">
+          <result name="success" type="redirectAction">
+          	<param name="actionName">myCard</param>
+          </result>
+       </action>
+		<!-- 修改密码 -->
+        <action name="updatePwd" class="com.jqg.wap.WapUserAction" method="updatePwd">
+        	<result name="success">/wap/jump.jsp</result>
+        	<interceptor-ref name="user" /><!-- 使用此拦截器 -->
+        </action>
+        <!-- 标详情 -->
+        <action name="toTender" class="com.jqg.wap.WapLssuingtAction" method="toTender">
+			<result name="success">/wap/invest_detail.jsp</result>
+        </action>
+        <!-- 标详情提交页 -->
+        <action name="toTenderSubmit" class="com.jqg.wap.WapLssuingtAction" method="toTenderSubmit">
+			<result name="success">/wap/invest_detail_submit.jsp</result>
+			<interceptor-ref name="user" /><!-- 使用此拦截器 -->
+        </action>
+        <!-- 投标 -->
+		<action name="tender" class="com.jqg.wap.WapLssuingtAction" method="tender">
+			<result name="success">/wap/jump.jsp</result>
+			<result name="tranjump">/loan/tranjump.jsp</result>
+			<interceptor-ref name="user" /><!-- 使用此拦截器 -->
+		</action>
+		 <!-- 标列表 -->
+        <action name="tenderList" class="com.jqg.wap.WapLssuingtAction" method="tenderList">
+			<result name="success">/wap/invest_list.jsp</result>
+        </action>
+        <!-- 企业标理财宝列表 -->
+        <action name="lssuinglist" class="com.jqg.wap.WapLssuingtAction" method="lssuinglist">
+			<result name="success">/wap/invest_list.jsp</result>
+        </action>
+           <!-- 债权转让列表 -->
+        <action name="transferlistPage" class="com.jqg.wap.WapLssuingtAction" method="transferlistPage">
+			<result name="success">/wap/transfer_list.jsp</result>
+        </action>
+             <!-- 债权转让详情 -->
+        <action name="findTransferByID" class="com.jqg.wap.WapLssuingtAction" method="findTransferByID">
+			<result name="success">/wap/transfer_detail.jsp</result>
+			<interceptor-ref name="user" /><!-- 使用此拦截器 -->
+        </action>
+             <!-- 债权购买 -->
+        <action name="transferBuy" class="com.jqg.wap.WapLssuingtAction" method="transferBuy">
+			<result name="success">/wap/jump.jsp</result>
+			<result name="error">/wap/jump.jsp</result>
+			<result name="tranjump">/loan/tranjump.jsp</result>
+			<interceptor-ref name="user" /><!-- 使用此拦截器 -->
+        </action>
+   </package>
+</struts>

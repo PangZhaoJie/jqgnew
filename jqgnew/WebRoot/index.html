@@ -1,0 +1,455 @@
+<%@page import="com.shishi.service.TenderService"%>
+<%@page import="com.shishi.service.impl.TenderServiceImpl"%>
+<%@page import="com.shishi.pojo.Tender"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+		<link rel="stylesheet" type="text/css" href="css/indexJQG.css" />
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="wrap_top">
+				<div class="wrap_top_left">
+					<ul>
+						<li><div class="phone">客户热线 400-123-01234</div></li>
+						<li>关注我们</li>
+						<li><div class="weibo">微博</div></li>
+						<li><div class="weixin">微信</div></li>
+					</ul>
+				</div>
+				<div class="wrap_top_right">
+					<ul>
+						<li><a href="#">立即登录</a></li>
+						<li>|</li>
+						<li><a href="#"><samp>免费注册</samp></a></li>
+						<li class="la"><div class="touzijiaoliu">投资交流群</div></li>
+						<li class="la"><div class="zaixiankefu">在线客服</div></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="wrap_header">
+		<div class="header">
+		<div class="logo"></div>
+		<div class="header_right">
+		<ul>
+		<li class="first"><a href="#">首页</a></li>
+		<li><a href="#">我要投资</a></li>
+		<li><a href="#">我要融资</a></li>
+		<li><a href="#">我的账户</a></li>
+		<li><a href="#">帮助中心</a></li>
+		</ul>
+		</div>
+		</div>
+	</div>
+	<div class="banner"></div>
+	<div class="wrap_shishi">
+		<div class="shishi">
+			<span>实时财务:</span>
+			<dl>
+				<dt>累计投资总额(元)</dt>
+				<dd>¥238,466,230.00</dd>
+			</dl>
+			<dl>
+				<dt>待收本金总额(元)</dt>
+				<dd>¥82,820,000.00</dd>
+			</dl>
+			<dl>
+				<dt>累计赚取收益(元)</dt>
+				<dd>¥5,810,844.35</dd>
+			</dl>
+			<dl>
+				<dt>会员总数(人)</dt>
+				<dd>3,903</dd>
+			</dl>
+			<samp><img src="img/more.jpg" />查看更多数据</samp>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="wrap_main">
+	<div class="main">
+		<div class="main_left">
+			<table class="table">
+					<tr>
+						<td><div class="toubiao"><samp>最新投标</samp></div></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><span><a href="#"><img border="0" src="img/more_tu.jpg" />more</a></span>
+						</td>
+					</tr>
+					<tr>
+						<th>借款标题</th>
+						<th>年利率</th>
+						<th>金额</th>
+						<th>期限</th>
+						<th>进度</th>
+					</tr>
+					<tr >
+						<td>老客户借款,信</td>
+						<td><small>19.00%</small>
+						</td>
+						<td><small><small>90000.0元</small></small></td>
+						<td><small>8</small>个月
+						</td>
+						<td><img src="img/jindu1.jpg" /></td>
+						<td>
+							<div class="table_btn">投标</div>
+						</td>
+					</tr>
+					<tr >
+						<td>信用标</td>
+						<td><small>19.00%</small>
+						</td>
+						<td><small>90000.0元</small></td>
+						<td><small>8</small>个月
+						</td>
+						<td><img src="img/jindu2.jpg" /></td>
+						</td>
+						<td>
+							<div class="table_btn">投标</div>
+						</td>
+					</tr>
+					<tr >
+						<td>信用标</td>
+						<td><small>19.00%</small>
+						</td>
+						<td><small>90000.0元</small></td>
+						<td><small>8</small>个月
+						</td>
+						<td><img src="img/jindu3.jpg" /></td>
+						</td>
+						<td>
+							<div class="table_btn">投标</div>
+						</td>
+					</tr>
+					<tr >
+						<td>信用标</td>
+						<td><small>19.00%</small>
+						</td>
+						<td><small>90000.0元</small></td>
+						<td><small>8</small>个月
+						</td>
+						<td><img src="img/jindu4.jpg" /></td>
+						</td>
+						<td>
+							<div class="table_btn">投标</div>
+						</td>
+					</tr>
+					<tr >
+						<td>老用户借款,信</td>
+						<td><small>19.00%</small>
+						</td>
+						<td><small>90000.0元</small></td>
+						<td><small>8</small>个月
+						</td>
+						<td><img src="img/jindu4.jpg" /></td>
+						<td>
+							<div class="table_btn">投标</div>
+						</td>
+					</tr>
+					<tr >
+						<td>个体工商户借款</td>
+						<td><small>19.00%</small>
+						</td>
+						<td><small>90000.0元</small></td>
+						<td><small>8</small>个月
+						</td>
+						<td><img src="img/jindu4.jpg" /></td>
+						<td>
+							<div class="table_btn">投标</div>
+						</td>
+					</tr>
+					<tr >
+						<td>老客户借款</td>
+						<td><small>19.00%</small>
+						</td>
+						<td><small>90000.0元</small></td>
+						<td><small>8</small>个月
+						</td>
+						<td><img src="img/jindu4.jpg" /></td>
+						<td>
+							<div class="table_btn">投标</div>
+						</td>
+					</tr>
+					<tr >
+						<td>按季还款</td>
+						<td><small>19.00%</small>
+						</td>
+						<td><small>90000.0元</small></td>
+						<td><small>8</small>个月
+						</td>
+						<td><img src="img/jindu4.jpg" /></td>
+						<td>
+							<div class="table_btn">投标</div>
+						</td>
+					</tr>
+					<tr >
+						<td>信用标</td>
+						<td><small>19.00%</small>
+						</td>
+						<td><small>90000.0元</small></td>
+						<td><small>8</small>个月
+						</td>
+						<td><img src="img/jindu4.jpg" /></td>
+						<td>
+							<div class="table_btn">投标</div>
+						</td>
+					</tr>
+					<tr >
+						<td>个体商户借款</td>
+						<td><small>19.00%</small>
+						</td>
+						<td><small>90000.0元</small></td>
+						<td><small>8</small>个月
+						</td>
+						<td><img src="img/jindu5.jpg" /></td>
+						<td>
+							<div class="table2_btn">完成</div>
+						</td>
+					</tr>
+						<tr >
+							<td>信用标</td>
+						<td><small>19.00%</small>
+						</td>
+						<td><small>90000.0元</small></td>
+						<td><small>8</small>个月
+						</td>
+						<td><img src="img/jindu5.jpg" /></td>
+						<td>
+							<div class="table2_btn">完成</div>
+						</td>
+					</tr>
+						<tr >
+							<td>个体商户借款</td>
+						<td><small>19.00%</small>
+						</td>
+						<td><small>90000.0元</small></td>
+						<td><small>8</small>个月
+						</td>
+						<td><img src="img/jindu5.jpg" /></td>
+						<td>
+							<div class="table2_btn">完成</div>
+						</td>
+					</tr>
+				</table>
+		</div>
+		<div class="main_right">
+			<div class="main_right_first">
+				<div class="main_right_fist_top">
+					<ul>
+						<li><a href="#"><img src="img/tongtai.jpg"/></a></li>
+						<li><a href="#"><img src="img/gonggao.jpg"/></a></li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+				<div class="main_right_fist_main">
+					<ul>
+						<li><img src="img/dian.jpg" />追逐梦想：佰易骨干培训班户外拓展...</li>
+						<li><img src="img/dian.jpg" />"佰易阳光暖冬工程"第三期开始...</li>
+						<li><img src="img/dian.jpg" />热烈祝贺佰易理财公司与山东东平...</li>
+						<li><img src="img/dian.jpg" />热烈祝贺佰易理财2014年第三...</li>
+					</ul>
+				</div>
+			</div>
+			<div class="main_right_tow">
+				<table>
+					
+						<h4>投标排行</h4>
+					
+					<tr>
+						<td><img src="img/1.jpg"/></td>
+						<td>小*********</td>
+						<td><samp>1822.85万</samp></td>
+					</tr>
+					
+					<tr>
+						<td><img src="img/2.jpg"/></td>
+						<td>华******</td>
+						<td><samp>889.10万</samp></td>
+					</tr>
+					<tr>
+						<td><img src="img/3.jpg"/></td>
+						<td>yul***********</td>
+						<td><samp>815.30万</samp></td>
+					</tr>
+					<tr>
+						<td><img src="img/4.jpg"/></td>
+						<td>天*********</td>
+						<td><samp>747.85万</samp></td>
+					</tr>
+					<tr>
+						<td><img src="img/5.jpg"/></td>
+						<td>乐*********</td>
+						<td><samp>665.80万</samp></td>
+					</tr>
+					<tr>
+						<td><img src="img/6.jpg"/></td>
+						<td>想</td>
+						<td><samp>654.01万</samp></td>
+					</tr>
+					<tr>
+						<td><img src="img/7.jpg"/></td>
+						<td>乌*********</td>
+						<td><samp>516.12万</samp></td>
+					</tr>
+					<tr>
+						<td><img src="img/8.jpg"/></td>
+						<td>北********</td>
+						<td><samp>496.86万</samp></td>
+					</tr>
+					<tr>
+						<td><img src="img/9.jpg"/></td>
+						<td>emi*********</td>
+						<td><samp>462.50万</samp></td>
+					</tr>
+					<tr>
+						<td><img src="img/10.jpg"/></td>
+						<td>世</td>
+						<td><samp>454.67万</samp></td>
+					</tr>
+				</table>
+			</div>
+			<div class="main_right_three">
+				<h4>关注我们</h4>
+				<div class="friendlink"></div>
+			</div>
+			<div class="main_right_last">
+								<table>
+						<h4>最新投标</h4>
+					<tr>
+						<td>sev**</td>
+						<td>刚刚投资了</td>
+						<td><samp>9907.0元</samp></td>
+					</tr>
+					
+					<tr>
+						<td>威***</td>
+						<td>刚刚投资了</td>
+						<td><samp>7640.0元</samp></td>
+					</tr>
+					<tr>
+						<td>亚***</td>
+						<td>刚刚投资了</td>
+						<td><samp>2222.0元</samp></td>
+					</tr>
+					<tr>
+						<td>zxp*****</td>
+						<td>刚刚投资了</td>
+						<td><samp>4000.0元</samp></td>
+					</tr>
+					<tr>
+						<td>刘******</td>
+						<td>刚刚投资了</td>
+						<td><samp>5000.0元</samp></td>
+					</tr>
+					<tr>
+						<td>蔡******</td>
+						<td>刚刚投资了</td>
+						<td><samp>131.0元</samp></td>
+					</tr>
+					<tr>
+						<td>大******</td>
+						<td>刚刚投资了</td>
+						<td><samp>556.0元</samp></td>
+					</tr>
+					<tr>
+						<td>wan*******</td>
+						<td>刚刚投资了</td>
+						<td><samp>11958.0元</samp></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+			</div>
+			</div>
+			<div class="clear"></div>
+<div class="text_footer">
+	<div class="partner">
+		<span>战略合作伙伴</span>
+		<div class="partner_tu">
+		<ul>
+			<li><img src="img/btn_left.jpg" /></li>
+			<li><img src="img/cft.jpg"/></li>
+			<li><img src="img/tlzf.jpg"/></li>
+			<li><img src="img/zlddb.jpg"/></li>
+			<li><img src="img/txqyqq.jpg"/></li>
+			<li><img src="img/zgdb.jpg"/></li>
+			<li><img src="img/cft.jpg"/></li>
+			<li><img src="img/cft.jpg"/></li>	
+			<li><img src="img/btn_right.jpg" /></li>
+		</ul>
+		</div>
+		
+		</div>
+		</div>
+		<div class="footer">
+			<div class="footer_top">
+				<div class="footer_logo"></div>
+				<div class="footer_top_dl">
+					<dl>
+						<dt><a href="#">关于我们</a></dt>
+						<dd><a href="#">关于金钱柜</a></dd>
+						<dd><a href="#">平台公告</a></dd>
+						<dd><a href="#">媒体报道</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="#">关于我们</a></dt>
+						<dd><a href="#">关于金钱柜</a></dd>
+						<dd><a href="#">平台公告</a></dd>
+						<dd><a href="#">媒体报道</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="#">关于我们</a></dt>
+						<dd><a href="#">关于金钱柜</a></dd>
+						<dd><a href="#">平台公告</a></dd>
+						<dd><a href="#">媒体报道</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="#">关于我们</a></dt>
+						<dd><a href="#">关于金钱柜</a></dd>
+						<dd><a href="#">平台公告</a></dd>
+						<dd><a href="#">媒体报道</a></dd>
+					</dl>
+				</div>
+			<div class="footer_top_kefu">
+				<ul>
+					<li>客服电话</li>
+					<li><img src="img/footer_phone.jpg" />400-0531-68556</li>
+					<li>服务时间<span>(9:00-21:00)</span></li>								
+				</ul>
+			</div>
+			</div>
+			<div class="footer_main">
+				<ul>
+					<li>友情链接：网贷之家</li>
+					<li>网贷之家</li>
+					<li>网贷之家</li>
+					<li>网贷之家</li>
+					<li>网贷之家</li>
+					<li>网贷之家</li>
+					<li>网贷之家</li>
+					<li>网贷之家</li>
+					<li>网贷之家</li>
+					<li>网贷之家</li>
+				</ul>
+			</div>
+			<div class="copyright">
+				<div class="copyright_tu">
+					<div class="renzheng"></div>
+					<div class="chengxin"></div>
+				</div>
+				<div class="clear"></div>
+				<div class="copyright_main">
+					<span>山东金钱柜网络科技有限公司 版权所有2013-2014copyright reserved 2013-2014 金钱柜|京IPC备  10401452301号</span>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+

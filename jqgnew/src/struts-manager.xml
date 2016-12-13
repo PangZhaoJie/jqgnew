@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.multipart.saveDir" value="/tmp"></constant>
+    <package name="back" namespace="/back" extends="default">
+ 		<action name="login" class="com.jqg.struts.ManagerAction" method="login">
+        <result name="success" type="dispatcher">/back/skip.jsp</result>  
+        <result name="error">/back/login.jsp</result>
+      
+        </action >
+        <action name="main" >
+                 <result>/back/main.jsp</result>
+           <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <!-- 充值管理 -->
+        <action name="offline" class="com.jqg.struts.OfflinerechargeAction" method="offlineList">
+        <result name="success">/back/4_list.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <!-- 导出充值记录总表 -->
+        <action name="upLoadOffline" class="com.jqg.struts.OfflinerechargeAction" method="upLoadOffline">
+        <result name="success">/back/4_list.jsp</result>
+        <result name="loanjump">/loan/tranjump.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <!--待审核提现  -->
+        <action name="translate1" class="com.jqg.struts.TranslateAction" method="translateList">
+        <result name="success">/back/41_list.jsp</result>
+        <result name="loanjump">/loan/tranjump.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <!-- 审核通过，处理中 -->
+        <action name="translate2" class="com.jqg.struts.TranslateAction" method="translateList2">
+        <result name="success">/back/42_list.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+         <!-- 已提现 -->
+        <action name="translate3" class="com.jqg.struts.TranslateAction" method="translateList3">
+        <result name="success">/back/43_list.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+         <!-- 审核未通过 -->
+        <action name="translate4" class="com.jqg.struts.TranslateAction" method="translateList4">
+        <result name="success">/back/44_list.jsp</result>
+           <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+         <!-- 提现申请总列表 -->
+        <action name="translate5" class="com.jqg.struts.TranslateAction" method="translateList5">
+        <result name="success">/back/45_list.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <!-- 导出提现申请总列表 excel-->
+        <action name="upLoadTranslate5" class="com.jqg.struts.TranslateAction" method="upLoadTranslate5">
+        <result name="success">/back/45_list.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <!-- 线上支付接口管理 -->
+        <action name="getOnlineModel" class="com.jqg.struts.OnlinemodelAction" method="getOnlineModel">
+        <result name="success">/back/9_pay.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="saveOnlineModel1" class="com.jqg.struts.OnlinemodelAction" method="saveOnlineModel1">
+        <result name="success">/back/9_pay.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="saveOnlineModel2" class="com.jqg.struts.OnlinemodelAction" method="saveOnlineModel2">
+        <result name="success">/back/9_pay.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+         <!-- 易通线上支付接口管理 -->
+        <action name="saveOnlineModel3" class="com.jqg.struts.OnlinemodelAction" method="saveOnlineModel3">
+        <result name="success">/back/9_pay.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <!-- 推荐投资记录 -->
+        <action name="recommondTenderList" class="com.jqg.struts.MoneyAllAction" method="recommondTenderList">
+       		<result name="success">/back/7_recommontendlist.jsp</result>
+         	<interceptor-ref name="defaultStack" /> 
+           	<interceptor-ref name="authority" />  
+        </action>
+        <!-- 投标记录 -->
+        <action name="findRecord" class="com.jqg.struts.MoneyAllAction" method="findRecord">
+        <result  name="success">/back/7_recordList.jsp</result>
+        <interceptor-ref name="defaultStack" /> 
+        <interceptor-ref name="authority" />  
+        </action>
+    </package>
+</struts>

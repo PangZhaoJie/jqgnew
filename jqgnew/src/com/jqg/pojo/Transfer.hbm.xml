@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.jqg.pojo.Transfer" table="transfer" >
+        <id name="transferId" type="java.lang.Integer">
+            <column name="transferId" />
+            <generator class="native" />
+        </id>
+        <property name="money" type="java.lang.Double">
+            <column name="money" />
+        </property>
+        <many-to-one name="tender1" class="com.jqg.pojo.Tender" fetch="select" lazy="proxy">
+            <column name="tenderId" />
+        </many-to-one>
+        <many-to-one name="buyUser" class="com.jqg.pojo.Uservip" fetch="select" lazy="proxy">
+            <column name="buyUserId" />
+        </many-to-one>
+        
+        <property name="isTransfer" type="java.lang.Integer">
+            <column name="isTransfer"  />
+        </property>
+        <property name="transferTime" type="java.sql.Timestamp">
+            <column name="transferTime" length="19" />
+        </property>
+        <property name="buyTime" type="java.sql.Timestamp">
+            <column name="buyTime" length="19" />
+        </property>
+        <property name="checkTime" type="java.sql.Timestamp">
+            <column name="checkTime" length="19" />
+        </property>
+        <property name="profit" type="java.lang.Double">
+            <column name="profit" />
+        </property>
+        
+        <property name="cancelTime" type="java.sql.Timestamp">
+            <column name="cancelTime" length="19" />
+        </property>
+        <property name="cancelNum" type="java.lang.Integer">
+            <column name="cancelNum" />
+        </property>
+        <property name="explains" type="java.lang.String">
+            <column name="explains" />
+        </property>
+    </class>
+</hibernate-mapping>

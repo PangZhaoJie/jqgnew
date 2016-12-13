@@ -1,0 +1,25 @@
+﻿@charset "utf-8";
+
+/*额度申请*/
+input{border:1px solid #ccc; border-radius:3px;vertical-align:middle;outline:none; height:32px; line-height:32px;  margin-left:10px; padding-left:8px; color:#999;}
+table{border-collapse: collapse;}
+input:hover{border:1px solid #0095eb;}
+.app{ margin-top:10px; width:845px; float:left;}
+
+#list_1 .table th{background-color:#F0F0F0;}
+#list_1 .jin{margin-top:10px;}
+#list_1 .shuoming{float:left;}
+#list_1 textarea{margin-left:10px;margin-top:10px;border:1px solid #CCC; height:100px; width:760px; float:left;}
+#list_1 .table{ text-align:center;margin-top:10px;}
+#list_1 .table tr{height:50px;}
+#list_1 .p label{float:right;margin-top:10px;}
+
+#button{ width:745px;margin:20px 0;margin-left:100px; float:left;}
+.submit_bt{font:16px/36px "Microsoft YaHei";width:150px;height:38px; background:#ff9c00 ;color:#fff;cursor:pointer;margin:0 auto;border-radius:3px; border:0;padding-right:8px;}
+.submit_bt:hover{background:#11a9e1;border:0;}
+/*翻页 样式*/
+.page{ float:right;padding:10px 0px; height:35px; font-size:14px; text-align: center;  width:430px ; margin-top:10px;}
+.page a {border-color: #dbdbdb; border-right: 1px solid #dbdbdb; border-style:solid;border-width: 1px; color: #555; background:#f6f6f6; margin: 3px 7px; padding: 4px 9px;text-decoration: none;}
+.page span.disabled,.page a:hover,.page a:active { border:1px solid #00a0ec;   color: #555;   margin: 3px 7px; padding: 4px 9px;}
+.page span.skip{ padding:0px 10px;}
+.page span.skip input{ margin:0px 5px;}

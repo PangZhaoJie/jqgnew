@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="transfer" namespace="/transfer" extends="default">
+    <!-- 定义一个拦截器 -->
+		<interceptors>
+			<interceptor name="json"
+				class="org.apache.struts2.json.JSONInterceptor" />
+			<!-- 拦截器栈 -->
+			<interceptor-stack name="teamwareStack">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="authority" />
+				<interceptor-ref name="json" />
+			</interceptor-stack>
+			<interceptor name="transfer"  
+                class="com.jqg.Interceptor.CkeckBackLogin">  
+            </interceptor> 
+		</interceptors>
+			<!-- 定义全局Result -->
+		<global-results>
+			<!-- 当返回login视图名时，转入/login.jsp页面 -->
+			<result name="login" type="redirect">/login/login.jsp</result>
+		</global-results>
+ 		<!-- 债权转让 -->
+        <action name="addTransfer" class="com.jqg.struts.TransferAction" method="addTransfer">
+        	<result name="success">/user/user_transfer_total.jsp</result>
+        	<result name="error">/jump.jsp</result>	  
+        </action>
+        
+        
+        
+        <!-- 可转债权 -->
+		<action name="transferlist" class="com.jqg.struts.TransferAction" 
+			method="transferlist">
+		</action>
+		<!-- 可转债权跳转页 -->
+		<action name="transferJump" class="com.jqg.struts.TransferAction" method="transferJump">
+			<result name="success">/user/user_transfer.jsp</result>
+		</action>
+        <!-- 进行中的债权 -->
+		<action name="transferlist1" class="com.jqg.struts.TransferAction"
+			method="transferlist1">
+		</action>
+		<!-- 成功转让的债权 -->
+		<action name="transferlist2" class="com.jqg.struts.TransferAction"
+			method="transferlist2">
+		</action>
+		<!-- 已购买的债权 -->
+		<action name="transferlist3" class="com.jqg.struts.TransferAction"
+			method="transferlist3">
+		</action>
+		<!-- 已撤消的债权 -->
+		<action name="transferlist4" class="com.jqg.struts.TransferAction"
+			method="transferlist4">
+		</action>
+		<!-- 可购买债权列表 -->
+        <action name="transferlistPage" class="com.jqg.struts.TransferAction" 
+        	method="transferlistPage">
+        </action>
+        <!-- 债权购买 -->
+        <action name="transferBuy" class="com.jqg.struts.TransferAction" method="transferBuy">
+            <result name="success">/tender/totenderList?transfer=1</result>
+        	<result name="error">/jump.jsp</result>
+        	<result name="tranjump">/loan/tranjump.jsp</result>	  
+        	<interceptor-ref name="transfer" /><!-- 使用此拦截器 -->
+        </action>
+        <!-- 债权转让详细页面跳转 -->
+        <action name="findTransferByID" class="com.jqg.struts.TransferAction" method="findTransferByID">
+        	<result>/invest/invest_TransferDetail.jsp</result>	  
+        </action>
+        <!-- 撤消转让 -->
+        <action name="cancelTransfer" class="com.jqg.struts.TransferAction" method="cancelTransfer">
+        	<result>/user/user_transfer_total.jsp</result>	  
+        </action>
+        
+           <!-- 后台转让待审核 -->
+		<action name="findTransger1" class="com.jqg.struts.TransferAction"
+			method="findTransger1">
+			<result name="success">/back/2_transfer1.jsp</result>
+			<interceptor-ref name="authority" /> 
+		</action>
+        
+        <!-- 后台转让记录 -->
+		<action name="findTransger2" class="com.jqg.struts.TransferAction"
+			method="findTransger2">
+			<result name="success">/back/2_transfer2.jsp</result>
+			<interceptor-ref name="authority" /> 
+		</action>
+        
+        <!-- 后台转让申请审核 -->
+		<action name="updateTransger" class="com.jqg.struts.TransferAction"
+			method="updateTransger">
+			<result name="success">findTransger1</result>
+			<interceptor-ref name="authority" /> 
+		</action>
+        
+        
+
+   </package>
+</struts>

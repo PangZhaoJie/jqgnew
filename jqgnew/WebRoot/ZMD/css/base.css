@@ -1,0 +1,87 @@
+.lanmu * {
+    box-sizing: border-box;
+}
+ins, u, s, a, a:hover {
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, span, a {
+    word-break: break-all;
+}
+a {
+    color: #666;
+}
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, blockquote, pre, hr, figure, table, caption, th, td, form, fieldset, legend, input, button, textarea, menu {
+    font-weight: normal;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.clearfix::after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+input, button {
+    outline: medium none;
+}
+
+.small-sign.blue::after {
+    border-top: 50px solid #5aa8fa;
+}
+.small-sign::after {
+    border-left: 50px solid transparent;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    z-index: -1;
+}
+.small-sign {
+    color: #fff;
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 30px;
+    z-index: 10;
+}
+
+.small-sign.re::after {
+    border-top: 50px solid rgb(243, 70, 70);
+}
+.small-sign::after {
+    border-left: 50px solid transparent;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    z-index: -1;
+}
+.small-sign {
+    color: #fff;
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 30px;
+    z-index: 10;
+}
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, blockquote, pre, hr, figure, table, caption, th, td, form, fieldset, legend, input, button, textarea, menu {
+    font-weight: normal;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}

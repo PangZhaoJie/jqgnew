@@ -1,0 +1,168 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*重置*/
+*{ margin:0;padding:0; font-family:"微软雅黑"; font-size:14px;}
+img{ display:block;}
+a{ text-decoration:none;}
+h1,h2{ font-weight:normal;}
+li{ list-style:none;}
+body{ background:#f5f5f5;}
+#ico_ks{ width:42px; line-height:18px; color:#fff; background:#ff6529; font-size:9px; text-align:center;-moz-border-radius: 4px;      /* Gecko browsers */
+-webkit-border-radius: 4px;   /* Webkit browsers */
+border-radius:4px;            /* W3C syntax */}
+/*
+导航栏增加债权、企业、理财标后使用
+.ui-content{ padding:0;margin-top: 40px;}
+*/
+.ui-content{ padding:0;margin-top: 80px;}
+.ui-header,.ui-footer{ border:0 none;}
+/*logoBox*/
+.logoBox{ height:44px; background:#fff no-repeat 10px 50%; background-side:70% auto; background-size:auto 70%; overflow:hidden;}
+.appDownload{ color:#f39300; font-size:12px; display: block; width:60px; line-height:25px; border:1px solid #c9c9c9; float:right; margin-right:10px; margin-top:10px; background: url(../images/login_user.png) no-repeat 8px 50%; background-size:60% auto; background-size:auto 60%; text-indent:22px;}
+.appDownload:hover{ color:#4aa2eb; border:#4aa2eb 1px solid;} 
+/*navBox*/
+.navBox{ background:#0066b9; height:40px;}
+.navBox li a{ color:#fff; font-size:14px; line-height:23px;}
+.navBox li a:hover{ background:#005ba5; border-bottom:2px solid #f39300;}
+.navCurrent{ background:#005ba5; border-bottom:2px solid #f39300;}
+/*membersDate*/
+.membersDate{border-bottom:1px solid #eee; border-top:1px solid #eee; line-height:50px; font-size:14px; color:#969696; clear:both; background:#fff url(../images/indexM.png) no-repeat 20px 50%; background-size:40% auto; background-size:auto 40%; text-indent:55px;}
+.membersDate a{ color:#0071ce;}
+/*推荐*/
+.recommendBox .head{ overflow:hidden; line-height:35px;}
+.recommendBox h2{ font-size:14px; color:#787878; float:left; margin-left:10px; background:url(../images/indexT.png) no-repeat 0px 50%; background-size:46% auto; background-size: auto 46%; text-indent:20px;}
+.recommendBox .more{ float:right; color:#787878; font-size:10px; margin-right:10px;}
+.recommendBox .more:hover{ color:#4aa2eb;}
+.recommendBox .recommend{ background:#fff; border-bottom:1px solid #eee; border-top:1px solid #eee; overflow:hidden;}
+.recommend .recommendIcon{ background:url(../images/indexH.png) no-repeat 0px 50%; background-size:66% auto; background-size:auto 66%; height:96px; width:20%; float:left; margin-left:5px; margin-right:10px;}
+.recommend .recommendContent{ float:left; margin-top:15px; width:70%;}
+.recommendContent .title{ font-size:13px; color:#787878; margin-bottom:8px;}
+.recommendContent .title a{ font-size:16px; color:#505050; margin-right:5px;}
+.recommendMain{ overflow:hidden;}
+.recommendMain div{ float:left; width:31%;}
+.recommendMain div .investBt{ font-size:12px; color:#fff; border:1px solid #fc7c00; line-height:30px; width:85px; display:block; text-align:center;
+background-image: -moz-linear-gradient(top, #ff9600, #f17700); /* Firefox */
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ff9600), color-stop(1, #f17700)); /* Saf4+, Chrome */
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff9600', endColorstr='#f17700', GradientType='0'); /* IE*/
+-moz-border-radius: 4px;      /* Gecko browsers */
+-webkit-border-radius: 4px;   /* Webkit browsers */
+border-radius:4px;            /* W3C syntax */}
+.recommendMain div p{ font-size:10px; color:#969696; margin-bottom:8px;}
+.recommendMain .one a{ color:#ff7e00;}
+.recommendMain div a span{ font-size:16px;}
+.recommendMain .two a{ color:#787878; font-size:13px; }
+/*首页项目列表*/
+.hotBox h2{ background:url(../images/indexL.png) no-repeat 0px 50%; background-size:46% auto; background-size: auto 46%;}
+.hotBox .hotItem .title{overflow:hidden; padding-top:15px; padding-bottom:15px;}
+.hotBox .hotItem .title p{ float: left; color:#666; margin-left:10px; line-height:16px;}
+.hotBox .hotItem .mainBox div{ float:left; width:30%;}
+.hotBox .hotItem{ margin-bottom:10px;}
+.hotBox .hotItem:hover{ background:#e6f1f9;}
+.hotBox .hotItem .mainBox{ padding-bottom:10px; overflow:hidden}
+.hotBox .hotItem .mainBox .one{ margin-left:20px;}
+.hotBox .hotItem .mainBox div a{ color:#969696; font-size:10px;}
+.hotBox .hotItem .mainBox div p{ color:#505050; font-size:18px;}
+.hotBox .hotItem .mainBox .two p{ color:#ff7e00;}
+.hotBox .hotItem .mainBox .three p{ text-indent:20px;}
+.border1px{width:92%; height:1px; background:#f2f2f2; margin:5px 0px 10px 15px;}
+/*进度条*/
+.progress{ overflow:hidden; padding-bottom:15px;}
+.progress div,.progress a{ float:left;}
+.progress a{ font-size:10px; color:#666; width:20%;}
+.progressbar{height:6px; border-radius:2px; background:#dfdfdf; width:70%; margin-left:20px; margin-top:6px; margin-right:5px;}
+.progressbar div{height:6px; border-radius:2px; background:#ff6529;}
+.enterList{ color:#666; font-size:12px; text-align:center; border-bottom:1px solid #eee; border-top:1px solid #eee; display:block; width:100%; background:#fff; line-height:35px; margin-bottom:10px;}
+.enterList:hover{ background:#e6f1f9; color:#4aa2eb;}
+.bottom{ background:#444; height:30px; color:#ccc; text-align:center; font-size:10px; padding-top:15px;}
+
+/*产品详情页*/
+.projectHead{ background:#3698d9; padding-bottom:5px;}
+.projectHead .title{ color:#d0ecff; line-height:44px; border-bottom:1px solid #50a5de; padding-left:15px;}
+.projectTotal{ color:#fff; font-size:32px; line-height:40px; padding:15px;}
+.projectTotal span{ font-size:12px; color:#d0ecff;}
+.pro_progress a{color:#d0ecff; font-size:12px;}
+.pro_progress .progressbar{ margin-left:15px; background:#207cb9;}
+.pro_progress .progressbar div{ background:#fff;}
+
+.projectData{ background:#fff; border-bottom:1px solid #e1e1e1;}
+.projectData p,.projectData a{ text-align:center;}
+.projectData p{ font-size:20px; color:#ff7e00; padding-top:5px;}
+.projectData a{ color:#969696; font-size:10px; padding:0; padding-top:8px; padding-bottom:4px;} 
+.projectMain .ui-content{ padding:10px;}
+
+.projectMain .navbar ul li a{ color:#3698d9; line-height:32px; padding:0; }
+.projectMain .navbar ul li a:hover{ color:#fff; background:#47a9ea;}
+.projectMain .navbar ul li .two{ border-left:1px solid #47a9ea; border-right:1px solid #47a9ea;}
+.projectMain .navbar{border:1px solid #47a9ea; -moz-border-radius: 4px;      /* Gecko browsers */
+-webkit-border-radius: 4px;   /* Webkit browsers */
+border-radius:4px;            /* W3C syntax */}
+.tabMain{ background:#fff; margin-top:10px;}
+.tabMain h6{ font-size:14px; color:#666; padding-bottom:10px;}
+.tabMain p{ padding-bottom:10px;}
+.tabMain p a,.tabMain p span{ color:#787878; font-size:12px;}
+.tabMain p span{ margin-left:50px;}
+.tabMain .ui-bar{ color:#666; font-size:12px;}
+.tabMain .wk_grey{ background:#f2f2f2;}
+.tabMain .wk_white{ margin-top:5px;}
+.tabMain .wk_white .ui-bar{color:#969696;}
+/*底部*/
+.confirmBt{ height:49px; background:#fff; border-top:1px solid #e1e1e1;}
+.ui-footer .confirmBt a{ line-height:36px; color:#fff; font-size:15px; text-align:center; background:#42a5e7; display:block; margin:0 auto; width:96%;-moz-border-radius: 6px;      /* Gecko browsers */
+-webkit-border-radius: 6px;   /* Webkit browsers */
+border-radius:6px;            /* W3C syntax */ margin-top:7px; padding:0; display:block;}
+.ui-footer .confirmBt a:hover{ background:#4eaff0;}
+
+/*投资页*/
+.wk_invest .ui-dialog-contain{ width:100%; margin:0; margin-top:1em;}
+.wk_invest .wk_money{ padding:10px;}		
+.wk_invest .wk_money .ui-grid-b{ border:1px solid #16aaff; line-height:44px; padding:0;-moz-border-radius: 20px;      /* Gecko browsers */
+-webkit-border-radius: 20px;   /* Webkit browsers */
+border-radius:20px;            /* W3C syntax */ padding:0;}
+.wk_invest .ui-input-text{ border:none 0;}
+.wk_invest .wk_money .ui-grid-b .ui-block-a{ width:28%; font-size:12px; color:#666; padding-left:10px;}
+.wk_invest .wk_money .ui-grid-b .ui-block-b{ width:60%;}
+.wk_invest .wk_money .ui-grid-b .ui-block-b input{ font-size:12px;}
+.wk_invest .wk_money .ui-grid-b .ui-block-c{ width:4%;color:#666;}
+.wk_invest .wk_money .ui-bar{ padding:0; font-size:12px;}
+.wk_invest_btn{ position:fixed; bottom:-1px; padding-bottom:1px; height:49px; background:#fff; border-top:1px solid #e1e1e1; width:100%;}
+.wk_invest_btn a{ line-height:36px; color:#fff; font-size:15px; text-align:center; background:#42a5e7; display:block; margin:0 auto; width:96%;-moz-border-radius: 6px;      /* Gecko browsers */
+-webkit-border-radius: 6px;   /* Webkit browsers */
+border-radius:6px;            /* W3C syntax */ margin-top:7px; padding:0; display:block;}
+.wk_invest_btn a:hover{ background:#4eaff0;}
+
+/*关于*/
+.wk_about .wk_about_btn{ display:block; color:#505050; line-height:44px; background:#fff url(../images/more.png) no-repeat 98% 50%; background-size:40% auto; background-size:auto 40%; border-bottom:1px solid #ddd; padding-left:10px;}
+.wk_about .wk_about_btn:hover{ background:#e6f1f9 url(../images/more.png) no-repeat 98% 50%; background-size:36% auto; background-size:auto 36%;}
+.wk_about .last{ border:none 0;}
+/*联系我们*/
+.wk_contact{ padding-top:20px; }
+.wk_contact .wk_about_btn{ font-size:12px; color:#666; background:#fff url(../images/contact_01.png) no-repeat 10px 50%; background-size: auto 44%; padding-left:36px;}
+.wk_contact .wk_about_btn:hover{ background:#e6f1f9 url(../images/contact_01.png) no-repeat 10px 50%; background-size:auto 40%;}
+.wk_contact .qq_btn{ background:#fff url(../images/contact_02.png) no-repeat 10px 50%; background-size: auto 44%}
+.wk_contact .qq_btn:hover{ background:#e6f1f9 url(../images/contact_02.png) no-repeat 10px 50%; background-size:auto 40%;}
+.wk_contact .last{ margin-bottom:10px; background:#fff url(../images/contact_03.png) no-repeat 10px 50%; background-size: auto 44%}
+.wk_contact .last:hover{ background:#e6f1f9 url(../images/contact_03.png) no-repeat 10px 50%; background-size:auto 40%;}
+.wk_contact .customer{background:#fff url(../images/contact_04.png) no-repeat 10px 50%; background-size: auto 44%;}
+.wk_contact .customer:hover{ background:#e6f1f9 url(../images/contact_04.png) no-repeat 10px 50%; background-size:auto 40%;}
+/*关于文章页*/
+.wk_page{ padding:10px;}
+.wk_page div h5{ color:#2EA7E0; margin-bottom:6px; font-size:16px;} 
+.wk_page p{ color:#666; line-height:22px; margin-bottom:15px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

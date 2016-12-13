@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.multipart.saveDir" value="/tmp"></constant>
+	<package name="user" namespace="/user" extends="json-default">
+		<!-- 定义一个拦截器 -->
+		<interceptors>
+			<interceptor name="authority" class="com.jqg.Interceptor.CkeckBackLogin">
+			</interceptor>
+			<interceptor name="json"
+				class="org.apache.struts2.json.JSONInterceptor" />
+			<!-- 拦截器栈 -->
+			<interceptor-stack name="teamwareStack">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="authority" />
+				<interceptor-ref name="json" />
+			</interceptor-stack>
+		</interceptors>
+		<!-- <default-interceptor-ref name="teamwareStack"/> 同一个package默认此拦截器 -->
+
+		<!-- 定义全局Result -->
+		<global-results>
+			<!-- 当返回login视图名时，转入/login.jsp页面 -->
+			<result name="login" type="redirect">/login/login.jsp</result>
+		</global-results>
+		<!-- 用户登录 -->
+		<action name="toJspPage" class="com.jqg.struts.UservipAction"
+			method="toJspPage">
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+			<result name="success1">/user/password.jsp</result>
+			<result name="success2">/user/letter.jsp</result>
+			<result name="success3">/user/apply.jsp</result>
+			<result name="success4">/user/message.jsp</result>
+			<result name="success5">/user/friend.jsp</result>
+			<result name="error" type="redirect">/login/login.jsp</result>
+		</action>
+		<!-- 图片 -->
+		<action name="picture" class="com.jqg.struts.UservipAction"
+			method="picture">
+			<result name="success">/user/password.jsp</result>
+		</action>
+		<!-- 用户注册 -->
+		<action name="register" class="com.jqg.struts.UservipAction"
+			method="createUservip">
+<!--			<result name="success" type="redirectAction">-->
+<!--				<param name="actionName">loginSearch</param>-->
+<!--			</result>-->
+<!--			<result name="jump">/jump.jsp</result>-->
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+			<result name="error" type="json">
+				<param name="root">result</param>
+			</result>
+			<result name="userError" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<!-- 根据用户名查找用户 -->
+		<action name="findusername" class="com.jqg.struts.UservipAction"
+			method="findUservipByUserName">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<!-- 查询客服信息 -->
+		<action name="findKefu"  class="com.jqg.struts.ManagerAction" method="findKefu">
+		  <result name="register1">/login/reg1.jsp</result>
+		</action>
+		
+		<!-- 根据邮箱查找用户 -->
+		<action name="findmail" class="com.jqg.struts.UservipAction"
+			method="findUservipByMail">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<!-- 根据身份证号查找用户 -->
+		<action name="findIdNum" class="com.jqg.struts.MatercertifiAction"
+			method="findBasicinforByIdNum">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		
+		<!-- 根据手机号查找用户 -->
+		<action name="findphone" class="com.jqg.struts.BasicinforAction"
+			method="findBasicinforByphone">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<!-- 根据身份证号查找用户 -->
+		<action name="findCard" class="com.jqg.struts.BasicinforAction"
+			method="findBasicinforByCard">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		
+		<!-- 登录查询 -->
+		<action name="loginSearch" class="com.jqg.struts.UservipAction"
+			method="loginSearch">
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+			<result>/user/user.jsp</result>
+		</action>
+		<!-- 开通托管账户 -->
+		<action name="registerbind" class="com.jqg.struts.LoanAction"
+			method="registerbind">
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+			<result name="success">/loan/registerbind.jsp</result>
+			<result name="message">/jump.jsp</result>
+		</action>
+		<!-- 开通托管返回处理 -->
+		<action name="registerbindreturn" class="com.jqg.struts.LoanAction"
+			method="registerbindreturn">
+			<result name="success">/jump.jsp</result>
+			<result name="mobile">/wap/jump.jsp</result>
+		
+		</action>
+		<!-- 开通托管异步通知接口-->
+		<action name="registerbindnotify" class="com.jqg.struts.LoanAction"
+			method="registerbindnotify">
+			<result>/jump.jsp</result>
+		</action>
+		
+		<!-- 开通授权返回接口-->
+		<action name="loanauthorizereturn" class="com.jqg.struts.LoanAction"
+			method="loanauthorizereturn">
+			<result name="success">/jump.jsp</result>
+			<result name="mobile">/wap/jump.jsp</result>
+		</action>
+		
+		<!-- 开通授权异步通知接口-->
+		<action name="loanauthorizenotify" class="com.jqg.struts.LoanAction"
+			method="loanauthorizenotify">
+			<result>/jump.jsp</result>
+		</action>
+		<!-- 开通授权接口-->
+		<action name="loanauthorize" class="com.jqg.struts.LoanAction"
+			method="loanAuthorize">
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+			<result name="success">/loan/loanauthorize.jsp</result>
+			<result name="message">/jump.jsp</result>
+		</action>
+		
+		<!-- 根据密码和用户名查找用户 -->
+		<action name="finduser" class="com.jqg.struts.UservipAction"
+			method="findUservipByPasswordAndUserName">
+			<result name="success" type="redirectAction">
+				<param name="actionName">loginSearch</param>
+			</result>
+			<result name="error">/login/login.jsp</result>
+			<result name="jump">/jump.jsp</result>
+		</action>
+		<!-- 登录 -->
+		<action name="login" class="com.jqg.struts.UservipAction"
+			method="login">
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+			<result name="success" type="redirectAction">
+				<param name="actionName">loginSearch</param>
+			</result>
+			<result name="error" type="redirect">/login/login.jsp</result>
+		</action>
+		<!-- 登出 -->
+		<action name="loginout" class="com.jqg.struts.UservipAction"
+			method="loginOut">
+			<result type="redirect">/login/login.jsp</result>
+		</action>
+		<!-- 激活 -->
+		<action name="activate" class="com.jqg.struts.UservipAction"
+			method="activate">
+			<result name="success" type="redirect">/login/mail.jsp</result>
+			<result name="jump" >/jump.jsp</result>
+		</action>
+
+		<!-- 用户基本资料 -->
+		<action name="searchBasic" class="com.jqg.struts.BasicinforAction"
+			method="search">
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+			<result>/user/baseinfo.jsp</result>
+		</action>
+		<!-- 创建基本信息 -->
+		<action name="list" class="com.jqg.struts.BasicinforAction"
+			method="createBasicinfor">
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+			<result name="success" type="redirectAction">
+				<param name="actionName">searchBasic?mark=${mark}</param>
+			</result>
+		</action>
+		<action name="list1" class="com.jqg.struts.BasicinforAction"
+			method="updateBasicinforlist1">
+			<result name="success" type="redirectAction">
+				<param name="actionName">searchBasic?mark=${mark}</param>
+			</result>
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+		<action name="list2" class="com.jqg.struts.BasicinforAction"
+			method="updateBasicinforlist2">
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+			<result name="success" type="redirectAction">
+				<param name="actionName">searchBasic?mark=${mark}</param>
+			</result>
+		</action>
+		<action name="list3" class="com.jqg.struts.BasicinforAction"
+			method="updateBasicinforList3">
+			<result name="success" type="redirectAction">
+				<param name="actionName">searchBasic?mark=${mark}</param>
+			</result>
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+		<action name="list4" class="com.jqg.struts.BasicinforAction"
+			method="updateBasicinforList4">
+			<result name="success" type="redirectAction">
+				<param name="actionName">searchBasic?mark=${mark}</param>
+			</result>
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+		<action name="list5" class="com.jqg.struts.BasicinforAction"
+			method="updateBasicinforList5">
+			<result name="success" type="redirectAction">
+				<param name="actionName">searchBasic?mark=${mark}</param>
+			</result>
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+		<action name="list6" class="com.jqg.struts.BasicinforAction"
+			method="updateBasicinforList6">
+			<result name="success" type="redirectAction">
+				<param name="actionName">searchBasic?mark=${mark}</param>
+			</result>
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+		<!--用户头像上传和密码修改 -->
+		<action name="searchPwd" class="com.jqg.struts.UservipAction"
+			method="searchPassword">
+			<result>/user/password.jsp</result>
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+		<action name="updatepwd" class="com.jqg.struts.UservipAction"
+			method="updatepwd">
+			<result name="success">
+				/login/login.jsp
+			</result>
+			<result name="error" type="redirectAction">
+				<param name="actionName">searchPwd?mark=${mark}&amp;resultString=${resultString}</param>
+			</result>
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+		<!-- 修改支付密码 -->
+		<action name="updatepaypwd" class="com.jqg.struts.UservipAction"
+			method="updatePaypwd">
+			<result name="success" type="redirectAction">
+				<param name="actionName">searchPwd?mark=${mark}&amp;resultPay=${resultPay}</param>
+			</result>
+			<result name="error" type="redirectAction">
+				<param name="actionName">searchPwd?mark=${mark}&amp;resultPay=${resultPay}</param>
+			</result>
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+		<!-- 上传图片 -->
+		<action name="uploadPic" class="com.jqg.struts.UservipAction"
+			method="uploadPic">
+			<result name="success">/user/password.jsp</result>
+			<result name="error">/user/password.jsp</result>
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+
+		<!-- 站内信 -->
+		<action name="inboxByIdPage" class="com.jqg.struts.InboxPageActon"
+			method="list">
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+		<action name="changeStatus" class="com.jqg.struts.InboxPageActon"
+			method="changeStatus">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+		<!-- 删除站内信 -->
+		<action name="delInbox" class="com.jqg.struts.InboxPageActon"
+			method="delInbox">
+			<result type="redirect">/user/letter.jsp</result>
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+		<!-- 认证中心 -->
+		<action name="search" class="com.jqg.struts.MatercertifiAction"
+			method="search">
+			<result>/user/approve.jsp</result>
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+		<action name="create" class="com.jqg.struts.MatercertifiAction"
+			method="createMatercertifi">
+			<result name="success" type="redirectAction">
+				<param name="actionName">search?mark=${mark}</param>
+			</result>
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+		<!-- 发送邮件 -->
+		<action name="sendMail" class="com.jqg.struts.MatercertifiAction"
+			method="sendMail">
+			<result name="success" type="redirectAction">
+				<param name="actionName">search?mark=${mark}</param>
+			</result>
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+		<!-- 问题认证 -->
+		<action name="questionSet" class="com.jqg.struts.MatercertifiAction"
+			method="questionSet">
+			<result name="success" type="redirectAction">
+				<param name="actionName">search?mark=${mark}</param>
+			</result>
+			<result name="error" type="redirectAction">
+				<param name="actionName">search?mark=${mark}&amp;tip=${tip}</param>
+			</result>
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+		<!-- 视频认证 -->
+		<action name="videoSet" class="com.jqg.struts.MatercertifiAction"
+			method="videoSet">
+			<result name="success" type="redirectAction">
+				<param name="actionName">search?mark=${mark}</param>
+			</result>
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+		<!-- 现场认证 -->
+		<action name="sceneSet" class="com.jqg.struts.MatercertifiAction"
+			method="sceneSet">
+			<result name="success" type="redirectAction">
+				<param name="actionName">search?mark=${mark}</param>
+			</result>
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+		<!-- 认证中心 -->
+		<action name="certification" class="com.jqg.struts.MatercertifiAction"
+			method="certification">
+			<result name="success" type="redirectAction">
+				<param name="actionName">search?mark=${mark}</param>
+			</result>
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+		<!-- 图片ajax上传，无刷新 -->
+		<action name="fileUploadAction" class="com.jqg.struts.MatercertifiAction"
+			method="fileUploadAction">
+			<result type="json" name="success">
+				<param name="contentType">
+					text/html
+				</param>
+			</result>
+			<result type="json" name="error">
+				<param name="contentType">
+					text/html
+				</param>
+			</result>
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+		<!--手机站认证中心 -->
+		<action name="wapCertification" class="com.jqg.struts.MatercertifiAction"
+			method="certification">
+			<result name="success" type="redirectAction">
+				 /wap/index.jsp
+			</result>
+		</action>
+		<!--手机站图片ajax上传，无刷新 -->
+		<action name="wapFileUploadAction" class="com.jqg.struts.MatercertifiAction"
+			method="fileUploadAction">
+			<result type="json" name="success">
+				<param name="contentType">
+					text/html
+				</param>
+			</result>
+			<result type="json" name="error">
+				<param name="contentType">
+					text/html
+				</param>
+			</result>
+		</action>
+		<!-- 积分明细记录 -->
+		<action name="integral" class="com.jqg.struts.IntegraldetailAction"
+			method="search">
+			<result>/user/integral.jsp</result>
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+		<action name="integralByIdPage" class="com.jqg.struts.IntegraldetailAction"
+			method="list">
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+		<!-- 额度申请 -->
+		<action name="apply" class="com.jqg.struts.RequestquotaAction"
+			method="create">
+			<result>/user/apply.jsp</result>
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+		<!-- 根据编号查询申请 -->
+		<action name="applyByIdPage" class="com.jqg.struts.RequestquotaAction"
+			method="list">
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+		<!-- 留言 -->
+		<action name="lssuingByIdPage" class="com.jqg.struts.TenderWordsAction"
+			method="list">
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+		<!-- 根据编号查询我的留言 -->
+		<action name="myMessageByIdPage" class="com.jqg.struts.TenderWordsAction"
+			method="message">
+
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+<!-- 		查询留言 -->
+		<action name="searchMessage" class="com.jqg.struts.TenderWordsAction"
+			method="list">
+			<result name="success">/user/message.jsp</result>
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+		<!-- 邀请奖励 -->
+		<action name="rewardByIdPage" class="com.jqg.struts.UservipAction"
+			method="reward">
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+<!-- 		根据id查询用户 -->
+		<action name="userByIdPage" class="com.jqg.struts.UservipAction"
+			method="list">
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+		</action>
+		<!-- 短信 -->
+		<action name="sendMessage1" class="com.jqg.struts.PhoneAction"
+			method="sendMessage1">
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+			<result name="success" type="json"></result>
+		</action>
+		<!--手机站短信验证 -->
+		<action name="wapSendMessage" class="com.jqg.struts.PhoneAction"
+			method="sendMessage1">
+			<result name="success" type="json"></result>
+		</action>
+		<!--手机站手机认证 -->
+		<action name="wapPhoneSet" class="com.jqg.struts.MatercertifiAction"
+			method="phoneSet">
+			<result name="success" type="json"></result>
+			<result name="error" type="json"></result>
+			<result name="repeat" type="json"></result>
+		</action>
+		<!-- 手机站发送邮件 -->
+		<action name="wapSendMail" class="com.jqg.struts.MatercertifiAction"
+			method="sendMail">
+			<result name="success" type="redirectAction">
+				<param name="actionName">search?mark=${mark}</param>
+			</result>
+		</action>
+		<!--照片认证 -->
+		<action name="phoneCheck" class="com.jqg.struts.MatercertifiAction"
+			method="phoneSet">
+			<interceptor-ref name="teamwareStack" /><!-- 使用此拦截器 -->
+			<result name="success" type="json"></result>
+			<result name="error" type="json"></result>
+			<result name="repeat" type="json"></result>
+		</action>
+		<!-- 用于图片裁剪，暂时不用 -->
+		<action name="cutPic" class="com.jqg.struts.UservipAction"
+			method="cutPic">
+			<result name="success" type="redirectAction">announcement_list.action</result>
+		</action>
+		<!-- 密码找回,验证码发送 -->
+		<action name="send" class="com.jqg.struts.PhoneAction"
+			method="send">
+			<result name="success">/r_pwd_2.jsp</result>
+			<result name="jump">/jump.jsp</result>
+		</action>
+		<!-- 密码找回,验证码重新发送 -->
+		<action name="send2" class="com.jqg.struts.PhoneAction"
+			method="send">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<!-- 密码找回 ,验证码验证 -->
+		<action name="check" class="com.jqg.struts.UservipAction"
+			method="check">
+			<result name="success">/r_pwd_3.jsp</result>
+			<result name="jump">/jump.jsp</result>
+		</action>
+		<!-- 密码找回 ,修改密码 -->
+		<action name="upwd" class="com.jqg.struts.UservipAction"
+			method="upwd">
+			<result name="jump">/jump.jsp</result>
+		</action>
+		<!-- 注册时短信验证 -->
+		<action name="sendMessageZC" class="com.jqg.struts.PhoneAction"
+			method="sendMessageZC">
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+			<result name="error" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<!-- 注册1 -->
+        <action name="reg1" class="com.jqg.struts.UservipAction" 
+        	method="reg1">
+	        <result name="success" >/login/reg2.jsp</result>
+	        <result name="jump" >/jump.jsp</result>
+        </action>
+	   <!-- 设置vip -->
+		<action name="updateUservip"  class="com.jqg.struts.MatercertifiAction" method="updateUservip">
+		<result name="success">/user/user_vip.jsp</result>
+		<result name="jump" >/jump.jsp</result>
+		</action>
+	  <!-- 查找用户信息 -->
+	  <action name="findUserInfo" class="com.jqg.struts.MatercertifiAction" method="findUserInfo">
+	  <result name="success">/user/user_vip.jsp</result>
+	  </action>
+	  <!-- 修改专属客服 -->
+	  	<action name="searchKefu" class="com.jqg.struts.UservipAction" method="searchKefu">
+	        <result name="success" >/user/kefu.jsp</result>
+        </action>
+        <action name="updateKefu" class="com.jqg.struts.UservipAction" method="updateKefu">
+	        <result name="success">/jump.jsp</result>
+        </action>
+	</package>
+</struts>

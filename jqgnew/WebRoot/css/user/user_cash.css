@@ -1,0 +1,84 @@
+﻿@charset "utf-8";
+
+/*马上提现*/
+input{border:1px solid #ccc; border-radius:3px;vertical-align:middle;outline:none; height:32px; line-height:32px;  margin-left:10px; padding-left:8px; color:#999;}
+table{border-collapse: collapse;}
+input:hover{border:1px solid #0095eb;}
+#list_1 p,#list_2 p{width:825px; line-height:37px; color:#f59b3b ; background:url(../../images/info.gif) left center no-repeat; padding-left:20px;}
+
+.c_tip{width:805px; line-height:30px; float:left; padding:10px 20px; margin-top:15px; border:1px dashed #ccc;}
+.c_tip span{ float:left; width:805px;}
+
+.pass_table,.record_table,.bank_table{ margin-top: 25px; float:left;}
+.pass_table .th1{ font-weight: bold; text-align:left; height:45px; line-height:45px; padding-left:15px; font-size:15px; background:#f7f7f7;}
+.pass_table .td1{ font-weight: bold; background:#f7f7f7; text-align:right; width:160px; padding:10px;font-size:15px; }
+.pass_table .td2{ text-align:left; padding:10px;width:620px; }
+.pass_table .td2 label,.bank_table .td2 label { font-weight:bold; padding-right:10px; }
+.pass_table .td2 span,.bank_table .td2 span {  padding-left:10px; }
+.pass_table th,.record_table th{ background-color: #f9f9f9; border: 1px solid #ddd; font-weight: normal; text-align: center;}
+.pass_table td,.bank_table td{ border: 1px solid #ddd;line-height:25px;   text-align:center; }
+.pass_table td a,.record_table a{ padding:0px 10px;}
+.record_table .th3 { font-weight: bold; height:55px; font-size:15px; background:#f9f9f9;}
+.record_table td{ border: 1px solid #ddd;line-height:25px; padding:10px;   text-align:center; }
+
+#submit{ width:845px; text-align:center; }
+.submit_bt{font:16px/38px "Microsoft YaHei";width:140px;height:40px; background:#ff9c00 ;color:#fff;cursor:pointer;margin:15px 0;border-radius:3px; border:0;}
+.submit_bt:hover{background:#11a9e1;border:0;}
+.red{ color:#fc0000;}
+.green{ color: #090;}
+
+/*翻页 样式*/
+.page{ float:left;padding:10px 0px; height:35px; font-size:14px; text-align: center;  width:845px ; margin-top:20px;}
+.page a {border-color: #dbdbdb; border-right: 1px solid #dbdbdb; border-style:solid;border-width: 1px; color: #555; background:#f6f6f6; margin: 3px 7px; padding: 4px 9px;text-decoration: none;}
+.page span.disabled,.page a:hover,.page a:active { border:1px solid #00a0ec;   color: #555;   margin: 3px 7px; padding: 4px 9px;}
+.page span.skip{ padding:0px 10px;}
+.page span.skip input{ margin:0px 5px;}
+
+/*银行账户*/
+.b_tip{width:805px; line-height:30px; padding:10px 20px; margin-top:10px; border:1px dashed #ccc;}
+.bank_table .td1 { font-weight: bold; background:#f7f7f7; text-align:right; width:180px; padding:10px;font-size:15px; }
+.bank_table .td2 input{ margin:0;}
+.bank_table .td2 { text-align:left; padding:10px;width:600px; }
+.bank_table .td2 em{ font-size:16px; color:#fc0000; padding-left:10px; line-height:30px;}
+
+/*表单下拉列表框*/
+#uboxstyle { float:left; padding:0; }
+#uboxstyle .select_box{width:320px;height:37px; padding:0; }
+#uboxstyle div.tag_select{display:block;color:#666;width:300px;height:37px;background:transparent url(../../images/320select_bg05.png) no-repeat 0 0;padding:0 10px;line-height:37px;}
+#uboxstyle div.tag_select_hover{display:block;color:#666;width:300px;height:37px;background:transparent url(../../images/320select_bg06.png) no-repeat 0 0px;padding:0 10px;line-height:37px;}
+#uboxstyle div.tag_select_open{display:block;color:#666;width:300px;height:37px;background:transparent url(../../images/320select_bg04.png) no-repeat 0 0px;padding:0 10px;line-height:37px;}
+#uboxstyle ul.tag_options{position:absolute;padding:0;margin:0px; height:170px; overflow-x:hidden;overflow-y:auto;  list-style:none;border: 1px solid #00a8e7; border-radius: 4px;width:320px;padding:0 0 5px; background:#fff;}
+#uboxstyle ul.tag_options li{width:300px;display:block;padding:0 10px;height:34px;text-decoration:none;line-height:34px;color:#666;}
+#uboxstyle ul.tag_options li.open_hover{background:#d0e8f2 repeat;color:#0066cc;}
+#uboxstyle ul.tag_options li.open_selected{background:#049cf2 repeat;color:#fff;}
+
+/*银行账户列表*/
+
+.bank_list{width:845px; float:left; margin-top:10px; }
+.bank_list .th1 { font-weight: bold; height:45px; font-size:15px; background:#f9f9f9;}
+.bank_list .td1 { font-weight: bold; background:#f7f7f7; text-align:right; width:180px; padding:10px;font-size:15px; }
+.bank_list img{ width:150px; height:38px;}
+.bank_list td{ border: 1px solid #ddd;line-height:25px;   text-align:center; padding:8px 5px; }
+.bank_list td a{ padding:0px 5px; }
+
+.list_1_top{width:845px; float:left;}
+.list_1_top span{width:645px; float:left;line-height:35px; color:#f59b3b ; background:url(../../images/info.gif) left center no-repeat; padding-left:20px;}
+.add_bt{font:16px/35px "Microsoft YaHei";width:120px;height:35px; padding:0; float:right; background: #f59b3b;color:#fff;  text-align:center;cursor:pointer;border-radius:3px; border:0;}
+.add_bt:hover{background:#11a9e1;border:0; color:#fff;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

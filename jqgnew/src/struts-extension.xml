@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.multipart.saveDir" value="/tmp"></constant>
+    <package name="extension" namespace="/extension" extends="default">
+        <!-- 更新手机参数-->
+ 		<action name="uptPhone" class="com.jqg.struts.MessagemodelAction" method="uptPhone">
+        <result>/back/9_tab2.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <!-- 邮箱，站内信，信息模板 -->
+ 		<action name="tab" class="com.jqg.struts.MessagemodelAction" method="search">
+        <result>/back/9_tab.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="save1" class="com.jqg.struts.MessagemodelAction" method="save1">
+        <result>/back/9_tab.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="save2" class="com.jqg.struts.MessagemodelAction" method="save2">
+        <result>/back/9_tab.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="save3" class="com.jqg.struts.MessagemodelAction" method="save3">
+        <result>/back/9_tab.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <!-- 邮箱信息 -->
+        <action name="searchSmtp" class="com.jqg.struts.MessagemodelAction" method="searchSmtp">
+        <result>/back/9_tab2.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="saveSmtp" class="com.jqg.struts.MessagemodelAction" method="saveSmtp">
+        <result>/back/9_tab2.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="smsSendLog" class="com.jqg.struts.MessagemodelAction" method="smsSendLog">
+        <result>/back/91_smslist.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="emailSendLog" class="com.jqg.struts.MessagemodelAction" method="emailSendLog">
+        <result>/back/91_emaillist.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <!-- qq客服管理 -->
+        <action name="searchManager" class="com.jqg.struts.MessagemodelAction" method="searchManager">
+        <result>/back/91_kflist.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="createManager" class="com.jqg.struts.MessagemodelAction" method="createManager">
+        <result>/back/91_kflist.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="delManager" class="com.jqg.struts.MessagemodelAction" method="delManager">
+        <result>/back/91_kflist.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="editManager" class="com.jqg.struts.MessagemodelAction" method="editManager">
+        <result>/back/91_kflist.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <!-- qq群管理 -->
+        <action name="searchKf" class="com.jqg.struts.MessagemodelAction" method="searchKf">
+        <result>/back/92_kflist.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="createKf" class="com.jqg.struts.MessagemodelAction" method="createKf">
+        <result>/back/92_kflist.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="delKf" class="com.jqg.struts.MessagemodelAction" method="delKf">
+        <result>/back/92_kflist.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="editKf" class="com.jqg.struts.MessagemodelAction" method="editKf">
+        <result>/back/92_kflist.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <!-- 客服电话 -->
+        <action name="searchPhone" class="com.jqg.struts.MessagemodelAction" method="searchPhone">
+        <result>/back/93_kflist.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="createPhone" class="com.jqg.struts.MessagemodelAction" method="createPhone">
+        <result>/back/93_kflist.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="delPhone" class="com.jqg.struts.MessagemodelAction" method="delPhone">
+        <result>/back/93_kflist.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="editPhone" class="com.jqg.struts.MessagemodelAction" method="editPhone">
+        <result>/back/93_kflist.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <!-- 线下支付管理 -->
+        <action name="searchBank" class="com.jqg.struts.MessagemodelAction" method="searchBank">
+        <result>/back/9_list.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="createBank" class="com.jqg.struts.MessagemodelAction" method="createBank">
+        <result>/back/9_list.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="delBank" class="com.jqg.struts.MessagemodelAction" method="delBank">
+        <result>/back/9_list.jsp</result> 
+        <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+        <action name="editBank" class="com.jqg.struts.MessagemodelAction" method="editBank">
+        <result>/back/9_list.jsp</result>
+         <interceptor-ref name="defaultStack" /> 
+           <interceptor-ref name="authority" />  
+        </action>
+    </package>
+</struts>
